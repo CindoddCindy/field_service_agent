@@ -118,6 +118,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content">
                             <TextView
+                                android:layout_margin="5dp"
                                 android:text="Itransit : "
                                 android:gravity="center"
                                 android:textStyle="bold"
@@ -127,6 +128,7 @@
 
                             </TextView>
                             <TextView
+                                android:layout_margin="5dp"
                                 android:text="0"
                                 android:gravity="center"
                                 android:textStyle="bold"
@@ -162,7 +164,7 @@
                                 android:gravity="center"
                                 android:textStyle="bold"
                                 android:textSize="20dp"
-
+                                android:layout_margin="5dp"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content">
 
@@ -172,7 +174,7 @@
                                 android:gravity="center"
                                 android:textStyle="bold"
                                 android:textSize="20dp"
-
+                                android:layout_margin="5dp"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content">
 
@@ -215,6 +217,7 @@
                                 android:textStyle="bold"
                                 android:textSize="20dp"
                                 android:text="Installation"
+                                android:layout_margin="5dp"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content">
 
@@ -224,6 +227,7 @@
                                 android:textStyle="bold"
                                 android:textSize="20dp"
                                 android:text="0"
+                                android:layout_margin="5dp"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content">
 
@@ -255,7 +259,7 @@
                                 android:textStyle="bold"
                                 android:textSize="20dp"
                                 android:text="Total Unit"
-
+                                android:layout_margin="5dp"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content">
 
@@ -265,7 +269,7 @@
                                 android:textStyle="bold"
                                 android:textSize="20dp"
                                 android:text="0"
-
+                                android:layout_margin="5dp"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content">
 
