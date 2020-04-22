@@ -114,6 +114,7 @@
                 </LinearLayout>
 
                 <Button
+                    android:id="@+id/btn_login"
                     android:text="LOGIN"
                     android:textColor="@color/colorFont"
                     android:background="#F42727"
