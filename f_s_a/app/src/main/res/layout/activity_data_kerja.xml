@@ -59,13 +59,14 @@
                                 android:orientation="vertical">
 
                                 <TextView
+                                    android:textColor="@color/colorFontHitam"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_margin="5dp"
                                     android:gravity="center"
                                     android:text="Welcome"
-                                    android:textSize="25dp"
-                                    android:textStyle="bold">
+                                    android:textSize="18dp"
+                                    android:textStyle="normal">
 
 
                                 </TextView>
@@ -80,13 +81,14 @@
                                 </ImageView>
 
                                 <TextView
+                                    android:textColor="@color/colorFontHitam"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:gravity="center"
                                     android:text=" User Name "
                                     android:layout_margin="5dp"
-                                    android:textSize="20dp"
-                                    android:textStyle="bold">
+                                    android:textSize="15dp"
+                                    android:textStyle="normal">
 
                                 </TextView>
 
@@ -118,21 +120,23 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content">
                             <TextView
+                                android:textColor="@color/colorFontHitam"
                                 android:layout_margin="5dp"
-                                android:text="Itransit : "
+                                android:text="Itransit  "
                                 android:gravity="center"
-                                android:textStyle="bold"
-                                android:textSize="20dp"
+                                android:textStyle="normal"
+                                android:textSize="15dp"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content">
 
                             </TextView>
                             <TextView
+                                android:textColor="@color/colorFontHitam"
                                 android:layout_margin="5dp"
                                 android:text="0"
                                 android:gravity="center"
-                                android:textStyle="bold"
-                                android:textSize="20dp"
+                                android:textStyle="normal"
+                                android:textSize="15dp"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content">
 
@@ -160,20 +164,22 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content">
                             <TextView
+                                android:textColor="@color/colorFontHitam"
                                 android:text="Total Unit "
                                 android:gravity="center"
-                                android:textStyle="bold"
-                                android:textSize="20dp"
+                                android:textStyle="normal"
+                                android:textSize="15dp"
                                 android:layout_margin="5dp"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content">
 
                             </TextView>
                             <TextView
+                                android:textColor="@color/colorFontHitam"
                                 android:text="0"
                                 android:gravity="center"
-                                android:textStyle="bold"
-                                android:textSize="20dp"
+                                android:textStyle="normal"
+                                android:textSize="15dp"
                                 android:layout_margin="5dp"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content">
@@ -213,9 +219,10 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content">
                             <TextView
+                                android:textColor="@color/colorFontHitam"
                                 android:gravity="center"
-                                android:textStyle="bold"
-                                android:textSize="20dp"
+                                android:textStyle="normal"
+                                android:textSize="15dp"
                                 android:text="Installation"
                                 android:layout_margin="5dp"
                                 android:layout_width="match_parent"
@@ -223,9 +230,10 @@
 
                             </TextView>
                             <TextView
+                                android:textColor="@color/colorFontHitam"
                                 android:gravity="center"
-                                android:textStyle="bold"
-                                android:textSize="20dp"
+                                android:textStyle="normal"
+                                android:textSize="15dp"
                                 android:text="0"
                                 android:layout_margin="5dp"
                                 android:layout_width="match_parent"
@@ -255,9 +263,10 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content">
                             <TextView
+                                android:textColor="@color/colorFontHitam"
                                 android:gravity="center"
-                                android:textStyle="bold"
-                                android:textSize="20dp"
+                                android:textStyle="normal"
+                                android:textSize="15dp"
                                 android:text="Total Unit"
                                 android:layout_margin="5dp"
                                 android:layout_width="match_parent"
@@ -265,9 +274,10 @@
 
                             </TextView>
                             <TextView
+                                android:textColor="@color/colorFontHitam"
                                 android:gravity="center"
-                                android:textStyle="bold"
-                                android:textSize="20dp"
+                                android:textStyle="normal"
+                                android:textSize="15dp"
                                 android:text="0"
                                 android:layout_margin="5dp"
                                 android:layout_width="match_parent"
@@ -318,10 +328,13 @@
 
                     <com.google.android.material.floatingactionbutton.FloatingActionButton
                         android:layout_margin="20dp"
-                        android:layout_gravity="right"
+                        android:outlineSpotShadowColor="@color/colorButton"
                         android:id="@+id/fab_to_dropdown"
+                        android:outlineAmbientShadowColor="@color/colorButton"
+                        android:layout_gravity="right"
                         android:src="@drawable/ic_add_black_24dp"
                         android:background="#EA0808"
+                        app:rippleColor="@color/colorButton"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
 

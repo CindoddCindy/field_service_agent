@@ -679,6 +679,7 @@
 
         </androidx.cardview.widget.CardView>
         <androidx.cardview.widget.CardView
+            android:layout_weight="1"
             app:cardElevation="2dp"
             app:cardCornerRadius="2dp"
             app:cardUseCompatPadding="true"
@@ -765,7 +766,7 @@
 
                            <CheckBox
                                android:padding="5dp"
-                               android:background="#FA3737"
+                               android:textColor="@color/colorButton"
                                android:text="Submit Form"
                                android:layout_width="match_parent"
                                android:layout_height="wrap_content">

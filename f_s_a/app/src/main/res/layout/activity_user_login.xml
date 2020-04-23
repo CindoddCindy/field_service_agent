@@ -51,9 +51,11 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
                         <EditText
-                            android:textStyle="bold"
-                            android:textColor="#000"
-                            android:hint="Your Name"
+                            android:layout_margin="5dp"
+                            android:textSize="12dp"
+                            android:textStyle="normal"
+                            android:textColor="@color/colorFontHitam"
+                            android:text="Your Name"
                             android:padding="5dp"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content">
@@ -75,9 +77,11 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
                         <EditText
-                            android:textStyle="bold"
-                            android:textColor="#000"
-                            android:hint="Your Password"
+                            android:layout_margin="5dp"
+                            android:textSize="12dp"
+                            android:textStyle="normal"
+                            android:textColor="@color/colorFontHitam"
+                            android:text="Your Password"
                             android:padding="5dp"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content">
@@ -116,8 +120,8 @@
                 <Button
                     android:id="@+id/btn_login"
                     android:text="LOGIN"
-                    android:textColor="@color/colorFont"
-                    android:background="#F42727"
+                    android:textColor="@color/colorFontPutih"
+                    android:background="@color/colorButton"
                     android:layout_margin="15dp"
                     android:layout_marginTop="20dp"
                     android:gravity="center"
