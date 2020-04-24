@@ -95,11 +95,12 @@
                               app:cardUseCompatPadding="true"
                               android:layout_width="match_parent"
                               android:layout_height="wrap_content">
+
                               <ImageView
+                                  android:layout_width="95dp"
+                                  android:layout_height="100dp"
                                   android:layout_gravity="center"
-                                  android:src="@drawable/logo_ing"
-                                  android:layout_width="100dp"
-                                  android:layout_height="100dp">
+                                  android:src="@drawable/ic_photo_black_24dp">
 
                               </ImageView>
 
@@ -113,7 +114,7 @@
                               android:layout_height="wrap_content">
                               <ImageView
                                   android:layout_gravity="center"
-                                  android:src="@drawable/logo_ing"
+                                  android:src="@drawable/ic_photo_black_24dp"
                                   android:layout_width="100dp"
                                   android:layout_height="100dp">
 
@@ -144,7 +145,7 @@
                               android:layout_height="wrap_content">
                               <ImageView
                                   android:layout_gravity="center"
-                                  android:src="@drawable/logo_ing"
+                                  android:src="@drawable/ic_photo_black_24dp"
                                   android:layout_width="100dp"
                                   android:layout_height="100dp">
 
@@ -161,7 +162,7 @@
                               android:layout_height="wrap_content">
                               <ImageView
                                   android:layout_gravity="center"
-                                  android:src="@drawable/logo_ing"
+                                  android:src="@drawable/ic_photo_black_24dp"
                                   android:layout_width="100dp"
                                   android:layout_height="100dp">
 
@@ -177,7 +178,7 @@
                               android:layout_height="wrap_content">
                               <ImageView
                                   android:layout_gravity="center"
-                                  android:src="@drawable/logo_ing"
+                                  android:src="@drawable/ic_photo_black_24dp"
                                   android:layout_width="100dp"
                                   android:layout_height="100dp">
 
