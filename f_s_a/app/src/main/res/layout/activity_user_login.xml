@@ -1,144 +1,150 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".UserLogin">
+
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:layout_gravity="center"
-        android:orientation="vertical">
-        <androidx.cardview.widget.CardView
-            android:background="@color/cardview_shadow_end_color"
-            android:layout_margin="5dp"
-            app:cardElevation="2dp"
-            app:cardCornerRadius="2dp"
-            app:cardUseCompatPadding="true"
-            app:cardMaxElevation="2dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="25dp"
+        android:layout_marginLeft="25dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:layout_centerInParent="true">
+
+        <ImageView
+            android:id="@+id/ivTop"
+            android:src="@drawable/logo_ing"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="70dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="30dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Asset Management System"
+            android:gravity="center"
+            android:textColor="@color/colorPrimary"
+            android:textSize="14sp"
+            android:layout_marginBottom="20dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="24dp"
+            android:layout_marginBottom="60dp"
+            android:background="@drawable/bg_shadow"
+            android:orientation="vertical">
+
             <LinearLayout
-                android:background="@color/cardview_shadow_end_color"
-                android:padding="10dp"
-                android:layout_margin="5dp"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:orientation="vertical"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/box_form"
+                android:gravity="center_vertical">
+
                 <ImageView
-                    android:layout_gravity="center"
-                    android:src="@drawable/logo_ing"
-                    android:layout_width="120dp"
-                    android:layout_height="120dp">
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/ic_profile"
+                    android:tint="@color/colorPrimary"/>
 
-                </ImageView>
-
-                <androidx.cardview.widget.CardView
+                <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="5dp"
-                    app:cardElevation="2dp"
-                    app:cardCornerRadius="2dp"
-                    app:cardUseCompatPadding="true"
-                    app:cardMaxElevation="2dp">
-                    <com.google.android.material.textfield.TextInputLayout
-
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
-                        <EditText
-                            android:layout_margin="5dp"
-                            android:textSize="12dp"
-                            android:textStyle="normal"
-                            android:textColor="@color/colorFontHitam"
-                            android:text="Your Name"
-                            android:padding="5dp"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content">
-
-                        </EditText>
-                    </com.google.android.material.textfield.TextInputLayout>
-                </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="5dp"
-                    app:cardElevation="2dp"
-                    app:cardCornerRadius="2dp"
-                    app:cardUseCompatPadding="true"
-                    app:cardMaxElevation="2dp">
-                    <com.google.android.material.textfield.TextInputLayout
-
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
-                        <EditText
-                            android:layout_margin="5dp"
-                            android:textSize="12dp"
-                            android:textStyle="normal"
-                            android:textColor="@color/colorFontHitam"
-                            android:text="Your Password"
-                            android:padding="5dp"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content">
-
-                        </EditText>
-                    </com.google.android.material.textfield.TextInputLayout>
-                </androidx.cardview.widget.CardView>
-
-                <LinearLayout
-                    android:layout_marginTop="10dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    >
-                    <CheckBox
-                        android:layout_weight="1"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Remember Me"
-                        >
-
-                    </CheckBox>
-
-                    <TextView
-                        android:textColor="#3F51B5"
-                        android:layout_weight="1"
-                        android:gravity="right"
-                        android:text="Forgot Password"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
-
-                    </TextView>
-
-                </LinearLayout>
-
-                <Button
-                    android:id="@+id/btn_login"
-                    android:text="LOGIN"
-                    android:textColor="@color/colorFontPutih"
-                    android:background="@color/colorButton"
-                    android:layout_margin="15dp"
-                    android:layout_marginTop="20dp"
-                    android:gravity="center"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                </Button>
-
+                    android:paddingTop="5dp"
+                    android:paddingLeft="10dp"
+                    android:paddingBottom="5dp"
+                    android:inputType="textNoSuggestions"
+                    android:hint="username"
+                    android:textColorHint="@color/hint"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:textColor="@color/colorPrimary"
+                    android:background="@android:color/transparent"
+                    android:textSize="16sp"
+                    android:id="@+id/etUserName"
+                    android:digits="@string/digit_email"
+                    android:imeOptions="actionNext"/>
 
             </LinearLayout>
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/box_form"
+                android:gravity="center_vertical">
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/ic_key"
+                    android:tint="@color/colorPrimary"/>
 
-        </androidx.cardview.widget.CardView>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingLeft="10dp"
+                    android:paddingBottom="5dp"
+                    android:inputType="textPassword"
+                    android:hint="password"
+                    android:textColorHint="@color/hint"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:textColor="@color/colorPrimary"
+                    android:background="@android:color/transparent"
+                    android:textSize="16sp"
+                    android:id="@+id/etPassword"
+                    android:imeOptions="actionDone"/>
+            </LinearLayout>
 
+            <Button
+                android:id="@+id/btnLogin"
+                android:text="LOGIN"
+                style="@style/btn_default"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
+            </Button>
+
+        </LinearLayout>
 
     </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:orientation="horizontal">
 
-</LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimary"
+            android:layout_marginEnd="5dp"
+            android:textSize="12sp"
+            android:text="Ingenico AMS "
+            android:id="@+id/tvAppsName"
+            android:layout_marginRight="5dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/snack_red"
+            android:textSize="12sp"
+            android:id="@+id/tvAppsVersion"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

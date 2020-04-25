@@ -6,4 +6,28 @@
     <color name="colorFontPutih">#FDFCFD</color>
     <color name="colorFontHitam">#070007</color>
     <color name="colorButton">#BD0606</color>
+
+
+    <color name="color_background">#eee</color>
+    <color name="color_header">#ddd</color>
+    <color name="snack_black">#1a1a1a</color>
+    <color name="snack_blue">#2885e5</color>
+    <color name="blue_01">#00a5ba</color>
+    <color name="blue_01_press">#028ea0</color>
+    <color name="snack_red">#ef4036</color>
+
+    <color name="cream">#F0F0F0</color>
+    <color name="hint">#ccc</color>
+    <color name="transparan">#00ffffff</color>
+
+    <color name="color_default">#333</color>
+    <color name="color_default_press">#555</color>
+    <color name="color_gray">#aaa</color>
+    <color name="color_divider">#ccc</color>
+    <color name="color_gray_press">#999</color>
+    <color name="color_white">#fff</color>
+    <color name="color_green">#5cb85c</color>
+    <color name="color_red">#cce60d18</color>
+    <color name="color_red_press">#eee60d18</color>
+
 </resources>

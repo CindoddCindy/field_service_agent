@@ -7,19 +7,7 @@
         android:icon="@drawable/ic_dashboard_black_24dp"
         android:title="Task"
         app:showAsAction="ifRoom" />
-    <item
-        android:id="@+id/in_transit"
-        android:enabled="true"
-        android:icon="@drawable/ic_file_download_black_24dp"
-        android:title="In transit"
-        app:showAsAction="ifRoom" />
-    <item
-        android:id="@+id/installation"
-        android:enabled="true"
-        android:icon="@drawable/ic_build_black_24dp"
-        android:title="Installation"
-        app:showAsAction="ifRoom" />
-    <item
+        <item
         android:id="@+id/user_profile"
         android:enabled="true"
         android:icon="@drawable/ic_person_black_24dp"

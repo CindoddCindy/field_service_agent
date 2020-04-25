@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
+import com.ingenicomovement.fieldserviceagent.BottomNavDua;
 import com.ingenicomovement.fieldserviceagent.DataKerja;
 import com.ingenicomovement.fieldserviceagent.R;
 
@@ -35,7 +36,7 @@ public class Dashboard extends Fragment {
         imageView_shope.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), DataKerja.class);
+                Intent intent = new Intent(getActivity(), BottomNavDua.class);
                 startActivity(intent);
             }
         });

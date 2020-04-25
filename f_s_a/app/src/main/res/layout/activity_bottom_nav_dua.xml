@@ -19,6 +19,8 @@
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
 
+        android:backgroundTint="@color/color_red"
+        android:backgroundTintMode="add"
         android:id="@+id/bottomNavigationViewdua"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

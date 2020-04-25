@@ -40,13 +40,6 @@ public class BottomNav extends AppCompatActivity {
                         fragment = new Dashboard();
                         break;
 
-                    case R.id.in_transit:
-                        fragment = new Intransit();
-                        break;
-
-                    case R.id.installation:
-                        fragment = new Installation();
-                        break;
 
                     case R.id.user_profile:
                         fragment = new Profile();

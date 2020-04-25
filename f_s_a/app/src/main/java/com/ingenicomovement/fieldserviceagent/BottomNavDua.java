@@ -51,6 +51,11 @@ public class BottomNavDua extends AppCompatActivity {
                         fragment = new Bulan();
                         break;
 
+                    case R.id.profile:
+                        fragment = new Profile();
+                        break;
+
+
 
                 }
                 return getFragmentPage(fragment);

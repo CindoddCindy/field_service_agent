@@ -9,6 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".SelectMenu"></activity>
         <activity android:name=".BottomNavDua" />
         <activity android:name=".UserInputDropDown" />
         <activity android:name=".DataKerja" />

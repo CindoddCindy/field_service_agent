@@ -5,24 +5,22 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
+import android.widget.ImageView;
 
-public class UserLogin extends AppCompatActivity {
+public class SelectMenu extends AppCompatActivity {
 
-    public Button button_login;
+    public ImageView imageView_shopee;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_user_login);
-        button_login=findViewById(R.id.btnLogin);
-        button_login.setOnClickListener(new View.OnClickListener() {
+        setContentView(R.layout.activity_select_menu);
+        imageView_shopee=findViewById(R.id.shope_click);
+        imageView_shopee.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(UserLogin.this, SelectMenu.class);
-
+                Intent intent= new Intent(SelectMenu.this,BottomNavDua.class);
                 startActivity(intent);
-                finish();
             }
         });
     }

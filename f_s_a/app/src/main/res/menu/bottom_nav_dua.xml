@@ -2,20 +2,35 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
+        android:icon="@drawable/ic_first_page_black_24dp"
+        android:visible="true"
         android:id="@+id/day"
         android:enabled="true"
-        android:title="Hari"
+        android:title="Perolehan"
         app:showAsAction="ifRoom" />
     <item
+        android:icon="@drawable/ic_keyboard_arrow_down_black_24dp"
+        android:visible="true"
         android:id="@+id/week"
         android:enabled="true"
-        android:title="Minggu"
+        android:title="Done"
         app:showAsAction="ifRoom" />
     <item
+        android:icon="@drawable/ic_done_black_24dp"
+        android:visible="true"
         android:id="@+id/month"
         android:enabled="true"
-        android:title="Bulan"
+        android:title="In Progress"
         app:showAsAction="ifRoom" />
+
+    <item
+        android:icon="@drawable/ic_profile"
+        android:visible="true"
+        android:id="@+id/profile"
+        android:enabled="true"
+        android:title="Profile"
+        app:showAsAction="ifRoom" />
+
 
 
 
