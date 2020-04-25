@@ -35,7 +35,6 @@ public class DataKerja extends AppCompatActivity {
                 Intent intent = new Intent(DataKerja.this,BottomNavDua.class);
 
                 startActivity(intent);
-                finish();
 
             }
         });
