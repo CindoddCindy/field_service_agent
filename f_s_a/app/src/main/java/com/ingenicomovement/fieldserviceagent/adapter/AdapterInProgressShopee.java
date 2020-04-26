@@ -64,6 +64,22 @@ public class AdapterInProgressShopee  extends RecyclerView.Adapter<AdapterInProg
                 bundle.putString("work_type",dataItem.getWorkType());
                 bundle.putString("tid",dataItem.getTid());
                 bundle.putString("tid_cimb",dataItem.getTidCimb());
+                bundle.putString("mid",dataItem.getMid());
+                bundle.putString("mer_name",dataItem.getMerchantName());
+                bundle.putString("mer_add",dataItem.getMerchantAddress());
+                bundle.putString("mer_add_dua",dataItem.getMerchantAddress2());
+                bundle.putString("post_code",dataItem.getPostalCode());
+                bundle.putString("city",dataItem.getCity());
+                bundle.putString("pict_name",dataItem.getPicName());
+                bundle.putString("pict_numb",dataItem.getPicNumber());
+                bundle.putString("note",dataItem.getNote());
+                bundle.putString("damage",dataItem.getDamageType());
+                bundle.putString("init_code",dataItem.getInitCode());
+                bundle.putString("sla",dataItem.getSla());
+                bundle.putString("ssn_edc",dataItem.getSnEdc());
+                bundle.putString("ssn_sim",dataItem.getSnSim());
+                bundle.putString("assign_to_date",dataItem.getAssignToDate());
+                bundle.putString("assign_to_status",dataItem.getAssignToStatus());
 
 
 

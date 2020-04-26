@@ -22,8 +22,8 @@ public class UserInputDropDown extends AppCompatActivity {
     public TextView textView_satu, textView_dua, textView_tiga, textView_empat, textView_lima,
     textView_enam, textView_tujuh, textView_delapan, textView_sembilan, textView_sepuluh,
     textView_sebelas, textView_duabelas, textView_tigabelas, textView_empatbelas, textView_lima_belas,
-    textView_enambelas, textView_tujuhbelas, textView_delapan_belas, getTextView_sembilanbelas, textView_duapuluh,
-    textView_duapuluhsatu, textView_duapuluhdua, textView_duapuluh_tiga, textView_dua_puluhemapt, textView_duapuluhlima,
+    textView_enambelas, textView_tujuhbelas, textView_delapan_belas, textView_sembilanbelas, textView_duapuluh,
+    textView_duapuluhsatu, textView_duapuluhdua, textView_duapuluh_tiga, textView_dua_puluhempat, textView_duapuluhlima,
     textView_duapuluhenam, textView_duapuluhtujuh, textView_duapuluhdelapaan;
 
 
@@ -43,6 +43,23 @@ public class UserInputDropDown extends AppCompatActivity {
         textView_sepuluh=findViewById(R.id.shope_detail_work_type);
         textView_sebelas=findViewById(R.id.shopee_detail_tid);
         textView_duabelas=findViewById(R.id.shopee_detail_tid_cimb);
+        textView_tigabelas=findViewById(R.id.shopee_detail_mid);
+        textView_empatbelas=findViewById(R.id.shopee_detail_merchant_name);
+        textView_lima_belas=findViewById(R.id.shopee_detail_merc_adres);
+        textView_enambelas=findViewById(R.id.shopee_detail_addres_mrchnt_dua);
+        textView_tujuhbelas=findViewById(R.id.shopee_detail_post_code);
+        textView_delapan_belas=findViewById(R.id.shopee_detail_city);
+        textView_sembilanbelas=findViewById(R.id.shopee_detail_pict_name);
+        textView_duapuluh=findViewById(R.id.shopee_detail_pic_numb);
+        textView_duapuluhsatu=findViewById(R.id.shope_deail_note);
+        textView_duapuluhdua=findViewById(R.id.shoope_detail_damage_type);
+        textView_duapuluh_tiga=findViewById(R.id.shope_detail_init_code);
+        textView_dua_puluhempat=findViewById(R.id.shope_detail_sla);
+        textView_duapuluhlima=findViewById(R.id.shope_detail_ssn_edc);
+        textView_duapuluhenam=findViewById(R.id.shope_detail_ssn_sim);
+        textView_duapuluhtujuh=findViewById(R.id.shope_detail_assign_to_date);
+        textView_duapuluhdelapaan=findViewById(R.id.shope_detail_assign_to_status);
+
 
         getDetailItem();
     }
@@ -66,6 +83,22 @@ public class UserInputDropDown extends AppCompatActivity {
             textView_sepuluh.setText(bundle.getString("work_type"));
             textView_sebelas.setText(bundle.getString("tid"));
             textView_duabelas.setText(bundle.getString("tid_cimb"));
+            textView_tigabelas.setText(bundle.getString("mid"));
+            textView_empatbelas.setText(bundle.getString("mer_name"));
+            textView_lima_belas.setText(bundle.getString("mer_add"));
+            textView_enambelas.setText(bundle.getString("mer_add_dua"));
+            textView_tujuhbelas.setText(bundle.getString("post_code"));
+            textView_delapan_belas.setText(bundle.getString("city"));
+            textView_sembilanbelas.setText(bundle.getString("pict_name"));
+            textView_duapuluh.setText(bundle.getString("pict_numb"));
+            textView_duapuluhsatu.setText(bundle.getString("note"));
+            textView_duapuluhdua.setText(bundle.getString("damage"));
+            textView_duapuluh_tiga.setText(bundle.getString("init_code"));
+            textView_dua_puluhempat.setText(bundle.getString("sla"));
+            textView_duapuluhlima.setText(bundle.getString("ssn_edc"));
+            textView_duapuluhenam.setText(bundle.getString("ssn_sim"));
+            textView_duapuluhtujuh.setText(bundle.getString("assign_to_date"));
+            textView_duapuluhdelapaan.setText(bundle.getString("assign_to_status"));
 
         }
 
