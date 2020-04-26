@@ -170,6 +170,7 @@
                             </TextView>
 
                             <TextView
+                                android:id="@+id/shopee_ticket_receive"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text=" Ticket Receive"
@@ -219,7 +220,7 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:id="@+id/shopee_datail_bank"
+                                android:id="@+id/shopee_datail_banks"
                                 android:text="Bank "
                                 android:gravity="left"
                                 android:textStyle="normal"
@@ -266,7 +267,7 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:id="@+id/shopee_detail_bank"
+                                android:id="@+id/shopee_detail_bank_sajah"
                                 android:text="Bank "
                                 android:gravity="left"
                                 android:textStyle="normal"
@@ -357,6 +358,7 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:id="@+id/shope_contract_number"
                                 android:text="Contract Number"
                                 android:gravity="left"
                                 android:textStyle="normal"
