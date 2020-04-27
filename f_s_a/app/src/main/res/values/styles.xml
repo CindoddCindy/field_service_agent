@@ -3,9 +3,9 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorButton</item>
-        <item name="colorPrimaryDark">@color/colorButton</item>
-        <item name="colorAccent">@color/colorButton</item>
+        <item name="colorPrimary">@color/color_red</item>
+        <item name="colorPrimaryDark">@color/color_header</item>
+        <item name="colorAccent">@color/color_red_press</item>
     </style>
 
     <style name="btn_default">

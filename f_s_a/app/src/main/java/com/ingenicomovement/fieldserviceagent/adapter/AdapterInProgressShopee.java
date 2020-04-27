@@ -42,9 +42,9 @@ public class AdapterInProgressShopee  extends RecyclerView.Adapter<AdapterInProg
     public void onBindViewHolder(@NonNull AdapterChild holder, int position) {
         final  DataItem dataItem = dataItemList.get(position);
 
-        holder.textView_merchantName.setText(dataItem.getId());
-        holder.textView_merchantAdress.setText(dataItem.getImportDate());
-        holder.textView_merchantBank.setText(dataItem.getBank());
+        holder.textView_merchantName.setText(dataItem.getBank());
+        holder.textView_merchantAdress.setText(dataItem.getId());
+        holder.textView_merchantBank.setText(dataItem.getNote());
 
         holder.cardView_onClik_detail.setOnClickListener(new View.OnClickListener() {
             @Override

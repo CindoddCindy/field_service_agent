@@ -49,6 +49,7 @@
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
                         <androidx.cardview.widget.CardView
+                            android:padding="5dp"
                             android:layout_margin="10dp"
                             android:layout_weight="1"
                             android:layout_width="match_parent"
@@ -83,6 +84,7 @@
                                 </ImageView>
 
                                 <TextView
+                                    android:id="@+id/tv_userName_perdata"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_margin="5dp"
@@ -113,7 +115,8 @@
                         app:cardUseCompatPadding="true"
                         app:cardCornerRadius="2dp"
                         app:cardElevation="2dp"
-                        android:layout_margin="10dp"
+                        android:layout_margin="5dp"
+                        android:padding="5dp"
                         android:layout_weight="1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
@@ -123,7 +126,7 @@
                             android:layout_height="wrap_content">
 
                             <TextView
-
+                                android:padding="5dp"
                                 android:textColor="@color/colorFontHitam"
                                 android:layout_margin="5dp"
                                 android:text=" Perolehan "
@@ -160,6 +163,7 @@
                                             android:layout_height="wrap_content"
                                             android:orientation="vertical">
                                             <TextView
+                                                android:padding="3dp"
                                                 android:layout_width="match_parent"
                                                 android:layout_height="wrap_content"
                                                 android:layout_margin="5dp"
@@ -171,6 +175,8 @@
 
                                             </TextView>
                                             <TextView
+                                                android:padding="5dp"
+                                                android:id="@+id/tv_per_day"
                                                 android:textColor="@color/colorFontHitam"
                                                 android:layout_margin="5dp"
                                                 android:text="0"
@@ -212,6 +218,7 @@
                                             android:layout_height="wrap_content"
                                             android:orientation="vertical">
                                             <TextView
+                                                android:padding="3dp"
                                                 android:textColor="@color/colorFontHitam"
                                                 android:layout_margin="5dp"
                                                 android:text=" Minggu "
@@ -223,7 +230,9 @@
 
                                             </TextView>
                                             <TextView
+                                                android:id="@+id/tv_per_week"
                                                 android:textColor="@color/colorFontHitam"
+                                                android:padding="5dp"
                                                 android:layout_margin="5dp"
                                                 android:text="0"
                                                 android:gravity="center"
@@ -267,6 +276,7 @@
                                                 android:layout_margin="5dp"
                                                 android:text=" Bulan"
                                                 android:gravity="center"
+                                                android:padding="3dp"
                                                 android:textStyle="normal"
                                                 android:textSize="15dp"
                                                 android:layout_width="match_parent"
@@ -274,8 +284,10 @@
 
                                             </TextView>
                                             <TextView
+                                                android:id="@+id/tv_per_month"
                                                 android:textColor="@color/colorFontHitam"
                                                 android:layout_margin="5dp"
+                                                android:padding="5dp"
                                                 android:text="0"
                                                 android:gravity="center"
                                                 android:textStyle="normal"
@@ -339,32 +351,6 @@
                 android:layout_height="match_parent"
                 android:orientation="vertical"
                 >
-
-
-                <LinearLayout
-                    android:gravity="bottom"
-                    android:layout_gravity="bottom"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    >
-
-                    <com.google.android.material.floatingactionbutton.FloatingActionButton
-                        android:layout_margin="20dp"
-                        android:outlineSpotShadowColor="@color/colorButton"
-                        android:id="@+id/fab_to_dropdown"
-                        android:outlineAmbientShadowColor="@color/colorButton"
-                        android:layout_gravity="right"
-                        android:src="@drawable/ic_add_black_24dp"
-                        android:background="#EA0808"
-                        app:rippleColor="@color/colorButton"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
-
-                    </com.google.android.material.floatingactionbutton.FloatingActionButton>
-
-
-                </LinearLayout>
 
 
 

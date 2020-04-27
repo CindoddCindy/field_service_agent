@@ -9,10 +9,7 @@ import android.view.MenuItem;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.ingenicomovement.fieldserviceagent.fragment.Bulan;
-import com.ingenicomovement.fieldserviceagent.fragment.Dashboard;
 import com.ingenicomovement.fieldserviceagent.fragment.Hari;
-import com.ingenicomovement.fieldserviceagent.fragment.Installation;
-import com.ingenicomovement.fieldserviceagent.fragment.Intransit;
 import com.ingenicomovement.fieldserviceagent.fragment.Minggu;
 import com.ingenicomovement.fieldserviceagent.fragment.Profile;
 

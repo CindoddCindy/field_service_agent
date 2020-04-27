@@ -10,10 +10,12 @@
 
     <TextView
         android:gravity="center"
+        android:textStyle="italic"
+        android:textColor="@color/colorFontHitam"
         android:textSize="15dp"
-        android:text="Data In Progress  Bulan Ini  : Tanggal"
-        android:layout_margin="20dp"
-        android:padding="10dp"
+        android:text="Data done"
+        android:layout_margin="5dp"
+        android:padding="5dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
