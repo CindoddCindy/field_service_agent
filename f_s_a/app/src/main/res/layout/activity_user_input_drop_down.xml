@@ -38,40 +38,86 @@
 
                 </LinearLayout>
 
+
+
                 <LinearLayout
                     android:orientation="vertical"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
-                   <androidx.cardview.widget.CardView
+
+                    <androidx.cardview.widget.CardView
+                        app:cardElevation="2dp"
+                        app:cardCornerRadius="2dp"
+                        app:cardUseCompatPadding="true"
+                        app:cardMaxElevation="2dp"
+                        android:layout_width="match_parent"
+                        android:layout_margin="5dp"
+                        android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+
+                            <TextView
+
+
+                                android:background="@color/primary"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text=" Detail Data"
+                                android:gravity="center"
+                                android:textStyle="bold"
+                                android:textSize="15dp"
+                                android:layout_margin="10dp"
+                                android:padding="10dp"
+                                android:textColor="@color/colorFontPutih"
+                                >
+
+                            </TextView>
+
+
+
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+
+
+
+                    <androidx.cardview.widget.CardView
                        app:cardElevation="2dp"
                        app:cardCornerRadius="2dp"
                        app:cardUseCompatPadding="true"
                        app:cardMaxElevation="2dp"
                        android:layout_width="match_parent"
-                       android:layout_margin="10dp"
+                       android:layout_margin="5dp"
                        android:layout_height="wrap_content">
                        <LinearLayout
                            android:layout_width="match_parent"
-                           android:layout_height="wrap_content"
-                           android:orientation="vertical">
+                           android:layout_height="match_parent"
+                           android:orientation="horizontal">
 
 
                            <TextView
-                               android:background="#E4E4E4"
-                               android:layout_width="match_parent"
+                               android:layout_weight="1"
+                               android:background="@color/cardview_shadow_end_color"
+                               android:layout_width="200dp"
                                android:layout_height="wrap_content"
                                android:text="ID"
-                               android:gravity="left"
+                               android:gravity="center"
                                android:textStyle="bold"
                                android:textSize="15dp"
-                               android:layout_margin="10dp"
+                               android:layout_margin="5dp"
                                android:padding="5dp"
                                android:textColor="#000"
                                >
 
                            </TextView>
                            <TextView
+                               android:layout_weight="1"
                                android:id="@+id/shoope_detail_id"
                                android:layout_width="match_parent"
                                android:layout_height="wrap_content"
@@ -79,8 +125,9 @@
                                android:layout_marginLeft="10dp"
                                android:textStyle="normal"
                                android:textSize="15dp"
-                               android:layout_margin="10dp"
+                               android:layout_margin="5dp"
                                android:padding="5dp"
+                               android:gravity="left"
                                android:textColor="#000"
                                >
 
@@ -104,23 +151,25 @@
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:orientation="vertical">
+                            android:orientation="horizontal">
 
                             <TextView
-                                android:background="#E4E4E4"
-                                android:layout_width="match_parent"
+                                android:layout_weight="1"
+                                android:background="@color/cardview_shadow_end_color"
+                                android:layout_width="200dp"
                                 android:layout_height="wrap_content"
                                 android:text="Import Date"
-                                android:gravity="left"
+                                android:gravity="center"
                                 android:textStyle="bold"
                                 android:textSize="15dp"
-                                android:layout_margin="10dp"
+                                android:layout_margin="5dp"
                                 android:padding="5dp"
                                 android:textColor="#000"
                                 >
 
                             </TextView>
                             <TextView
+                                android:layout_weight="1"
                                 android:id="@+id/shopee_detail_iport_date"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -128,7 +177,7 @@
                                 android:gravity="left"
                                 android:textStyle="normal"
                                 android:textSize="15dp"
-                                android:layout_margin="10dp"
+                                android:layout_margin="5dp"
                                 android:padding="5dp"
                                 android:textColor="#000"
                                 >
@@ -153,18 +202,19 @@
                         android:layout_height="wrap_content">
 
                         <LinearLayout
-                            android:orientation="vertical"
+                            android:orientation="horizontal"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content">
 
                             <TextView
-                                android:layout_width="321dp"
+                                android:layout_weight="1"
+                                android:layout_width="200dp"
                                 android:layout_height="wrap_content"
-                                android:layout_margin="10dp"
-                                android:background="#E4E4E4"
-                                android:gravity="left"
+                                android:layout_margin="5dp"
+                                android:background="@color/cardview_shadow_end_color"
+                                android:gravity="center"
                                 android:padding="5dp"
-                                android:text="Import Ticker Receive"
+                                android:text="Ticket Receive"
                                 android:textColor="#000"
                                 android:textSize="15dp"
                                 android:textStyle="bold">
@@ -172,6 +222,7 @@
                             </TextView>
 
                             <TextView
+                                android:layout_weight="1"
                                 android:id="@+id/shopee_ticket_receive"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -179,7 +230,7 @@
                                 android:gravity="left"
                                 android:textStyle="normal"
                                 android:textSize="15dp"
-                                android:layout_margin="10dp"
+                                android:layout_margin="5dp"
                                 android:padding="5dp"
                                 android:textColor="#000"
                                 >
@@ -203,23 +254,25 @@
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:orientation="vertical">
+                            android:orientation="horizontal">
 
                             <TextView
-                                android:background="#E4E4E4"
-                                android:layout_width="match_parent"
+                                android:layout_weight="1"
+                                android:background="@color/cardview_shadow_end_color"
+                                android:layout_width="200dp"
                                 android:layout_height="wrap_content"
                                 android:text=" Import Bank "
-                                android:gravity="left"
+                                android:gravity="center"
                                 android:textStyle="bold"
                                 android:textSize="15dp"
-                                android:layout_margin="10dp"
+                                android:layout_margin="5dp"
                                 android:padding="5dp"
                                 android:textColor="#000"
                                 >
 
                             </TextView>
                             <TextView
+                                android:layout_weight="1"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:id="@+id/shopee_datail_banks"
@@ -227,7 +280,7 @@
                                 android:gravity="left"
                                 android:textStyle="normal"
                                 android:textSize="15dp"
-                                android:layout_margin="10dp"
+                                android:layout_margin="5dp"
                                 android:padding="5dp"
                                 android:textColor="#000"
                                 >
@@ -251,22 +304,24 @@
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:orientation="vertical">
+                            android:orientation="horizontal">
                             <TextView
-                                android:background="#E4E4E4"
-                                android:layout_width="match_parent"
+                                android:layout_weight="1"
+                                android:background="@color/cardview_shadow_end_color"
+                                android:layout_width="200dp"
                                 android:layout_height="wrap_content"
                                 android:text="Bank "
-                                android:gravity="left"
+                                android:gravity="center"
                                 android:textStyle="bold"
                                 android:textSize="15dp"
-                                android:layout_margin="10dp"
+                                android:layout_margin="5dp"
                                 android:padding="5dp"
                                 android:textColor="#000"
                                 >
 
                             </TextView>
                             <TextView
+                                android:layout_weight="1"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:id="@+id/shopee_detail_bank_sajah"
@@ -274,7 +329,7 @@
                                 android:gravity="left"
                                 android:textStyle="normal"
                                 android:textSize="15dp"
-                                android:layout_margin="10dp"
+                                android:layout_margin="5dp"
                                 android:padding="5dp"
                                 android:textColor="#000"
                                 >
@@ -296,22 +351,24 @@
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:orientation="vertical">
+                            android:orientation="horizontal">
                             <TextView
-                                android:background="#E4E4E4"
-                                android:layout_width="match_parent"
+                                android:layout_weight="1"
+                                android:background="@color/cardview_shadow_end_color"
+                                android:layout_width="200dp"
                                 android:layout_height="wrap_content"
                                 android:text="Case"
-                                android:gravity="left"
+                                android:gravity="center"
                                 android:textStyle="bold"
                                 android:textSize="15dp"
-                                android:layout_margin="10dp"
+                                android:layout_margin="5dp"
                                 android:padding="5dp"
                                 android:textColor="#000"
                                 >
 
                             </TextView>
                             <TextView
+                                android:layout_weight="1"
                                 android:id="@+id/shopee_detail_case"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -319,7 +376,7 @@
                                 android:gravity="left"
                                 android:textStyle="normal"
                                 android:textSize="15dp"
-                                android:layout_margin="10dp"
+                                android:layout_margin="5dp"
                                 android:padding="5dp"
                                 android:textColor="#000"
                                 >
@@ -343,14 +400,15 @@
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:orientation="vertical">
+                            android:orientation="horizontal">
 
                             <TextView
-                                android:layout_width="match_parent"
+                                android:layout_weight="1"
+                                android:layout_width="200dp"
                                 android:layout_height="wrap_content"
-                                android:layout_margin="10dp"
-                                android:background="#E4E4E4"
-                                android:gravity="left"
+                                android:layout_margin="5dp"
+                                android:background="@color/cardview_shadow_end_color"
+                                android:gravity="center"
                                 android:padding="5dp"
                                 android:text="Contract Number"
                                 android:textColor="#000"
@@ -360,10 +418,11 @@
                             </TextView>
 
                             <TextView
+                                android:layout_weight="1"
                                 android:id="@+id/shope_contract_number"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_margin="10dp"
+                                android:layout_margin="5dp"
                                 android:gravity="left"
                                 android:padding="5dp"
                                 android:text="Contract Number"
@@ -389,22 +448,24 @@
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:orientation="vertical">
+                            android:orientation="horizontal">
                             <TextView
-                                android:background="#E4E4E4"
-                                android:layout_width="match_parent"
+                                android:layout_weight="1"
+                                android:background="@color/cardview_shadow_end_color"
+                                android:layout_width="200dp"
                                 android:layout_height="wrap_content"
                                 android:text=" Ticket Number"
-                                android:gravity="left"
+                                android:gravity="center"
                                 android:textStyle="bold"
                                 android:textSize="15dp"
-                                android:layout_margin="10dp"
+                                android:layout_margin="5dp"
                                 android:padding="5dp"
                                 android:textColor="#000"
                                 >
 
                             </TextView>
                             <TextView
+                                android:layout_weight="1"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:id="@+id/shope_detail_ticket_number"
@@ -412,7 +473,7 @@
                                 android:gravity="left"
                                 android:textStyle="normal"
                                 android:textSize="15dp"
-                                android:layout_margin="10dp"
+                                android:layout_margin="5dp"
                                 android:padding="5dp"
                                 android:textColor="#000"
                                 >
@@ -432,24 +493,26 @@
                         android:layout_margin="10dp"
                         android:layout_height="wrap_content">
                         <LinearLayout
-                            android:orientation="vertical"
+                            android:orientation="horizontal"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content">
                             <TextView
-                                android:background="#E4E4E4"
-                                android:layout_width="match_parent"
+                                android:layout_weight="1"
+                                android:background="@color/cardview_shadow_end_color"
+                                android:layout_width="200dp"
                                 android:layout_height="wrap_content"
                                 android:text="SPK Number"
-                                android:gravity="left"
+                                android:gravity="center"
                                 android:textStyle="bold"
                                 android:textSize="15dp"
-                                android:layout_margin="10dp"
+                                android:layout_margin="5dp"
                                 android:padding="5dp"
                                 android:textColor="#000"
                                 >
 
                             </TextView>
                             <TextView
+                                android:layout_weight="1"
                                 android:id="@+id/shope_detail_spk_number"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -457,7 +520,7 @@
                                 android:gravity="left"
                                 android:textStyle="bold"
                                 android:textSize="15dp"
-                                android:layout_margin="10dp"
+                                android:layout_margin="5dp"
                                 android:padding="5dp"
                                 android:textColor="#000"
                                 >
@@ -479,16 +542,17 @@
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:orientation="vertical">
+                            android:orientation="horizontal">
                             <TextView
+                                android:layout_weight="1"
                                 android:background="@color/color_abu_abu"
-                                android:layout_width="match_parent"
+                                android:layout_width="200dp"
                                 android:layout_height="wrap_content"
                                 android:text="Work Type"
-                                android:gravity="left"
+                                android:gravity="center"
                                 android:textStyle="bold"
                                 android:textSize="15dp"
-                                android:layout_margin="10dp"
+                                android:layout_margin="5dp"
                                 android:padding="5dp"
                                 android:textColor="#000"
                                 >
@@ -496,6 +560,7 @@
                             </TextView>
 
                             <TextView
+                                android:layout_weight="1"
                                 android:id="@+id/shope_detail_work_type"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -503,7 +568,7 @@
                                 android:gravity="left"
                                 android:textStyle="normal"
                                 android:textSize="15dp"
-                                android:layout_margin="10dp"
+                                android:layout_margin="5dp"
                                 android:padding="5dp"
                                 android:textColor="#000"
                                 >
@@ -527,23 +592,25 @@
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:orientation="vertical">
+                            android:orientation="horizontal">
 
                             <TextView
-                                android:layout_width="match_parent"
+                                android:layout_weight="1"
+                                android:layout_width="200dp"
                                 android:layout_height="wrap_content"
                                 android:background="@color/color_abu_abu"
                                 android:text="TID"
-                                android:gravity="left"
+                                android:gravity="center"
                                 android:textStyle="bold"
                                 android:textSize="15dp"
-                                android:layout_margin="10dp"
+                                android:layout_margin="5dp"
                                 android:padding="5dp"
                                 android:textColor="#000"
                                 >
 
                             </TextView>
                             <TextView
+                                android:layout_weight="1"
                                 android:id="@+id/shopee_detail_tid"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -551,7 +618,7 @@
                                 android:gravity="left"
                                 android:textStyle="normal"
                                 android:textSize="15dp"
-                                android:layout_margin="10dp"
+                                android:layout_margin="5dp"
                                 android:padding="5dp"
                                 android:textColor="#000"
                                 >
@@ -573,23 +640,25 @@
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:orientation="vertical">
+                            android:orientation="horizontal">
 
                             <TextView
-                                android:layout_width="match_parent"
+                                android:layout_weight="1"
+                                android:layout_width="200dp"
                                 android:layout_height="wrap_content"
                                 android:background="@color/color_abu_abu"
                                 android:text="TID/CIMB"
-                                android:gravity="left"
+                                android:gravity="center"
                                 android:textStyle="bold"
                                 android:textSize="15dp"
-                                android:layout_margin="10dp"
+                                android:layout_margin="5dp"
                                 android:padding="5dp"
                                 android:textColor="#000"
                                 >
 
                             </TextView>
                             <TextView
+                                android:layout_weight="1"
                                 android:id="@+id/shopee_detail_tid_cimb"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -597,7 +666,7 @@
                                 android:gravity="left"
                                 android:textStyle="normal"
                                 android:textSize="15dp"
-                                android:layout_margin="10dp"
+                                android:layout_margin="5dp"
                                 android:padding="5dp"
                                 android:textColor="#000"
                                 >
@@ -619,22 +688,24 @@
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:orientation="vertical">
+                            android:orientation="horizontal">
                             <TextView
+                                android:layout_weight="1"
                                 android:background="@color/color_abu_abu"
-                                android:layout_width="match_parent"
+                                android:layout_width="200dp"
                                 android:layout_height="wrap_content"
                                 android:text="MID"
-                                android:gravity="left"
+                                android:gravity="center"
                                 android:textStyle="bold"
                                 android:textSize="15dp"
-                                android:layout_margin="10dp"
+                                android:layout_margin="5dp"
                                 android:padding="5dp"
                                 android:textColor="#000"
                                 >
 
                             </TextView>
                             <TextView
+                                android:layout_weight="1"
                                 android:id="@+id/shopee_detail_mid"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -642,7 +713,7 @@
                                 android:gravity="left"
                                 android:textStyle="normal"
                                 android:textSize="15dp"
-                                android:layout_margin="10dp"
+                                android:layout_margin="5dp"
                                 android:padding="5dp"
                                 android:textColor="#000"
                                 >
@@ -664,22 +735,24 @@
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:orientation="vertical">
+                            android:orientation="horizontal">
                             <TextView
+                                android:layout_weight="1"
                                 android:background="@color/color_abu_abu"
-                                android:layout_width="match_parent"
+                                android:layout_width="200dp"
                                 android:layout_height="wrap_content"
                                 android:text=" Merchant Name"
-                                android:gravity="left"
+                                android:gravity="center"
                                 android:textStyle="bold"
                                 android:textSize="15dp"
-                                android:layout_margin="10dp"
+                                android:layout_margin="5dp"
                                 android:padding="5dp"
                                 android:textColor="#000"
                                 >
 
                             </TextView>
                             <TextView
+                                android:layout_weight="1"
                                 android:id="@+id/shopee_detail_merchant_name"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -687,7 +760,7 @@
                                 android:gravity="left"
                                 android:textStyle="normal"
                                 android:textSize="15dp"
-                                android:layout_margin="10dp"
+                                android:layout_margin="5dp"
                                 android:padding="5dp"
                                 android:textColor="#000"
                                 >
@@ -709,22 +782,24 @@
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:orientation="vertical">
+                            android:orientation="horizontal">
                             <TextView
-                                android:layout_width="match_parent"
+                                android:layout_weight="1"
+                                android:layout_width="200dp"
                                 android:layout_height="wrap_content"
                                 android:background="@color/color_abu_abu"
                                 android:text=" Merchant Adress"
-                                android:gravity="left"
+                                android:gravity="center"
                                 android:textStyle="bold"
                                 android:textSize="15dp"
-                                android:layout_margin="10dp"
+                                android:layout_margin="5dp"
                                 android:padding="5dp"
                                 android:textColor="#000"
                                 >
 
                             </TextView>
                             <TextView
+                                android:layout_weight="1"
                                 android:id="@+id/shopee_detail_merc_adres"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -732,7 +807,7 @@
                                 android:gravity="left"
                                 android:textStyle="normal"
                                 android:textSize="15dp"
-                                android:layout_margin="10dp"
+                                android:layout_margin="5dp"
                                 android:padding="5dp"
                                 android:textColor="#000"
                                 >
@@ -754,22 +829,24 @@
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:orientation="vertical">
+                            android:orientation="horizontal">
                             <TextView
+                                android:layout_weight="1"
                                 android:background="@color/color_abu_abu"
-                                android:layout_width="match_parent"
+                                android:layout_width="200dp"
                                 android:layout_height="wrap_content"
                                 android:text=" Merchant Address 2"
-                                android:gravity="left"
+                                android:gravity="center"
                                 android:textStyle="bold"
                                 android:textSize="15dp"
-                                android:layout_margin="10dp"
+                                android:layout_margin="5dp"
                                 android:padding="5dp"
                                 android:textColor="#000"
                                 >
 
                             </TextView>
                             <TextView
+                                android:layout_weight="1"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:id="@+id/shopee_detail_addres_mrchnt_dua"
@@ -777,7 +854,7 @@
                                 android:gravity="left"
                                 android:textStyle="normal"
                                 android:textSize="15dp"
-                                android:layout_margin="10dp"
+                                android:layout_margin="5dp"
                                 android:padding="5dp"
                                 android:textColor="#000"
                                 >
@@ -799,22 +876,24 @@
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:orientation="vertical">
+                            android:orientation="horizontal">
                             <TextView
+                                android:layout_weight="1"
                                 android:background="@color/color_abu_abu"
-                                android:layout_width="match_parent"
+                                android:layout_width="200dp"
                                 android:layout_height="wrap_content"
                                 android:text="Postal Code "
-                                android:gravity="left"
+                                android:gravity="center"
                                 android:textStyle="bold"
                                 android:textSize="15dp"
-                                android:layout_margin="10dp"
+                                android:layout_margin="5dp"
                                 android:padding="5dp"
                                 android:textColor="#000"
                                 >
 
                             </TextView>
                             <TextView
+                                android:layout_weight="1"
                                 android:id="@+id/shopee_detail_post_code"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -822,7 +901,7 @@
                                 android:gravity="left"
                                 android:textStyle="normal"
                                 android:textSize="15dp"
-                                android:layout_margin="10dp"
+                                android:layout_margin="5dp"
                                 android:padding="5dp"
                                 android:textColor="#000"
                                 >
@@ -844,22 +923,24 @@
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:orientation="vertical">
+                            android:orientation="horizontal">
                             <TextView
+                                android:layout_weight="1"
                                 android:background="@color/color_abu_abu"
-                                android:layout_width="match_parent"
+                                android:layout_width="200dp"
                                 android:layout_height="wrap_content"
                                 android:text="City"
-                                android:gravity="left"
+                                android:gravity="center"
                                 android:textStyle="bold"
                                 android:textSize="15dp"
-                                android:layout_margin="10dp"
+                                android:layout_margin="5dp"
                                 android:padding="5dp"
                                 android:textColor="#000"
                                 >
 
                             </TextView>
                             <TextView
+                                android:layout_weight="1"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:id="@+id/shopee_detail_city"
@@ -867,7 +948,7 @@
                                 android:gravity="left"
                                 android:textStyle="normal"
                                 android:textSize="15dp"
-                                android:layout_margin="10dp"
+                                android:layout_margin="5dp"
                                 android:padding="5dp"
                                 android:textColor="#000"
                                 >
@@ -889,22 +970,24 @@
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:orientation="vertical">
+                            android:orientation="horizontal">
                             <TextView
+                                android:layout_weight="1"
                                 android:background="@color/color_abu_abu"
-                                android:layout_width="match_parent"
+                                android:layout_width="200dp"
                                 android:layout_height="wrap_content"
                                 android:text=" PIC Name"
-                                android:gravity="left"
+                                android:gravity="center"
                                 android:textStyle="bold"
                                 android:textSize="15dp"
-                                android:layout_margin="10dp"
+                                android:layout_margin="5dp"
                                 android:padding="5dp"
                                 android:textColor="#000"
                                 >
 
                             </TextView>
                             <TextView
+                                android:layout_weight="1"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:id="@+id/shopee_detail_pict_name"
@@ -912,7 +995,7 @@
                                 android:gravity="left"
                                 android:textStyle="normal"
                                 android:textSize="15dp"
-                                android:layout_margin="10dp"
+                                android:layout_margin="5dp"
                                 android:padding="5dp"
                                 android:textColor="#000"
                                 >
@@ -934,22 +1017,24 @@
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:orientation="vertical">
+                            android:orientation="horizontal">
                             <TextView
+                                android:layout_weight="1"
                                 android:background="@color/color_abu_abu"
-                                android:layout_width="match_parent"
+                                android:layout_width="200dp"
                                 android:layout_height="wrap_content"
                                 android:text=" PIC Number"
-                                android:gravity="left"
+                                android:gravity="center"
                                 android:textStyle="bold"
                                 android:textSize="15dp"
-                                android:layout_margin="10dp"
+                                android:layout_margin="5dp"
                                 android:padding="5dp"
                                 android:textColor="#000"
                                 >
 
                             </TextView>
                             <TextView
+                                android:layout_weight="1"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:id="@+id/shopee_detail_pic_numb"
@@ -957,7 +1042,7 @@
                                 android:gravity="left"
                                 android:textStyle="normal"
                                 android:textSize="15dp"
-                                android:layout_margin="10dp"
+                                android:layout_margin="5dp"
                                 android:padding="5dp"
                                 android:textColor="#000"
                                 >
@@ -979,22 +1064,24 @@
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:orientation="vertical">
+                            android:orientation="horizontal">
                             <TextView
+                                android:layout_weight="1"
                                 android:background="@color/color_abu_abu"
-                                android:layout_width="match_parent"
+                                android:layout_width="200dp"
                                 android:layout_height="wrap_content"
                                 android:text="Note"
-                                android:gravity="left"
+                                android:gravity="center"
                                 android:textStyle="bold"
                                 android:textSize="15dp"
-                                android:layout_margin="10dp"
+                                android:layout_margin="5dp"
                                 android:padding="5dp"
                                 android:textColor="#000"
                                 >
 
                             </TextView>
                             <TextView
+                                android:layout_weight="1"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:id="@+id/shope_deail_note"
@@ -1002,7 +1089,7 @@
                                 android:gravity="left"
                                 android:textStyle="bold"
                                 android:textSize="15dp"
-                                android:layout_margin="10dp"
+                                android:layout_margin="5dp"
                                 android:padding="5dp"
                                 android:textColor="#000"
                                 >
@@ -1024,23 +1111,24 @@
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:orientation="vertical">
+                            android:orientation="horizontal">
                             <TextView
-
+                                android:layout_weight="1"
                                 android:background="@color/color_abu_abu"
-                                android:layout_width="match_parent"
+                                android:layout_width="200dp"
                                 android:layout_height="wrap_content"
                                 android:text="Damage Type"
-                                android:gravity="left"
+                                android:gravity="center"
                                 android:textStyle="bold"
                                 android:textSize="15dp"
-                                android:layout_margin="10dp"
+                                android:layout_margin="5dp"
                                 android:padding="5dp"
                                 android:textColor="#000"
                                 >
 
                             </TextView>
                             <TextView
+                                android:layout_weight="1"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:id="@+id/shoope_detail_damage_type"
@@ -1048,7 +1136,7 @@
                                 android:gravity="left"
                                 android:textStyle="normal"
                                 android:textSize="15dp"
-                                android:layout_margin="10dp"
+                                android:layout_margin="5dp"
                                 android:padding="5dp"
                                 android:textColor="#000"
                                 >
@@ -1071,22 +1159,24 @@
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:orientation="vertical">
+                            android:orientation="horizontal">
                             <TextView
+                                android:layout_weight="1"
                                 android:background="@color/color_abu_abu"
-                                android:layout_width="match_parent"
+                                android:layout_width="200dp"
                                 android:layout_height="wrap_content"
                                 android:text=" Init Code"
-                                android:gravity="left"
+                                android:gravity="center"
                                 android:textStyle="bold"
                                 android:textSize="15dp"
-                                android:layout_margin="10dp"
+                                android:layout_margin="5dp"
                                 android:padding="5dp"
                                 android:textColor="#000"
                                 >
 
                             </TextView>
                             <TextView
+                                android:layout_weight="1"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:id="@+id/shope_detail_init_code"
@@ -1094,7 +1184,7 @@
                                 android:gravity="left"
                                 android:textStyle="normal"
                                 android:textSize="15dp"
-                                android:layout_margin="10dp"
+                                android:layout_margin="5dp"
                                 android:padding="5dp"
                                 android:textColor="#000"
                                 >
@@ -1117,22 +1207,24 @@
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:orientation="vertical">
+                            android:orientation="horizontal">
                             <TextView
+                                android:layout_weight="1"
                                 android:background="@color/color_abu_abu"
-                                android:layout_width="match_parent"
+                                android:layout_width="200dp"
                                 android:layout_height="wrap_content"
                                 android:text=" SLA"
-                                android:gravity="left"
+                                android:gravity="center"
                                 android:textStyle="bold"
                                 android:textSize="15dp"
-                                android:layout_margin="10dp"
+                                android:layout_margin="5dp"
                                 android:padding="5dp"
                                 android:textColor="#000"
                                 >
 
                             </TextView>
                             <TextView
+                                android:layout_weight="1"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:id="@+id/shope_detail_sla"
@@ -1140,7 +1232,7 @@
                                 android:gravity="left"
                                 android:textStyle="normal"
                                 android:textSize="15dp"
-                                android:layout_margin="10dp"
+                                android:layout_margin="5dp"
                                 android:padding="5dp"
                                 android:textColor="#000"
                                 >
@@ -1163,22 +1255,24 @@
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:orientation="vertical">
+                            android:orientation="horizontal">
                             <TextView
+                                android:layout_weight="1"
                                 android:background="@color/color_abu_abu"
-                                android:layout_width="match_parent"
+                                android:layout_width="200dp"
                                 android:layout_height="wrap_content"
                                 android:text=" SN EDC"
-                                android:gravity="left"
+                                android:gravity="center"
                                 android:textStyle="bold"
                                 android:textSize="15dp"
-                                android:layout_margin="10dp"
+                                android:layout_margin="5dp"
                                 android:padding="5dp"
                                 android:textColor="#000"
                                 >
 
                             </TextView>
                             <TextView
+                                android:layout_weight="1"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:id="@+id/shope_detail_ssn_edc"
@@ -1186,7 +1280,7 @@
                                 android:gravity="left"
                                 android:textStyle="normal"
                                 android:textSize="15dp"
-                                android:layout_margin="10dp"
+                                android:layout_margin="5dp"
                                 android:padding="5dp"
                                 android:textColor="#000"
                                 >
@@ -1209,22 +1303,24 @@
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:orientation="vertical">
+                            android:orientation="horizontal">
                             <TextView
+                                android:layout_weight="1"
                                 android:background="@color/color_abu_abu"
-                                android:layout_width="match_parent"
+                                android:layout_width="200dp"
                                 android:layout_height="wrap_content"
                                 android:text=" SN Sim"
-                                android:gravity="left"
+                                android:gravity="center"
                                 android:textStyle="bold"
                                 android:textSize="15dp"
-                                android:layout_margin="10dp"
+                                android:layout_margin="5dp"
                                 android:padding="5dp"
                                 android:textColor="#000"
                                 >
 
                             </TextView>
                             <TextView
+                                android:layout_weight="1"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:id="@+id/shope_detail_ssn_sim"
@@ -1232,7 +1328,7 @@
                                 android:gravity="left"
                                 android:textStyle="normal"
                                 android:textSize="15dp"
-                                android:layout_margin="10dp"
+                                android:layout_margin="5dp"
                                 android:padding="5dp"
                                 android:textColor="#000"
                                 >
@@ -1255,22 +1351,24 @@
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:orientation="vertical">
+                            android:orientation="horizontal">
                             <TextView
+                                android:layout_weight="1"
                                 android:background="@color/color_abu_abu"
-                                android:layout_width="match_parent"
+                                android:layout_width="200dp"
                                 android:layout_height="wrap_content"
                                 android:text=" Assign to date"
-                                android:gravity="left"
+                                android:gravity="center"
                                 android:textStyle="bold"
                                 android:textSize="15dp"
-                                android:layout_margin="10dp"
+                                android:layout_margin="5dp"
                                 android:padding="5dp"
                                 android:textColor="#000"
                                 >
 
                             </TextView>
                             <TextView
+                                android:layout_weight="1"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:id="@+id/shope_detail_assign_to_date"
@@ -1278,7 +1376,7 @@
                                 android:gravity="left"
                                 android:textStyle="normal"
                                 android:textSize="15dp"
-                                android:layout_margin="10dp"
+                                android:layout_margin="5dp"
                                 android:padding="5dp"
                                 android:textColor="#000"
                                 >
@@ -1301,22 +1399,24 @@
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:orientation="vertical">
+                            android:orientation="horizontal">
                             <TextView
+                                android:layout_weight="1"
                                 android:background="@color/color_abu_abu"
-                                android:layout_width="match_parent"
+                                android:layout_width="200dp"
                                 android:layout_height="wrap_content"
                                 android:text=" Assign to status"
-                                android:gravity="left"
+                                android:gravity="center"
                                 android:textStyle="bold"
                                 android:textSize="15dp"
-                                android:layout_margin="10dp"
+                                android:layout_margin="5dp"
                                 android:padding="5dp"
                                 android:textColor="#000"
                                 >
 
                             </TextView>
                             <TextView
+                                android:layout_weight="1"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:id="@+id/shope_detail_assign_to_status"
@@ -1324,7 +1424,7 @@
                                 android:gravity="left"
                                 android:textStyle="normal"
                                 android:textSize="15dp"
-                                android:layout_margin="10dp"
+                                android:layout_margin="5dp"
                                 android:padding="5dp"
                                 android:textColor="#000"
                                 >
