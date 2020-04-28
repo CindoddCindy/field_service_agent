@@ -15,19 +15,30 @@ import com.ingenicomovement.fieldserviceagent.fragment.Profile;
 
 public class BottomNavDua extends AppCompatActivity {
     public BottomNavigationView bottomNavigationView_dua;
+    public String data;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bottom_nav_dua);
 
-        //Menampilkan halaman Fragment yang pertama kali muncul
+        if(getIntent().getExtras()!=null) {
+            /**
+             * Jika Bundle ada, ambil data dari Bundle
+             */
+            Bundle bundle = getIntent().getExtras();
+             data = bundle.getString("user_name");
+        }
+
+            //Menampilkan halaman Fragment yang pertama kali muncul
         getFragmentPage(new Hari());
 
         /*Inisialisasi BottomNavigationView beserta listenernya untuk
          *menangkap setiap kejadian saat salah satu menu item diklik
          */
-        BottomNavigationView bottomNavigation = findViewById(R.id.bottomNavigationViewdua);
+
+
+            BottomNavigationView bottomNavigation = findViewById(R.id.bottomNavigationViewdua);
         bottomNavigation.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -40,13 +51,6 @@ public class BottomNavDua extends AppCompatActivity {
                         fragment = new Hari();
                         break;
 
-                    case R.id.week:
-                        fragment = new Minggu();
-                        break;
-
-                    case R.id.month:
-                        fragment = new Bulan();
-                        break;
 
                     case R.id.profile:
                         fragment = new Profile();
@@ -58,6 +62,8 @@ public class BottomNavDua extends AppCompatActivity {
                 return getFragmentPage(fragment);
             }
         });
+
+
 
     }
 
@@ -71,4 +77,6 @@ public class BottomNavDua extends AppCompatActivity {
         }
         return false;
     }
+
+
 }

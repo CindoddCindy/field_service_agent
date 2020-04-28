@@ -6,21 +6,7 @@
         android:visible="true"
         android:id="@+id/day"
         android:enabled="true"
-        android:title="Perolehan"
-        app:showAsAction="ifRoom" />
-    <item
-        android:icon="@drawable/ic_keyboard_arrow_down_black_24dp"
-        android:visible="true"
-        android:id="@+id/week"
-        android:enabled="true"
-        android:title="In Progress"
-        app:showAsAction="ifRoom" />
-    <item
-        android:icon="@drawable/ic_done_black_24dp"
-        android:visible="true"
-        android:id="@+id/month"
-        android:enabled="true"
-        android:title="Done"
+        android:title="Select Project"
         app:showAsAction="ifRoom" />
 
     <item

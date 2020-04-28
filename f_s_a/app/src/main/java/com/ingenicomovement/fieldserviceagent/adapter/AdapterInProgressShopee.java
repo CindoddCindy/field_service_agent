@@ -42,8 +42,8 @@ public class AdapterInProgressShopee  extends RecyclerView.Adapter<AdapterInProg
     public void onBindViewHolder(@NonNull AdapterChild holder, int position) {
         final  DataItem dataItem = dataItemList.get(position);
 
-        holder.textView_merchantName.setText(dataItem.getBank());
-        holder.textView_merchantAdress.setText(dataItem.getId());
+        holder.textView_merchantName.setText(dataItem.getMerchantName());
+        holder.textView_merchantAdress.setText(dataItem.getMerchantAddress());
         holder.textView_merchantBank.setText(dataItem.getNote());
 
         holder.cardView_onClik_detail.setOnClickListener(new View.OnClickListener() {
@@ -57,7 +57,7 @@ public class AdapterInProgressShopee  extends RecyclerView.Adapter<AdapterInProg
                 bundle.putString("data_ticket_receive",dataItem.getImportTicketReceive());
                 bundle.putString("data_bank",dataItem.getImportBank());
                 bundle.putString("bank",dataItem.getBank());
-                bundle.putString("case",dataItem.getJsonMemberCase());
+                bundle.putString("case",dataItem.getCase());
                 bundle.putString("cont_numb",dataItem.getContractNumber());
                 bundle.putString("tick_numb",dataItem.getTicketNumber());
                 bundle.putString("spk_num",dataItem.getSpkNumber());

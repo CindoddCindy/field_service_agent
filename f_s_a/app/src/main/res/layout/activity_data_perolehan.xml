@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".DataPerolehan">
+
+    <LinearLayout
+        android:layout_margin="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <androidx.cardview.widget.CardView
+            android:background="@color/primary"
+            android:id="@+id/cv_in_progress"
+            app:cardMaxElevation="2dp"
+            app:cardUseCompatPadding="true"
+            app:cardCornerRadius="2dp"
+            app:cardElevation="2dp"
+            android:layout_margin="2dp"
+            android:padding="2dp"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:background="@color/primary"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:padding="5dp"
+                    android:textColor="@color/colorFontPutih"
+                    android:layout_margin="5dp"
+                    android:text=" Perolehan "
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textSize="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <androidx.cardview.widget.CardView
+
+                            app:cardBackgroundColor="@color/cardview_shadow_end_color"
+                            app:cardMaxElevation="2dp"
+                            app:cardUseCompatPadding="true"
+                            android:layout_margin="5dp"
+                            app:cardCornerRadius="2dp"
+                            app:cardElevation="2dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <LinearLayout
+                                android:background="@color/colorFontPutih"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+                                <TextView
+                                    android:padding="3dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="5dp"
+                                    android:gravity="center"
+                                    android:text="Hari "
+                                    android:textColor="@color/colorFontHitam"
+                                    android:textSize="15dp"
+                                    android:textStyle="bold">
+
+                                </TextView>
+                                <TextView
+                                    android:padding="5dp"
+                                    android:id="@+id/tv_per_day"
+                                    android:textColor="@color/colorFontHitam"
+                                    android:layout_margin="5dp"
+                                    android:text="0"
+                                    android:gravity="center"
+                                    android:textStyle="bold"
+                                    android:textSize="25dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                </TextView>
+
+
+                            </LinearLayout>
+
+
+                        </androidx.cardview.widget.CardView>
+
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <androidx.cardview.widget.CardView
+                            app:cardBackgroundColor="@color/cardview_shadow_end_color"
+                            app:cardMaxElevation="2dp"
+                            app:cardUseCompatPadding="true"
+                            android:layout_margin="5dp"
+                            app:cardCornerRadius="2dp"
+                            app:cardElevation="2dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:background="@color/colorFontPutih"
+                                >
+                                <TextView
+                                    android:padding="3dp"
+                                    android:textColor="@color/colorFontHitam"
+                                    android:layout_margin="5dp"
+                                    android:text=" Minggu "
+                                    android:gravity="center"
+                                    android:textStyle="bold"
+                                    android:textSize="15dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                </TextView>
+                                <TextView
+                                    android:id="@+id/tv_per_week"
+                                    android:textColor="@color/colorFontHitam"
+                                    android:padding="5dp"
+                                    android:layout_margin="5dp"
+                                    android:text="0"
+                                    android:gravity="center"
+                                    android:textStyle="bold"
+                                    android:textSize="25dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                </TextView>
+
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+
+
+                    </LinearLayout>
+                    <LinearLayout
+
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <androidx.cardview.widget.CardView
+                            app:cardBackgroundColor="@color/cardview_shadow_end_color"
+                            app:cardMaxElevation="2dp"
+                            app:cardUseCompatPadding="true"
+                            android:layout_margin="5dp"
+                            app:cardCornerRadius="2dp"
+                            app:cardElevation="2dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <LinearLayout
+                                android:background="@color/colorFontPutih"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:textColor="@color/colorFontHitam"
+                                    android:layout_margin="5dp"
+                                    android:text=" Bulan"
+                                    android:gravity="center"
+                                    android:padding="3dp"
+                                    android:textStyle="bold"
+                                    android:textSize="15dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                </TextView>
+                                <TextView
+                                    android:id="@+id/tv_per_month"
+                                    android:textColor="@color/colorFontHitam"
+                                    android:layout_margin="5dp"
+                                    android:padding="5dp"
+                                    android:text="0"
+                                    android:gravity="center"
+                                    android:textStyle="bold"
+                                    android:textSize="25dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                </TextView>
+
+
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+
+
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+
+
+
+
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <androidx.cardview.widget.CardView
+            app:cardMaxElevation="2dp"
+            app:cardUseCompatPadding="true"
+            app:cardCornerRadius="2dp"
+            app:cardElevation="2dp"
+            android:layout_margin="5dp"
+            android:padding="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tab_leout"
+                android:layout_margin="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:elevation="2dp"
+                android:background="@color/colorFontPutih"
+                android:minHeight="?android:attr/actionBarSize"
+                app:tabTextColor="@color/colorFontHitam"
+                app:tabSelectedTextColor="@color/primary"
+                app:tabIndicatorColor="@color/primary"
+
+                >
+
+            </com.google.android.material.tabs.TabLayout>
+
+            <androidx.viewpager.widget.ViewPager
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/vew_pager">
+
+            </androidx.viewpager.widget.ViewPager>
+
+
+        </androidx.cardview.widget.CardView>
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

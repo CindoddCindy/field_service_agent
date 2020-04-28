@@ -6,19 +6,16 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.ingenicomovement.fieldserviceagent.R;
 import com.ingenicomovement.fieldserviceagent.adapter.AdapterInProgressShopee;
-import com.ingenicomovement.fieldserviceagent.pojo.AssignShopeeResponse;
+import com.ingenicomovement.fieldserviceagent.pojo.AssignDataResponse;
 import com.ingenicomovement.fieldserviceagent.pojo.DataItem;
 import com.ingenicomovement.fieldserviceagent.retrofit.RetrofitMethod;
 import com.ingenicomovement.fieldserviceagent.retrofit.RetrofitUrl;
-import com.ingenicomovement.fieldserviceagent.util.ConnectUtil;
-import com.ingenicomovement.fieldserviceagent.util.PopUpUtil;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -66,10 +63,10 @@ public class Minggu extends Fragment {
 
     public void shoopeInProgressData(){
         retrofitMethod = RetrofitUrl.getRetrofit().create(RetrofitMethod.class);
-        Call<AssignShopeeResponse> assignShopeeResponseCall= retrofitMethod.getShpeeAsignInProgress();
-        assignShopeeResponseCall.enqueue(new Callback<AssignShopeeResponse>() {
+        Call<AssignDataResponse> assignShopeeResponseCall= retrofitMethod.getShpeeAsignInProgress();
+        assignShopeeResponseCall.enqueue(new Callback<AssignDataResponse>() {
             @Override
-            public void onResponse(Call<AssignShopeeResponse> call, Response<AssignShopeeResponse> response) {
+            public void onResponse(Call<AssignDataResponse> call, Response<AssignDataResponse> response) {
                 if (response.isSuccessful()){
                     dataItemArrayList=response.body().getData();
                     adapterInProgressShopee = new AdapterInProgressShopee(getActivity(),dataItemArrayList);
@@ -79,7 +76,7 @@ public class Minggu extends Fragment {
             }
 
             @Override
-            public void onFailure(Call<AssignShopeeResponse> call, Throwable t) {
+            public void onFailure(Call<AssignDataResponse> call, Throwable t) {
 
             }
         });

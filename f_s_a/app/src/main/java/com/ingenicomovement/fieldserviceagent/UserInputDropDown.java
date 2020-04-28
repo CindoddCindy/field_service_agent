@@ -2,13 +2,10 @@ package com.ingenicomovement.fieldserviceagent;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TextView;
 
-import com.ingenicomovement.fieldserviceagent.pojo.AssignShopeeResponse;
-import com.ingenicomovement.fieldserviceagent.pojo.DataItem;
-import com.ingenicomovement.fieldserviceagent.pojo.DetailAssignResponse;
+import com.ingenicomovement.fieldserviceagent.pojo.AssignDataResponse;
 import com.ingenicomovement.fieldserviceagent.retrofit.RetrofitMethod;
 import com.ingenicomovement.fieldserviceagent.retrofit.RetrofitUrl;
 
@@ -106,10 +103,10 @@ public class UserInputDropDown extends AppCompatActivity {
 
     public void getDetailItem(){
     RetrofitMethod    retrofitMethod = RetrofitUrl.getRetrofit().create(RetrofitMethod.class);
-        Call<DetailAssignResponse> assignShopeeResponseCall= retrofitMethod.getShpeeAsignInProgressDetail();
-        assignShopeeResponseCall.enqueue(new Callback<DetailAssignResponse>() {
+        Call<AssignDataResponse> assignShopeeResponseCall= retrofitMethod.getShpeeAsignInProgressDetail();
+        assignShopeeResponseCall.enqueue(new Callback<AssignDataResponse>() {
             @Override
-            public void onResponse(Call<DetailAssignResponse> call, Response<DetailAssignResponse> response) {
+            public void onResponse(Call<AssignDataResponse> call, Response<AssignDataResponse> response) {
                 if (response.isSuccessful()){
                     getBundle();
 
@@ -117,7 +114,7 @@ public class UserInputDropDown extends AppCompatActivity {
             }
 
             @Override
-            public void onFailure(Call<DetailAssignResponse> call, Throwable t) {
+            public void onFailure(Call<AssignDataResponse> call, Throwable t) {
 
             }
         });

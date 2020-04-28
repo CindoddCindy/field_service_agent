@@ -1,321 +1,522 @@
+
 package com.ingenicomovement.fieldserviceagent.pojo;
 
-public class DataItem{
-	private String picName;
-	private String note;
-	private String merchantAddress;
-	private String city;
-	private String mid;
-	private String picNumber;
-	private String assignToStatus;
-	private Object sumWeek;
-	private String importBank;
-	private String tid;
-	private String postalCode;
-	private Object sumMonth;
-	private String importDate;
-	private String bank;
-	private String initCode;
-	private String damageType;
-	private String snEdc;
-	private String id;
-	private String jsonMemberCase;
-	private String contractNumber;
-	private String spkNumber;
-	private String importTicketReceive;
-	private String snSim;
-	private String ticketNumber;
-	private String merchantAddress2;
-	private String sla;
-	private Object sumToday;
-	private String assignToDate;
-	private String workType;
-	private String tidCimb;
-	private String merchantName;
+import android.os.Parcel;
+import android.os.Parcelable;
+import android.os.Parcelable.Creator;
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
 
-	public void setPicName(String picName){
-		this.picName = picName;
-	}
+public class DataItem implements Parcelable
+{
 
-	public String getPicName(){
-		return picName;
-	}
+    @SerializedName("id")
+    @Expose
+    private String id;
+    @SerializedName("import_Date")
+    @Expose
+    private String importDate;
+    @SerializedName("import_Ticket_Receive")
+    @Expose
+    private String importTicketReceive;
+    @SerializedName("import_Bank")
+    @Expose
+    private String importBank;
+    @SerializedName("bank")
+    @Expose
+    private String bank;
+    @SerializedName("case")
+    @Expose
+    private String _case;
+    @SerializedName("contract_Number")
+    @Expose
+    private String contractNumber;
+    @SerializedName("ticket_Number")
+    @Expose
+    private String ticketNumber;
+    @SerializedName("spk_Number")
+    @Expose
+    private String spkNumber;
+    @SerializedName("work_Type")
+    @Expose
+    private String workType;
+    @SerializedName("tid")
+    @Expose
+    private String tid;
+    @SerializedName("tid_Cimb")
+    @Expose
+    private String tidCimb;
+    @SerializedName("mid")
+    @Expose
+    private String mid;
+    @SerializedName("merchant_Name")
+    @Expose
+    private String merchantName;
+    @SerializedName("merchant_Address")
+    @Expose
+    private String merchantAddress;
+    @SerializedName("merchant_Address_2")
+    @Expose
+    private String merchantAddress2;
+    @SerializedName("postal_Code")
+    @Expose
+    private String postalCode;
+    @SerializedName("city")
+    @Expose
+    private String city;
+    @SerializedName("pic_Name")
+    @Expose
+    private String picName;
+    @SerializedName("pic_Number")
+    @Expose
+    private String picNumber;
+    @SerializedName("note")
+    @Expose
+    private String note;
+    @SerializedName("damage_Type")
+    @Expose
+    private String damageType;
+    @SerializedName("init_Code")
+    @Expose
+    private String initCode;
+    @SerializedName("sla")
+    @Expose
+    private String sla;
+    @SerializedName("sn_Edc")
+    @Expose
+    private String snEdc;
+    @SerializedName("sn_Sim")
+    @Expose
+    private String snSim;
+    @SerializedName("assign_To_Date")
+    @Expose
+    private String assignToDate;
+    @SerializedName("assign_To_Status")
+    @Expose
+    private String assignToStatus;
+    @SerializedName("sum_Month")
+    @Expose
+    private Object sumMonth;
+    @SerializedName("sum_Week")
+    @Expose
+    private Object sumWeek;
+    @SerializedName("sum_Today")
+    @Expose
+    private Object sumToday;
+    public final static Creator<DataItem> CREATOR = new Creator<DataItem>() {
 
-	public void setNote(String note){
-		this.note = note;
-	}
 
-	public String getNote(){
-		return note;
-	}
+        @SuppressWarnings({
+            "unchecked"
+        })
 
-	public void setMerchantAddress(String merchantAddress){
-		this.merchantAddress = merchantAddress;
-	}
+        public DataItem createFromParcel(Parcel in) {
+            return new DataItem(in);
+        }
 
-	public String getMerchantAddress(){
-		return merchantAddress;
-	}
+        public DataItem[] newArray(int size) {
+            return (new DataItem[size]);
+        }
 
-	public void setCity(String city){
-		this.city = city;
-	}
 
-	public String getCity(){
-		return city;
-	}
 
-	public void setMid(String mid){
-		this.mid = mid;
-	}
+    }
+    ;
 
-	public String getMid(){
-		return mid;
-	}
+    protected DataItem(Parcel in) {
+        this.id = ((String) in.readValue((String.class.getClassLoader())));
+        this.importDate = ((String) in.readValue((String.class.getClassLoader())));
+        this.importTicketReceive = ((String) in.readValue((String.class.getClassLoader())));
+        this.importBank = ((String) in.readValue((String.class.getClassLoader())));
+        this.bank = ((String) in.readValue((String.class.getClassLoader())));
+        this._case = ((String) in.readValue((String.class.getClassLoader())));
+        this.contractNumber = ((String) in.readValue((String.class.getClassLoader())));
+        this.ticketNumber = ((String) in.readValue((String.class.getClassLoader())));
+        this.spkNumber = ((String) in.readValue((String.class.getClassLoader())));
+        this.workType = ((String) in.readValue((String.class.getClassLoader())));
+        this.tid = ((String) in.readValue((String.class.getClassLoader())));
+        this.tidCimb = ((String) in.readValue((String.class.getClassLoader())));
+        this.mid = ((String) in.readValue((String.class.getClassLoader())));
+        this.merchantName = ((String) in.readValue((String.class.getClassLoader())));
+        this.merchantAddress = ((String) in.readValue((String.class.getClassLoader())));
+        this.merchantAddress2 = ((String) in.readValue((String.class.getClassLoader())));
+        this.postalCode = ((String) in.readValue((String.class.getClassLoader())));
+        this.city = ((String) in.readValue((String.class.getClassLoader())));
+        this.picName = ((String) in.readValue((String.class.getClassLoader())));
+        this.picNumber = ((String) in.readValue((String.class.getClassLoader())));
+        this.note = ((String) in.readValue((String.class.getClassLoader())));
+        this.damageType = ((String) in.readValue((String.class.getClassLoader())));
+        this.initCode = ((String) in.readValue((String.class.getClassLoader())));
+        this.sla = ((String) in.readValue((String.class.getClassLoader())));
+        this.snEdc = ((String) in.readValue((String.class.getClassLoader())));
+        this.snSim = ((String) in.readValue((String.class.getClassLoader())));
+        this.assignToDate = ((String) in.readValue((String.class.getClassLoader())));
+        this.assignToStatus = ((String) in.readValue((String.class.getClassLoader())));
+        this.sumMonth = ((Object) in.readValue((Object.class.getClassLoader())));
+        this.sumWeek = ((Object) in.readValue((Object.class.getClassLoader())));
+        this.sumToday = ((Object) in.readValue((Object.class.getClassLoader())));
+    }
 
-	public void setPicNumber(String picNumber){
-		this.picNumber = picNumber;
-	}
+    /**
+     * No args constructor for use in serialization
+     * 
+     */
+    public DataItem() {
+    }
 
-	public String getPicNumber(){
-		return picNumber;
-	}
+    /**
+     * 
+     * @param ticketNumber
+     * @param note
+     * @param assignToStatus
+     * @param sumToday
+     * @param city
+     * @param postalCode
+     * @param mid
+     * @param tidCimb
+     * @param picName
+     * @param tid
+     * @param snEdc
+     * @param merchantName
+     * @param bank
+     * @param merchantAddress2
+     * @param importDate
+     * @param importTicketReceive
+     * @param id
+     * @param picNumber
+     * @param sumWeek
+     * @param sumMonth
+     * @param importBank
+     * @param initCode
+     * @param _case
+     * @param contractNumber
+     * @param sla
+     * @param spkNumber
+     * @param assignToDate
+     * @param workType
+     * @param merchantAddress
+     * @param snSim
+     * @param damageType
+     */
+    public DataItem(String id, String importDate, String importTicketReceive, String importBank, String bank, String _case, String contractNumber, String ticketNumber, String spkNumber, String workType, String tid, String tidCimb, String mid, String merchantName, String merchantAddress, String merchantAddress2, String postalCode, String city, String picName, String picNumber, String note, String damageType, String initCode, String sla, String snEdc, String snSim, String assignToDate, String assignToStatus, Object sumMonth, Object sumWeek, Object sumToday) {
+        super();
+        this.id = id;
+        this.importDate = importDate;
+        this.importTicketReceive = importTicketReceive;
+        this.importBank = importBank;
+        this.bank = bank;
+        this._case = _case;
+        this.contractNumber = contractNumber;
+        this.ticketNumber = ticketNumber;
+        this.spkNumber = spkNumber;
+        this.workType = workType;
+        this.tid = tid;
+        this.tidCimb = tidCimb;
+        this.mid = mid;
+        this.merchantName = merchantName;
+        this.merchantAddress = merchantAddress;
+        this.merchantAddress2 = merchantAddress2;
+        this.postalCode = postalCode;
+        this.city = city;
+        this.picName = picName;
+        this.picNumber = picNumber;
+        this.note = note;
+        this.damageType = damageType;
+        this.initCode = initCode;
+        this.sla = sla;
+        this.snEdc = snEdc;
+        this.snSim = snSim;
+        this.assignToDate = assignToDate;
+        this.assignToStatus = assignToStatus;
+        this.sumMonth = sumMonth;
+        this.sumWeek = sumWeek;
+        this.sumToday = sumToday;
+    }
 
-	public void setAssignToStatus(String assignToStatus){
-		this.assignToStatus = assignToStatus;
-	}
+    public String getId() {
+        return id;
+    }
 
-	public String getAssignToStatus(){
-		return assignToStatus;
-	}
+    public void setId(String id) {
+        this.id = id;
+    }
 
-	public void setSumWeek(Object sumWeek){
-		this.sumWeek = sumWeek;
-	}
+    public String getImportDate() {
+        return importDate;
+    }
 
-	public Object getSumWeek(){
-		return sumWeek;
-	}
+    public void setImportDate(String importDate) {
+        this.importDate = importDate;
+    }
 
-	public void setImportBank(String importBank){
-		this.importBank = importBank;
-	}
+    public String getImportTicketReceive() {
+        return importTicketReceive;
+    }
 
-	public String getImportBank(){
-		return importBank;
-	}
+    public void setImportTicketReceive(String importTicketReceive) {
+        this.importTicketReceive = importTicketReceive;
+    }
 
-	public void setTid(String tid){
-		this.tid = tid;
-	}
+    public String getImportBank() {
+        return importBank;
+    }
 
-	public String getTid(){
-		return tid;
-	}
+    public void setImportBank(String importBank) {
+        this.importBank = importBank;
+    }
 
-	public void setPostalCode(String postalCode){
-		this.postalCode = postalCode;
-	}
+    public String getBank() {
+        return bank;
+    }
 
-	public String getPostalCode(){
-		return postalCode;
-	}
+    public void setBank(String bank) {
+        this.bank = bank;
+    }
 
-	public void setSumMonth(Object sumMonth){
-		this.sumMonth = sumMonth;
-	}
+    public String getCase() {
+        return _case;
+    }
 
-	public Object getSumMonth(){
-		return sumMonth;
-	}
+    public void setCase(String _case) {
+        this._case = _case;
+    }
 
-	public void setImportDate(String importDate){
-		this.importDate = importDate;
-	}
+    public String getContractNumber() {
+        return contractNumber;
+    }
 
-	public String getImportDate(){
-		return importDate;
-	}
+    public void setContractNumber(String contractNumber) {
+        this.contractNumber = contractNumber;
+    }
 
-	public void setBank(String bank){
-		this.bank = bank;
-	}
+    public String getTicketNumber() {
+        return ticketNumber;
+    }
 
-	public String getBank(){
-		return bank;
-	}
+    public void setTicketNumber(String ticketNumber) {
+        this.ticketNumber = ticketNumber;
+    }
 
-	public void setInitCode(String initCode){
-		this.initCode = initCode;
-	}
+    public String getSpkNumber() {
+        return spkNumber;
+    }
 
-	public String getInitCode(){
-		return initCode;
-	}
+    public void setSpkNumber(String spkNumber) {
+        this.spkNumber = spkNumber;
+    }
 
-	public void setDamageType(String damageType){
-		this.damageType = damageType;
-	}
+    public String getWorkType() {
+        return workType;
+    }
 
-	public String getDamageType(){
-		return damageType;
-	}
+    public void setWorkType(String workType) {
+        this.workType = workType;
+    }
 
-	public void setSnEdc(String snEdc){
-		this.snEdc = snEdc;
-	}
+    public String getTid() {
+        return tid;
+    }
 
-	public String getSnEdc(){
-		return snEdc;
-	}
+    public void setTid(String tid) {
+        this.tid = tid;
+    }
 
-	public void setId(String id){
-		this.id = id;
-	}
+    public String getTidCimb() {
+        return tidCimb;
+    }
 
-	public String getId(){
-		return id;
-	}
+    public void setTidCimb(String tidCimb) {
+        this.tidCimb = tidCimb;
+    }
 
-	public void setJsonMemberCase(String jsonMemberCase){
-		this.jsonMemberCase = jsonMemberCase;
-	}
+    public String getMid() {
+        return mid;
+    }
 
-	public String getJsonMemberCase(){
-		return jsonMemberCase;
-	}
+    public void setMid(String mid) {
+        this.mid = mid;
+    }
 
-	public void setContractNumber(String contractNumber){
-		this.contractNumber = contractNumber;
-	}
+    public String getMerchantName() {
+        return merchantName;
+    }
 
-	public String getContractNumber(){
-		return contractNumber;
-	}
+    public void setMerchantName(String merchantName) {
+        this.merchantName = merchantName;
+    }
 
-	public void setSpkNumber(String spkNumber){
-		this.spkNumber = spkNumber;
-	}
+    public String getMerchantAddress() {
+        return merchantAddress;
+    }
 
-	public String getSpkNumber(){
-		return spkNumber;
-	}
+    public void setMerchantAddress(String merchantAddress) {
+        this.merchantAddress = merchantAddress;
+    }
 
-	public void setImportTicketReceive(String importTicketReceive){
-		this.importTicketReceive = importTicketReceive;
-	}
+    public String getMerchantAddress2() {
+        return merchantAddress2;
+    }
 
-	public String getImportTicketReceive(){
-		return importTicketReceive;
-	}
+    public void setMerchantAddress2(String merchantAddress2) {
+        this.merchantAddress2 = merchantAddress2;
+    }
 
-	public void setSnSim(String snSim){
-		this.snSim = snSim;
-	}
+    public String getPostalCode() {
+        return postalCode;
+    }
 
-	public String getSnSim(){
-		return snSim;
-	}
+    public void setPostalCode(String postalCode) {
+        this.postalCode = postalCode;
+    }
 
-	public void setTicketNumber(String ticketNumber){
-		this.ticketNumber = ticketNumber;
-	}
+    public String getCity() {
+        return city;
+    }
 
-	public String getTicketNumber(){
-		return ticketNumber;
-	}
+    public void setCity(String city) {
+        this.city = city;
+    }
 
-	public void setMerchantAddress2(String merchantAddress2){
-		this.merchantAddress2 = merchantAddress2;
-	}
+    public String getPicName() {
+        return picName;
+    }
 
-	public String getMerchantAddress2(){
-		return merchantAddress2;
-	}
+    public void setPicName(String picName) {
+        this.picName = picName;
+    }
 
-	public void setSla(String sla){
-		this.sla = sla;
-	}
+    public String getPicNumber() {
+        return picNumber;
+    }
 
-	public String getSla(){
-		return sla;
-	}
+    public void setPicNumber(String picNumber) {
+        this.picNumber = picNumber;
+    }
 
-	public void setSumToday(Object sumToday){
-		this.sumToday = sumToday;
-	}
+    public String getNote() {
+        return note;
+    }
 
-	public Object getSumToday(){
-		return sumToday;
-	}
+    public void setNote(String note) {
+        this.note = note;
+    }
 
-	public void setAssignToDate(String assignToDate){
-		this.assignToDate = assignToDate;
-	}
+    public String getDamageType() {
+        return damageType;
+    }
 
-	public String getAssignToDate(){
-		return assignToDate;
-	}
+    public void setDamageType(String damageType) {
+        this.damageType = damageType;
+    }
 
-	public void setWorkType(String workType){
-		this.workType = workType;
-	}
+    public String getInitCode() {
+        return initCode;
+    }
 
-	public String getWorkType(){
-		return workType;
-	}
+    public void setInitCode(String initCode) {
+        this.initCode = initCode;
+    }
 
-	public void setTidCimb(String tidCimb){
-		this.tidCimb = tidCimb;
-	}
+    public String getSla() {
+        return sla;
+    }
 
-	public String getTidCimb(){
-		return tidCimb;
-	}
+    public void setSla(String sla) {
+        this.sla = sla;
+    }
 
-	public void setMerchantName(String merchantName){
-		this.merchantName = merchantName;
-	}
+    public String getSnEdc() {
+        return snEdc;
+    }
 
-	public String getMerchantName(){
-		return merchantName;
-	}
+    public void setSnEdc(String snEdc) {
+        this.snEdc = snEdc;
+    }
 
-	@Override
- 	public String toString(){
-		return 
-			"DataItem{" + 
-			"pic_Name = '" + picName + '\'' + 
-			",note = '" + note + '\'' + 
-			",merchant_Address = '" + merchantAddress + '\'' + 
-			",city = '" + city + '\'' + 
-			",mid = '" + mid + '\'' + 
-			",pic_Number = '" + picNumber + '\'' + 
-			",assign_To_Status = '" + assignToStatus + '\'' + 
-			",sum_Week = '" + sumWeek + '\'' + 
-			",import_Bank = '" + importBank + '\'' + 
-			",tid = '" + tid + '\'' + 
-			",postal_Code = '" + postalCode + '\'' + 
-			",sum_Month = '" + sumMonth + '\'' + 
-			",import_Date = '" + importDate + '\'' + 
-			",bank = '" + bank + '\'' + 
-			",init_Code = '" + initCode + '\'' + 
-			",damage_Type = '" + damageType + '\'' + 
-			",sn_Edc = '" + snEdc + '\'' + 
-			",id = '" + id + '\'' + 
-			",case = '" + jsonMemberCase + '\'' + 
-			",contract_Number = '" + contractNumber + '\'' + 
-			",spk_Number = '" + spkNumber + '\'' + 
-			",import_Ticket_Receive = '" + importTicketReceive + '\'' + 
-			",sn_Sim = '" + snSim + '\'' + 
-			",ticket_Number = '" + ticketNumber + '\'' + 
-			",merchant_Address_2 = '" + merchantAddress2 + '\'' + 
-			",sla = '" + sla + '\'' + 
-			",sum_Today = '" + sumToday + '\'' + 
-			",assign_To_Date = '" + assignToDate + '\'' + 
-			",work_Type = '" + workType + '\'' + 
-			",tid_Cimb = '" + tidCimb + '\'' + 
-			",merchant_Name = '" + merchantName + '\'' + 
-			"}";
-		}
+    public String getSnSim() {
+        return snSim;
+    }
+
+    public void setSnSim(String snSim) {
+        this.snSim = snSim;
+    }
+
+    public String getAssignToDate() {
+        return assignToDate;
+    }
+
+    public void setAssignToDate(String assignToDate) {
+        this.assignToDate = assignToDate;
+    }
+
+    public String getAssignToStatus() {
+        return assignToStatus;
+    }
+
+    public void setAssignToStatus(String assignToStatus) {
+        this.assignToStatus = assignToStatus;
+    }
+
+    public Object getSumMonth() {
+        return sumMonth;
+    }
+
+    public void setSumMonth(Object sumMonth) {
+        this.sumMonth = sumMonth;
+    }
+
+    public Object getSumWeek() {
+        return sumWeek;
+    }
+
+    public void setSumWeek(Object sumWeek) {
+        this.sumWeek = sumWeek;
+    }
+
+    public Object getSumToday() {
+        return sumToday;
+    }
+
+    public void setSumToday(Object sumToday) {
+        this.sumToday = sumToday;
+    }
+
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeValue(id);
+        dest.writeValue(importDate);
+        dest.writeValue(importTicketReceive);
+        dest.writeValue(importBank);
+        dest.writeValue(bank);
+        dest.writeValue(_case);
+        dest.writeValue(contractNumber);
+        dest.writeValue(ticketNumber);
+        dest.writeValue(spkNumber);
+        dest.writeValue(workType);
+        dest.writeValue(tid);
+        dest.writeValue(tidCimb);
+        dest.writeValue(mid);
+        dest.writeValue(merchantName);
+        dest.writeValue(merchantAddress);
+        dest.writeValue(merchantAddress2);
+        dest.writeValue(postalCode);
+        dest.writeValue(city);
+        dest.writeValue(picName);
+        dest.writeValue(picNumber);
+        dest.writeValue(note);
+        dest.writeValue(damageType);
+        dest.writeValue(initCode);
+        dest.writeValue(sla);
+        dest.writeValue(snEdc);
+        dest.writeValue(snSim);
+        dest.writeValue(assignToDate);
+        dest.writeValue(assignToStatus);
+        dest.writeValue(sumMonth);
+        dest.writeValue(sumWeek);
+        dest.writeValue(sumToday);
+    }
+
+    public int describeContents() {
+        return  0;
+    }
+
 }
