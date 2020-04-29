@@ -23,6 +23,17 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
+                <TextView
+                    android:layout_gravity="left"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorFontHitam"
+                    android:textSize="12dp"
+                    android:text="Merchant Name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+
 
                     <TextView
                         android:background="@color/cardview_shadow_end_color"
@@ -39,6 +50,18 @@
 
                     </TextView>
 
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="12dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorFontHitam"
+                    android:gravity="left"
+                    android:text="Merchant Address">
+
+                </TextView>
+
                     <TextView
                         android:background="@color/cardview_shadow_end_color"
                         android:id="@+id/tv_merchantAddress"
@@ -53,6 +76,18 @@
                         android:layout_height="wrap_content">
 
                     </TextView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorFontHitam"
+                    android:textStyle="bold"
+                    android:textSize="12dp"
+                    android:gravity="left"
+                    android:text="Note"
+                    android:layout_marginTop="5dp">
+
+                </TextView>
 
                     <TextView
                         android:background="@color/cardview_shadow_end_color"
