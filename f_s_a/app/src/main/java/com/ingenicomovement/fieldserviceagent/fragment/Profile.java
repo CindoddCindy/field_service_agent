@@ -57,9 +57,11 @@ public class Profile extends Fragment {
 
     public void userAuthLogin(){
         String name="ranadi";
-        String password="95ac42770704d5394099eaed91670c53";
+        String password="000000";
         String signature="a939f165240abec4382ec354dbf058c5";
         String _datetime  = "20200420000000";//(String) DateFormat.format("yyyyMMddhhmmss", new java.util.Date());
+        //String _datetime= =DateFormat.format("yyyyMMddhhmmss", new java.util.Date());
+
 
         RetrofitMethod retrofitMethod = RetrofitUrl.getRetrofit().create(RetrofitMethod.class);
         Call<AuthLoginResponse> authLoginResponseObj = retrofitMethod.loginUserTech(name,password, _datetime,signature);
@@ -67,11 +69,14 @@ public class Profile extends Fragment {
             @Override
             public void onResponse(Call<AuthLoginResponse> call, Response<AuthLoginResponse> response) {
 
-                //AuthLoginResponse authLoginResponse = response.body();
-                //Datum datum = authLoginResponse.getData();
+              //  AuthLoginResponse authLoginResponse = response.body();
+              //  Datum datum = (Datum) authLoginResponse.getData();
                 if (response.isSuccessful()){
                     //Ai sii errornya dimana, parameter _datetime itu yang bikin error
                     //ku coba hardcode ya datetimenya??
+                   // textView_username.setText(datum.getUsername());
+                   // textView_user_full_name.setText(datum.getFullname());
+
 
                     textView_username.setText(response.body().getData().get(0).getUsername());
                     textView_user_full_name.setText(response.body().getData().get(0).getFullname());

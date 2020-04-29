@@ -66,7 +66,7 @@
                                 android:background="@color/primary"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text=" Detail Data"
+                                android:text=" In Progress Detail Data "
                                 android:gravity="center"
                                 android:textStyle="bold"
                                 android:textSize="15dp"
@@ -93,7 +93,7 @@
                        app:cardUseCompatPadding="true"
                        app:cardMaxElevation="2dp"
                        android:layout_width="match_parent"
-                       android:layout_margin="5dp"
+                       android:layout_margin="1dp"
                        android:layout_height="wrap_content">
                        <LinearLayout
                            android:layout_width="match_parent"
@@ -102,21 +102,22 @@
 
 
                            <TextView
+                               android:background="@color/color_abu_abu"
                                android:layout_weight="1"
-                               android:background="@color/cardview_shadow_end_color"
                                android:layout_width="200dp"
                                android:layout_height="wrap_content"
                                android:text="ID"
                                android:gravity="center"
                                android:textStyle="bold"
-                               android:textSize="15dp"
-                               android:layout_margin="5dp"
-                               android:padding="5dp"
-                               android:textColor="#000"
+                               android:textSize="12dp"
+                               android:layout_margin="2dp"
+                               android:padding="2dp"
+                               android:textColor="@color/primary"
                                >
 
                            </TextView>
                            <TextView
+                               android:background="@color/color_abu_abu"
                                android:layout_weight="1"
                                android:id="@+id/shoope_detail_id"
                                android:layout_width="match_parent"
@@ -124,9 +125,9 @@
                                android:text="ID"
                                android:layout_marginLeft="10dp"
                                android:textStyle="normal"
-                               android:textSize="15dp"
-                               android:layout_margin="5dp"
-                               android:padding="5dp"
+                               android:textSize="12dp"
+                               android:layout_margin="2dp"
+                               android:padding="2dp"
                                android:gravity="left"
                                android:textColor="#000"
                                >
@@ -146,7 +147,7 @@
                         app:cardUseCompatPadding="true"
                         app:cardMaxElevation="2dp"
                         android:layout_width="match_parent"
-                        android:layout_margin="10dp"
+                        android:layout_margin="1dp"
                         android:layout_height="wrap_content">
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -155,16 +156,16 @@
 
                             <TextView
                                 android:layout_weight="1"
-                                android:background="@color/cardview_shadow_end_color"
+                                android:background="@color/color_abu_abu"
                                 android:layout_width="200dp"
                                 android:layout_height="wrap_content"
                                 android:text="Import Date"
-                                android:gravity="center"
+                                android:gravity="left"
                                 android:textStyle="bold"
-                                android:textSize="15dp"
-                                android:layout_margin="5dp"
-                                android:padding="5dp"
-                                android:textColor="#000"
+                                android:textSize="12dp"
+                                android:layout_margin="2dp"
+                                android:padding="2dp"
+                                android:textColor="@color/primary"
                                 >
 
                             </TextView>
@@ -176,10 +177,11 @@
                                 android:text="IMPORT DATE"
                                 android:gravity="left"
                                 android:textStyle="normal"
-                                android:textSize="15dp"
-                                android:layout_margin="5dp"
-                                android:padding="5dp"
+                                android:textSize="12dp"
+                                android:layout_margin="2dp"
+                                android:padding="2dp"
                                 android:textColor="#000"
+                                android:background="@color/color_abu_abu"
                                 >
 
                             </TextView>
@@ -198,7 +200,7 @@
                         app:cardUseCompatPadding="true"
                         app:cardMaxElevation="2dp"
                         android:layout_width="match_parent"
-                        android:layout_margin="10dp"
+                        android:layout_margin="1dp"
                         android:layout_height="wrap_content">
 
                         <LinearLayout
@@ -207,21 +209,22 @@
                             android:layout_height="wrap_content">
 
                             <TextView
+                                android:background="@color/color_abu_abu"
                                 android:layout_weight="1"
                                 android:layout_width="200dp"
                                 android:layout_height="wrap_content"
-                                android:layout_margin="5dp"
-                                android:background="@color/cardview_shadow_end_color"
-                                android:gravity="center"
-                                android:padding="5dp"
+                                android:layout_margin="2dp"
+                                android:gravity="left"
+                                android:padding="2dp"
                                 android:text="Ticket Receive"
-                                android:textColor="#000"
-                                android:textSize="15dp"
+                                android:textColor="@color/primary"
+                                android:textSize="12dp"
                                 android:textStyle="bold">
 
                             </TextView>
 
                             <TextView
+                                android:background="@color/color_abu_abu"
                                 android:layout_weight="1"
                                 android:id="@+id/shopee_ticket_receive"
                                 android:layout_width="match_parent"
@@ -229,9 +232,9 @@
                                 android:text=" Ticket Receive"
                                 android:gravity="left"
                                 android:textStyle="normal"
-                                android:textSize="15dp"
-                                android:layout_margin="5dp"
-                                android:padding="5dp"
+                                android:textSize="12dp"
+                                android:layout_margin="2dp"
+                                android:padding="2dp"
                                 android:textColor="#000"
                                 >
 
@@ -249,7 +252,7 @@
                         app:cardUseCompatPadding="true"
                         app:cardMaxElevation="2dp"
                         android:layout_width="match_parent"
-                        android:layout_margin="10dp"
+                        android:layout_margin="1dp"
                         android:layout_height="wrap_content">
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -257,21 +260,22 @@
                             android:orientation="horizontal">
 
                             <TextView
+                                android:background="@color/color_abu_abu"
                                 android:layout_weight="1"
-                                android:background="@color/cardview_shadow_end_color"
                                 android:layout_width="200dp"
                                 android:layout_height="wrap_content"
                                 android:text=" Import Bank "
-                                android:gravity="center"
+                                android:gravity="left"
                                 android:textStyle="bold"
-                                android:textSize="15dp"
-                                android:layout_margin="5dp"
-                                android:padding="5dp"
-                                android:textColor="#000"
+                                android:textSize="12dp"
+                                android:layout_margin="2dp"
+                                android:padding="2dp"
+                                android:textColor="@color/primary"
                                 >
 
                             </TextView>
                             <TextView
+                                android:background="@color/color_abu_abu"
                                 android:layout_weight="1"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -279,9 +283,9 @@
                                 android:text="Bank "
                                 android:gravity="left"
                                 android:textStyle="normal"
-                                android:textSize="15dp"
-                                android:layout_margin="5dp"
-                                android:padding="5dp"
+                                android:textSize="12dp"
+                                android:layout_margin="2dp"
+                                android:padding="2dp"
                                 android:textColor="#000"
                                 >
 
@@ -299,28 +303,29 @@
                         app:cardUseCompatPadding="true"
                         app:cardMaxElevation="2dp"
                         android:layout_width="match_parent"
-                        android:layout_margin="10dp"
+                        android:layout_margin="1dp"
                         android:layout_height="wrap_content">
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:orientation="horizontal">
                             <TextView
+                                android:background="@color/color_abu_abu"
                                 android:layout_weight="1"
-                                android:background="@color/cardview_shadow_end_color"
                                 android:layout_width="200dp"
                                 android:layout_height="wrap_content"
                                 android:text="Bank "
                                 android:gravity="center"
                                 android:textStyle="bold"
-                                android:textSize="15dp"
-                                android:layout_margin="5dp"
-                                android:padding="5dp"
-                                android:textColor="#000"
+                                android:textSize="12dp"
+                                android:layout_margin="2dp"
+                                android:padding="2dp"
+                                android:textColor="@color/primary"
                                 >
 
                             </TextView>
                             <TextView
+                                android:background="@color/color_abu_abu"
                                 android:layout_weight="1"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -328,9 +333,9 @@
                                 android:text="Bank "
                                 android:gravity="left"
                                 android:textStyle="normal"
-                                android:textSize="15dp"
-                                android:layout_margin="5dp"
-                                android:padding="5dp"
+                                android:textSize="12dp"
+                                android:layout_margin="2dp"
+                                android:padding="2dp"
                                 android:textColor="#000"
                                 >
 
@@ -346,7 +351,7 @@
                         app:cardUseCompatPadding="true"
                         app:cardMaxElevation="2dp"
                         android:layout_width="match_parent"
-                        android:layout_margin="10dp"
+                        android:layout_margin="1dp"
                         android:layout_height="wrap_content">
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -354,16 +359,16 @@
                             android:orientation="horizontal">
                             <TextView
                                 android:layout_weight="1"
-                                android:background="@color/cardview_shadow_end_color"
+                                android:background="@color/color_abu_abu"
                                 android:layout_width="200dp"
                                 android:layout_height="wrap_content"
                                 android:text="Case"
                                 android:gravity="center"
                                 android:textStyle="bold"
-                                android:textSize="15dp"
-                                android:layout_margin="5dp"
-                                android:padding="5dp"
-                                android:textColor="#000"
+                                android:textSize="12dp"
+                                android:layout_margin="2dp"
+                                android:padding="2dp"
+                                android:textColor="@color/primary"
                                 >
 
                             </TextView>
@@ -375,10 +380,11 @@
                                 android:text="CASE"
                                 android:gravity="left"
                                 android:textStyle="normal"
-                                android:textSize="15dp"
-                                android:layout_margin="5dp"
-                                android:padding="5dp"
+                                android:textSize="12dp"
+                                android:layout_margin="2dp"
+                                android:padding="2dp"
                                 android:textColor="#000"
+                                android:background="@color/color_abu_abu"
                                 >
 
                             </TextView>
@@ -391,7 +397,7 @@
                     <androidx.cardview.widget.CardView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_margin="10dp"
+                        android:layout_margin="1dp"
                         app:cardCornerRadius="2dp"
                         app:cardElevation="2dp"
                         app:cardMaxElevation="2dp"
@@ -406,13 +412,13 @@
                                 android:layout_weight="1"
                                 android:layout_width="200dp"
                                 android:layout_height="wrap_content"
-                                android:layout_margin="5dp"
-                                android:background="@color/cardview_shadow_end_color"
-                                android:gravity="center"
-                                android:padding="5dp"
+                                android:layout_margin="2dp"
+                                android:background="@color/color_abu_abu"
+                                android:gravity="left"
+                                android:padding="2dp"
                                 android:text="Contract Number"
-                                android:textColor="#000"
-                                android:textSize="15dp"
+                                android:textColor="@color/primary"
+                                android:textSize="11dp"
                                 android:textStyle="bold">
 
                             </TextView>
@@ -422,12 +428,13 @@
                                 android:id="@+id/shope_contract_number"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_margin="5dp"
+                                android:layout_margin="2dp"
                                 android:gravity="left"
-                                android:padding="5dp"
+                                android:padding="2dp"
                                 android:text="Contract Number"
+                                android:background="@color/color_abu_abu"
                                 android:textColor="#000"
-                                android:textSize="15dp"
+                                android:textSize="12dp"
                                 android:textStyle="normal">
 
                             </TextView>
@@ -443,7 +450,7 @@
                         app:cardUseCompatPadding="true"
                         app:cardMaxElevation="2dp"
                         android:layout_width="match_parent"
-                        android:layout_margin="10dp"
+                        android:layout_margin="1dp"
                         android:layout_height="wrap_content">
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -451,20 +458,21 @@
                             android:orientation="horizontal">
                             <TextView
                                 android:layout_weight="1"
-                                android:background="@color/cardview_shadow_end_color"
+                                android:background="@color/color_abu_abu"
                                 android:layout_width="200dp"
                                 android:layout_height="wrap_content"
                                 android:text=" Ticket Number"
-                                android:gravity="center"
+                                android:gravity="left"
                                 android:textStyle="bold"
-                                android:textSize="15dp"
-                                android:layout_margin="5dp"
-                                android:padding="5dp"
-                                android:textColor="#000"
+                                android:textSize="11dp"
+                                android:layout_margin="2dp"
+                                android:padding="2dp"
+                                android:textColor="@color/primary"
                                 >
 
                             </TextView>
                             <TextView
+                                android:background="@color/color_abu_abu"
                                 android:layout_weight="1"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -472,9 +480,9 @@
                                 android:text="Ticket Number"
                                 android:gravity="left"
                                 android:textStyle="normal"
-                                android:textSize="15dp"
-                                android:layout_margin="5dp"
-                                android:padding="5dp"
+                                android:textSize="12dp"
+                                android:layout_margin="2dp"
+                                android:padding="2dp"
                                 android:textColor="#000"
                                 >
 
@@ -490,7 +498,7 @@
                         app:cardUseCompatPadding="true"
                         app:cardMaxElevation="2dp"
                         android:layout_width="match_parent"
-                        android:layout_margin="10dp"
+                        android:layout_margin="1dp"
                         android:layout_height="wrap_content">
                         <LinearLayout
                             android:orientation="horizontal"
@@ -498,30 +506,31 @@
                             android:layout_height="wrap_content">
                             <TextView
                                 android:layout_weight="1"
-                                android:background="@color/cardview_shadow_end_color"
+                                android:background="@color/color_abu_abu"
                                 android:layout_width="200dp"
                                 android:layout_height="wrap_content"
                                 android:text="SPK Number"
                                 android:gravity="center"
                                 android:textStyle="bold"
-                                android:textSize="15dp"
-                                android:layout_margin="5dp"
-                                android:padding="5dp"
-                                android:textColor="#000"
+                                android:textSize="11dp"
+                                android:layout_margin="2dp"
+                                android:padding="2dp"
+                                android:textColor="@color/primary"
                                 >
 
                             </TextView>
                             <TextView
                                 android:layout_weight="1"
                                 android:id="@+id/shope_detail_spk_number"
+                                android:background="@color/color_abu_abu"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="No SPK"
                                 android:gravity="left"
-                                android:textStyle="bold"
-                                android:textSize="15dp"
-                                android:layout_margin="5dp"
-                                android:padding="5dp"
+                                android:textStyle="normal"
+                                android:textSize="12dp"
+                                android:layout_margin="2dp"
+                                android:padding="2dp"
                                 android:textColor="#000"
                                 >
 
@@ -537,7 +546,7 @@
                         app:cardUseCompatPadding="true"
                         app:cardMaxElevation="2dp"
                         android:layout_width="match_parent"
-                        android:layout_margin="10dp"
+                        android:layout_margin="1dp"
                         android:layout_height="wrap_content">
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -551,10 +560,10 @@
                                 android:text="Work Type"
                                 android:gravity="center"
                                 android:textStyle="bold"
-                                android:textSize="15dp"
-                                android:layout_margin="5dp"
-                                android:padding="5dp"
-                                android:textColor="#000"
+                                android:textSize="12dp"
+                                android:layout_margin="2dp"
+                                android:padding="2dp"
+                                android:textColor="@color/primary"
                                 >
 
                             </TextView>
@@ -565,11 +574,12 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="Work Type"
+                                android:background="@color/color_abu_abu"
                                 android:gravity="left"
                                 android:textStyle="normal"
-                                android:textSize="15dp"
-                                android:layout_margin="5dp"
-                                android:padding="5dp"
+                                android:textSize="12dp"
+                                android:layout_margin="2dp"
+                                android:padding="2dp"
                                 android:textColor="#000"
                                 >
 
@@ -587,7 +597,7 @@
                         app:cardUseCompatPadding="true"
                         app:cardMaxElevation="2dp"
                         android:layout_width="match_parent"
-                        android:layout_margin="10dp"
+                        android:layout_margin="1dp"
                         android:layout_height="wrap_content">
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -602,10 +612,10 @@
                                 android:text="TID"
                                 android:gravity="center"
                                 android:textStyle="bold"
-                                android:textSize="15dp"
-                                android:layout_margin="5dp"
-                                android:padding="5dp"
-                                android:textColor="#000"
+                                android:textSize="12dp"
+                                android:layout_margin="2dp"
+                                android:padding="2dp"
+                                android:textColor="@color/primary"
                                 >
 
                             </TextView>
@@ -617,10 +627,12 @@
                                 android:text="TID/CSI"
                                 android:gravity="left"
                                 android:textStyle="normal"
-                                android:textSize="15dp"
-                                android:layout_margin="5dp"
-                                android:padding="5dp"
+                                android:textSize="12dp"
+                                android:layout_margin="2dp"
+                                android:padding="2dp"
                                 android:textColor="#000"
+                                android:background="@color/color_abu_abu"
+
                                 >
 
                             </TextView>
@@ -635,7 +647,7 @@
                         app:cardUseCompatPadding="true"
                         app:cardMaxElevation="2dp"
                         android:layout_width="match_parent"
-                        android:layout_margin="10dp"
+                        android:layout_margin="1dp"
                         android:layout_height="wrap_content">
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -650,10 +662,10 @@
                                 android:text="TID/CIMB"
                                 android:gravity="center"
                                 android:textStyle="bold"
-                                android:textSize="15dp"
-                                android:layout_margin="5dp"
-                                android:padding="5dp"
-                                android:textColor="#000"
+                                android:textSize="12dp"
+                                android:layout_margin="2dp"
+                                android:padding="2dp"
+                                android:textColor="@color/primary"
                                 >
 
                             </TextView>
@@ -665,10 +677,11 @@
                                 android:text="TID/CIMB"
                                 android:gravity="left"
                                 android:textStyle="normal"
-                                android:textSize="15dp"
-                                android:layout_margin="5dp"
-                                android:padding="5dp"
+                                android:textSize="12dp"
+                                android:layout_margin="2dp"
+                                android:padding="2dp"
                                 android:textColor="#000"
+                                android:background="@color/color_abu_abu"
                                 >
 
                             </TextView>
@@ -683,7 +696,7 @@
                         app:cardUseCompatPadding="true"
                         app:cardMaxElevation="2dp"
                         android:layout_width="match_parent"
-                        android:layout_margin="10dp"
+                        android:layout_margin="1dp"
                         android:layout_height="wrap_content">
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -697,10 +710,10 @@
                                 android:text="MID"
                                 android:gravity="center"
                                 android:textStyle="bold"
-                                android:textSize="15dp"
-                                android:layout_margin="5dp"
-                                android:padding="5dp"
-                                android:textColor="#000"
+                                android:textSize="12dp"
+                                android:layout_margin="2dp"
+                                android:padding="2dp"
+                                android:textColor="@color/primary"
                                 >
 
                             </TextView>
@@ -712,10 +725,11 @@
                                 android:text="MID"
                                 android:gravity="left"
                                 android:textStyle="normal"
-                                android:textSize="15dp"
-                                android:layout_margin="5dp"
-                                android:padding="5dp"
+                                android:textSize="12dp"
+                                android:layout_margin="2dp"
+                                android:padding="2dp"
                                 android:textColor="#000"
+                                android:background="@color/color_abu_abu"
                                 >
 
                             </TextView>
@@ -730,7 +744,7 @@
                         app:cardUseCompatPadding="true"
                         app:cardMaxElevation="2dp"
                         android:layout_width="match_parent"
-                        android:layout_margin="10dp"
+                        android:layout_margin="1dp"
                         android:layout_height="wrap_content">
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -742,12 +756,12 @@
                                 android:layout_width="200dp"
                                 android:layout_height="wrap_content"
                                 android:text=" Merchant Name"
-                                android:gravity="center"
+                                android:gravity="left"
                                 android:textStyle="bold"
-                                android:textSize="15dp"
-                                android:layout_margin="5dp"
-                                android:padding="5dp"
-                                android:textColor="#000"
+                                android:textSize="11dp"
+                                android:layout_margin="2dp"
+                                android:padding="2dp"
+                                android:textColor="@color/primary"
                                 >
 
                             </TextView>
@@ -759,10 +773,11 @@
                                 android:text=" Merchant Name"
                                 android:gravity="left"
                                 android:textStyle="normal"
-                                android:textSize="15dp"
-                                android:layout_margin="5dp"
-                                android:padding="5dp"
+                                android:textSize="12dp"
+                                android:layout_margin="2dp"
+                                android:padding="2dp"
                                 android:textColor="#000"
+                                android:background="@color/color_abu_abu"
                                 >
 
                             </TextView>
@@ -777,7 +792,7 @@
                         app:cardUseCompatPadding="true"
                         app:cardMaxElevation="2dp"
                         android:layout_width="match_parent"
-                        android:layout_margin="10dp"
+                        android:layout_margin="1dp"
                         android:layout_height="wrap_content">
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -789,12 +804,12 @@
                                 android:layout_height="wrap_content"
                                 android:background="@color/color_abu_abu"
                                 android:text=" Merchant Adress"
-                                android:gravity="center"
+                                android:gravity="left"
                                 android:textStyle="bold"
-                                android:textSize="15dp"
-                                android:layout_margin="5dp"
-                                android:padding="5dp"
-                                android:textColor="#000"
+                                android:textSize="11dp"
+                                android:layout_margin="2dp"
+                                android:padding="2dp"
+                                android:textColor="@color/primary"
                                 >
 
                             </TextView>
@@ -806,10 +821,11 @@
                                 android:text=" Merchant Adress"
                                 android:gravity="left"
                                 android:textStyle="normal"
-                                android:textSize="15dp"
-                                android:layout_margin="5dp"
-                                android:padding="5dp"
+                                android:textSize="12dp"
+                                android:layout_margin="2dp"
+                                android:padding="2dp"
                                 android:textColor="#000"
+                                android:background="@color/color_abu_abu"
                                 >
 
                             </TextView>
@@ -824,7 +840,7 @@
                         app:cardUseCompatPadding="true"
                         app:cardMaxElevation="2dp"
                         android:layout_width="match_parent"
-                        android:layout_margin="10dp"
+                        android:layout_margin="1dp"
                         android:layout_height="wrap_content">
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -836,12 +852,12 @@
                                 android:layout_width="200dp"
                                 android:layout_height="wrap_content"
                                 android:text=" Merchant Address 2"
-                                android:gravity="center"
+                                android:gravity="left"
                                 android:textStyle="bold"
-                                android:textSize="15dp"
-                                android:layout_margin="5dp"
-                                android:padding="5dp"
-                                android:textColor="#000"
+                                android:textSize="10dp"
+                                android:layout_margin="2dp"
+                                android:padding="2dp"
+                                android:textColor="@color/primary"
                                 >
 
                             </TextView>
@@ -853,10 +869,11 @@
                                 android:text=" Merchant Address 2"
                                 android:gravity="left"
                                 android:textStyle="normal"
-                                android:textSize="15dp"
-                                android:layout_margin="5dp"
-                                android:padding="5dp"
+                                android:textSize="11dp"
+                                android:layout_margin="2dp"
+                                android:padding="2dp"
                                 android:textColor="#000"
+                                android:background="@color/color_abu_abu"
                                 >
 
                             </TextView>
@@ -871,7 +888,7 @@
                         app:cardUseCompatPadding="true"
                         app:cardMaxElevation="2dp"
                         android:layout_width="match_parent"
-                        android:layout_margin="10dp"
+                        android:layout_margin="1dp"
                         android:layout_height="wrap_content">
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -883,12 +900,12 @@
                                 android:layout_width="200dp"
                                 android:layout_height="wrap_content"
                                 android:text="Postal Code "
-                                android:gravity="center"
+                                android:gravity="left"
                                 android:textStyle="bold"
-                                android:textSize="15dp"
-                                android:layout_margin="5dp"
-                                android:padding="5dp"
-                                android:textColor="#000"
+                                android:textSize="12dp"
+                                android:layout_margin="2dp"
+                                android:padding="2dp"
+                                android:textColor="@color/primary"
                                 >
 
                             </TextView>
@@ -900,9 +917,10 @@
                                 android:text="Postal Code "
                                 android:gravity="left"
                                 android:textStyle="normal"
-                                android:textSize="15dp"
-                                android:layout_margin="5dp"
-                                android:padding="5dp"
+                                android:textSize="12dp"
+                                android:layout_margin="2dp"
+                                android:padding="2dp"
+                                android:background="@color/color_abu_abu"
                                 android:textColor="#000"
                                 >
 
@@ -918,7 +936,7 @@
                         app:cardUseCompatPadding="true"
                         app:cardMaxElevation="2dp"
                         android:layout_width="match_parent"
-                        android:layout_margin="10dp"
+                        android:layout_margin="1dp"
                         android:layout_height="wrap_content">
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -932,14 +950,15 @@
                                 android:text="City"
                                 android:gravity="center"
                                 android:textStyle="bold"
-                                android:textSize="15dp"
-                                android:layout_margin="5dp"
-                                android:padding="5dp"
-                                android:textColor="#000"
+                                android:textSize="12dp"
+                                android:layout_margin="2dp"
+                                android:padding="2dp"
+                                android:textColor="@color/primary"
                                 >
 
                             </TextView>
                             <TextView
+                                android:background="@color/color_abu_abu"
                                 android:layout_weight="1"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -947,9 +966,9 @@
                                 android:text="Kota"
                                 android:gravity="left"
                                 android:textStyle="normal"
-                                android:textSize="15dp"
-                                android:layout_margin="5dp"
-                                android:padding="5dp"
+                                android:textSize="12dp"
+                                android:layout_margin="2dp"
+                                android:padding="2dp"
                                 android:textColor="#000"
                                 >
 
@@ -965,7 +984,7 @@
                         app:cardUseCompatPadding="true"
                         app:cardMaxElevation="2dp"
                         android:layout_width="match_parent"
-                        android:layout_margin="10dp"
+                        android:layout_margin="1dp"
                         android:layout_height="wrap_content">
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -977,12 +996,12 @@
                                 android:layout_width="200dp"
                                 android:layout_height="wrap_content"
                                 android:text=" PIC Name"
-                                android:gravity="center"
+                                android:gravity="left"
                                 android:textStyle="bold"
-                                android:textSize="15dp"
-                                android:layout_margin="5dp"
-                                android:padding="5dp"
-                                android:textColor="#000"
+                                android:textSize="12dp"
+                                android:layout_margin="2dp"
+                                android:padding="2dp"
+                                android:textColor="@color/primary"
                                 >
 
                             </TextView>
@@ -994,10 +1013,11 @@
                                 android:text="Nama PIC"
                                 android:gravity="left"
                                 android:textStyle="normal"
-                                android:textSize="15dp"
-                                android:layout_margin="5dp"
-                                android:padding="5dp"
+                                android:textSize="12dp"
+                                android:layout_margin="2dp"
+                                android:padding="2dp"
                                 android:textColor="#000"
+                                android:background="@color/color_abu_abu"
                                 >
 
                             </TextView>
@@ -1012,7 +1032,7 @@
                         app:cardUseCompatPadding="true"
                         app:cardMaxElevation="2dp"
                         android:layout_width="match_parent"
-                        android:layout_margin="10dp"
+                        android:layout_margin="1dp"
                         android:layout_height="wrap_content">
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -1024,12 +1044,12 @@
                                 android:layout_width="200dp"
                                 android:layout_height="wrap_content"
                                 android:text=" PIC Number"
-                                android:gravity="center"
+                                android:gravity="left"
                                 android:textStyle="bold"
-                                android:textSize="15dp"
-                                android:layout_margin="5dp"
-                                android:padding="5dp"
-                                android:textColor="#000"
+                                android:textSize="12dp"
+                                android:layout_margin="2dp"
+                                android:padding="2dp"
+                                android:textColor="@color/primary"
                                 >
 
                             </TextView>
@@ -1041,10 +1061,11 @@
                                 android:text="No PIC"
                                 android:gravity="left"
                                 android:textStyle="normal"
-                                android:textSize="15dp"
-                                android:layout_margin="5dp"
-                                android:padding="5dp"
+                                android:textSize="12dp"
+                                android:layout_margin="2dp"
+                                android:padding="2dp"
                                 android:textColor="#000"
+                                android:background="@color/color_abu_abu"
                                 >
 
                             </TextView>
@@ -1059,7 +1080,7 @@
                         app:cardUseCompatPadding="true"
                         app:cardMaxElevation="2dp"
                         android:layout_width="match_parent"
-                        android:layout_margin="10dp"
+                        android:layout_margin="1dp"
                         android:layout_height="wrap_content">
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -1073,10 +1094,10 @@
                                 android:text="Note"
                                 android:gravity="center"
                                 android:textStyle="bold"
-                                android:textSize="15dp"
-                                android:layout_margin="5dp"
-                                android:padding="5dp"
-                                android:textColor="#000"
+                                android:textSize="12dp"
+                                android:layout_margin="2dp"
+                                android:padding="2dp"
+                                android:textColor="@color/primary"
                                 >
 
                             </TextView>
@@ -1087,11 +1108,12 @@
                                 android:id="@+id/shope_deail_note"
                                 android:text="Note"
                                 android:gravity="left"
-                                android:textStyle="bold"
-                                android:textSize="15dp"
-                                android:layout_margin="5dp"
-                                android:padding="5dp"
+                                android:textStyle="normal"
+                                android:textSize="10dp"
+                                android:layout_margin="2dp"
+                                android:padding="2dp"
                                 android:textColor="#000"
+                                android:background="@color/color_abu_abu"
                                 >
 
                             </TextView>
@@ -1106,7 +1128,7 @@
                         app:cardUseCompatPadding="true"
                         app:cardMaxElevation="2dp"
                         android:layout_width="match_parent"
-                        android:layout_margin="10dp"
+                        android:layout_margin="1dp"
                         android:layout_height="wrap_content">
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -1118,12 +1140,12 @@
                                 android:layout_width="200dp"
                                 android:layout_height="wrap_content"
                                 android:text="Damage Type"
-                                android:gravity="center"
+                                android:gravity="left"
                                 android:textStyle="bold"
-                                android:textSize="15dp"
-                                android:layout_margin="5dp"
-                                android:padding="5dp"
-                                android:textColor="#000"
+                                android:textSize="11dp"
+                                android:layout_margin="2dp"
+                                android:padding="2dp"
+                                android:textColor="@color/primary"
                                 >
 
                             </TextView>
@@ -1135,10 +1157,11 @@
                                 android:text="Jenis Kerusakan"
                                 android:gravity="left"
                                 android:textStyle="normal"
-                                android:textSize="15dp"
-                                android:layout_margin="5dp"
-                                android:padding="5dp"
+                                android:textSize="11dp"
+                                android:layout_margin="2dp"
+                                android:padding="2dp"
                                 android:textColor="#000"
+                                android:background="@color/color_abu_abu"
                                 >
 
                             </TextView>
@@ -1154,7 +1177,7 @@
                         app:cardUseCompatPadding="true"
                         app:cardMaxElevation="2dp"
                         android:layout_width="match_parent"
-                        android:layout_margin="10dp"
+                        android:layout_margin="1dp"
                         android:layout_height="wrap_content">
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -1166,16 +1189,17 @@
                                 android:layout_width="200dp"
                                 android:layout_height="wrap_content"
                                 android:text=" Init Code"
-                                android:gravity="center"
+                                android:gravity="left"
                                 android:textStyle="bold"
-                                android:textSize="15dp"
-                                android:layout_margin="5dp"
-                                android:padding="5dp"
-                                android:textColor="#000"
+                                android:textSize="12dp"
+                                android:layout_margin="2dp"
+                                android:padding="2dp"
+                                android:textColor="@color/primary"
                                 >
 
                             </TextView>
                             <TextView
+                                android:background="@color/color_abu_abu"
                                 android:layout_weight="1"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -1183,10 +1207,11 @@
                                 android:text="Kode Init"
                                 android:gravity="left"
                                 android:textStyle="normal"
-                                android:textSize="15dp"
-                                android:layout_margin="5dp"
-                                android:padding="5dp"
+                                android:textSize="12dp"
+                                android:layout_margin="2dp"
+                                android:padding="2dp"
                                 android:textColor="#000"
+
                                 >
 
                             </TextView>
@@ -1202,7 +1227,7 @@
                         app:cardUseCompatPadding="true"
                         app:cardMaxElevation="2dp"
                         android:layout_width="match_parent"
-                        android:layout_margin="10dp"
+                        android:layout_margin="1dp"
                         android:layout_height="wrap_content">
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -1216,10 +1241,10 @@
                                 android:text=" SLA"
                                 android:gravity="center"
                                 android:textStyle="bold"
-                                android:textSize="15dp"
-                                android:layout_margin="5dp"
-                                android:padding="5dp"
-                                android:textColor="#000"
+                                android:textSize="12dp"
+                                android:layout_margin="2dp"
+                                android:padding="2dp"
+                                android:textColor="@color/primary"
                                 >
 
                             </TextView>
@@ -1231,9 +1256,10 @@
                                 android:text="Kode Init"
                                 android:gravity="left"
                                 android:textStyle="normal"
-                                android:textSize="15dp"
-                                android:layout_margin="5dp"
-                                android:padding="5dp"
+                                android:textSize="12dp"
+                                android:layout_margin="2dp"
+                                android:background="@color/color_abu_abu"
+                                android:padding="2dp"
                                 android:textColor="#000"
                                 >
 
@@ -1250,7 +1276,7 @@
                         app:cardUseCompatPadding="true"
                         app:cardMaxElevation="2dp"
                         android:layout_width="match_parent"
-                        android:layout_margin="10dp"
+                        android:layout_margin="1dp"
                         android:layout_height="wrap_content">
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -1264,10 +1290,10 @@
                                 android:text=" SN EDC"
                                 android:gravity="center"
                                 android:textStyle="bold"
-                                android:textSize="15dp"
-                                android:layout_margin="5dp"
-                                android:padding="5dp"
-                                android:textColor="#000"
+                                android:textSize="12dp"
+                                android:layout_margin="2dp"
+                                android:padding="2dp"
+                                android:textColor="@color/primary"
                                 >
 
                             </TextView>
@@ -1279,9 +1305,10 @@
                                 android:text="Kode Init"
                                 android:gravity="left"
                                 android:textStyle="normal"
-                                android:textSize="15dp"
-                                android:layout_margin="5dp"
-                                android:padding="5dp"
+                                android:textSize="12dp"
+                                android:background="@color/color_abu_abu"
+                                android:layout_margin="2dp"
+                                android:padding="2dp"
                                 android:textColor="#000"
                                 >
 
@@ -1298,7 +1325,7 @@
                         app:cardUseCompatPadding="true"
                         app:cardMaxElevation="2dp"
                         android:layout_width="match_parent"
-                        android:layout_margin="10dp"
+                        android:layout_margin="1dp"
                         android:layout_height="wrap_content">
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -1310,12 +1337,12 @@
                                 android:layout_width="200dp"
                                 android:layout_height="wrap_content"
                                 android:text=" SN Sim"
-                                android:gravity="center"
+                                android:gravity="left"
                                 android:textStyle="bold"
-                                android:textSize="15dp"
-                                android:layout_margin="5dp"
-                                android:padding="5dp"
-                                android:textColor="#000"
+                                android:textSize="12dp"
+                                android:layout_margin="2dp"
+                                android:padding="2dp"
+                                android:textColor="@color/primary"
                                 >
 
                             </TextView>
@@ -1327,9 +1354,10 @@
                                 android:text="Kode Init"
                                 android:gravity="left"
                                 android:textStyle="normal"
-                                android:textSize="15dp"
-                                android:layout_margin="5dp"
-                                android:padding="5dp"
+                                android:textSize="12dp"
+                                android:layout_margin="2dp"
+                                android:background="@color/color_abu_abu"
+                                android:padding="2dp"
                                 android:textColor="#000"
                                 >
 
@@ -1346,7 +1374,7 @@
                         app:cardUseCompatPadding="true"
                         app:cardMaxElevation="2dp"
                         android:layout_width="match_parent"
-                        android:layout_margin="10dp"
+                        android:layout_margin="1dp"
                         android:layout_height="wrap_content">
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -1358,16 +1386,17 @@
                                 android:layout_width="200dp"
                                 android:layout_height="wrap_content"
                                 android:text=" Assign to date"
-                                android:gravity="center"
+                                android:gravity="left"
                                 android:textStyle="bold"
-                                android:textSize="15dp"
-                                android:layout_margin="5dp"
-                                android:padding="5dp"
-                                android:textColor="#000"
+                                android:textSize="10dp"
+                                android:layout_margin="2dp"
+                                android:padding="2dp"
+                                android:textColor="@color/primary"
                                 >
 
                             </TextView>
                             <TextView
+                                android:background="@color/color_abu_abu"
                                 android:layout_weight="1"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -1375,9 +1404,9 @@
                                 android:text="Kode Init"
                                 android:gravity="left"
                                 android:textStyle="normal"
-                                android:textSize="15dp"
-                                android:layout_margin="5dp"
-                                android:padding="5dp"
+                                android:textSize="11dp"
+                                android:layout_margin="2dp"
+                                android:padding="2dp"
                                 android:textColor="#000"
                                 >
 
@@ -1394,7 +1423,7 @@
                         app:cardUseCompatPadding="true"
                         app:cardMaxElevation="2dp"
                         android:layout_width="match_parent"
-                        android:layout_margin="10dp"
+                        android:layout_margin="1dp"
                         android:layout_height="wrap_content">
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -1406,12 +1435,12 @@
                                 android:layout_width="200dp"
                                 android:layout_height="wrap_content"
                                 android:text=" Assign to status"
-                                android:gravity="center"
+                                android:gravity="left"
                                 android:textStyle="bold"
-                                android:textSize="15dp"
-                                android:layout_margin="5dp"
-                                android:padding="5dp"
-                                android:textColor="#000"
+                                android:textSize="9dp"
+                                android:layout_margin="2dp"
+                                android:padding="2dp"
+                                android:textColor="@color/primary"
                                 >
 
                             </TextView>
@@ -1422,11 +1451,13 @@
                                 android:id="@+id/shope_detail_assign_to_status"
                                 android:text="Kode Init"
                                 android:gravity="left"
+                                android:background="@color/color_abu_abu"
                                 android:textStyle="normal"
-                                android:textSize="15dp"
-                                android:layout_margin="5dp"
-                                android:padding="5dp"
+                                android:textSize="12dp"
+                                android:layout_margin="2dp"
+                                android:padding="2dp"
                                 android:textColor="#000"
+
                                 >
 
                             </TextView>

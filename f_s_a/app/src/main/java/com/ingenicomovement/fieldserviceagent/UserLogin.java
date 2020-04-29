@@ -32,11 +32,16 @@ public class UserLogin extends AppCompatActivity {
         button_login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                userAuthLogin();
+              //  userAuthLogin();
                 //Intent intent = new Intent(UserLogin.this, SelectMenu.class);
 
                // startActivity(intent);
                // finish();
+
+                Intent intent = new Intent(UserLogin.this, BottomNavDua.class);
+                startActivity(intent);
+                finish();
+
 
             }
         });
