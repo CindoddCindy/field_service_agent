@@ -1,5 +1,5 @@
 
-package com.ingenicomovement.fieldserviceagent.pojo;
+package com.ingenicomovement.fieldserviceagent.pojo_auth;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;

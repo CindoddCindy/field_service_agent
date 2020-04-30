@@ -5,9 +5,8 @@ import java.util.ArrayList;
 import java.util.List;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
-//import org.apache.commons.lang.builder.ToStringBuilder;
 
-public class AuthLoginResponse {
+public class ResponseInProgressAssign {
 
     @SerializedName("success")
     @Expose
@@ -15,27 +14,32 @@ public class AuthLoginResponse {
     @SerializedName("message")
     @Expose
     private Object message;
+    @SerializedName("total")
+    @Expose
+    private String total;
     @SerializedName("data")
     @Expose
-    private List<Datum> data = new ArrayList<Datum>();
+    private List<Object> data = new ArrayList<Object>();
 
     /**
      * No args constructor for use in serialization
-     *
+     * 
      */
-    public AuthLoginResponse() {
+    public ResponseInProgressAssign() {
     }
 
     /**
-     *
+     * 
+     * @param total
      * @param data
      * @param success
      * @param message
      */
-    public AuthLoginResponse(String success, Object message, List<Datum> data) {
+    public ResponseInProgressAssign(String success, Object message, String total, List<Object> data) {
         super();
         this.success = success;
         this.message = message;
+        this.total = total;
         this.data = data;
     }
 
@@ -55,13 +59,20 @@ public class AuthLoginResponse {
         this.message = message;
     }
 
-    public List<Datum> getData() {
+    public String getTotal() {
+        return total;
+    }
+
+    public void setTotal(String total) {
+        this.total = total;
+    }
+
+    public List<Object> getData() {
         return data;
     }
 
-    public void setData(List<Datum> data) {
+    public void setData(List<Object> data) {
         this.data = data;
     }
-
 
 }

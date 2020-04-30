@@ -1,18 +1,20 @@
 
 package com.ingenicomovement.fieldserviceagent.pojo;
 
-import android.os.Parcel;
-import android.os.Parcelable;
-import android.os.Parcelable.Creator;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class DataItem implements Parcelable
-{
+public class DataDetail {
 
     @SerializedName("id")
     @Expose
     private String id;
+    @SerializedName("category")
+    @Expose
+    private String category;
+    @SerializedName("customer")
+    @Expose
+    private String customer;
     @SerializedName("import_Date")
     @Expose
     private String importDate;
@@ -88,88 +90,18 @@ public class DataItem implements Parcelable
     @SerializedName("sn_Sim")
     @Expose
     private String snSim;
-    @SerializedName("assign_To_Date")
-    @Expose
-    private String assignToDate;
-    @SerializedName("assign_To_Status")
-    @Expose
-    private String assignToStatus;
-    @SerializedName("sum_Month")
-    @Expose
-    private Object sumMonth;
-    @SerializedName("sum_Week")
-    @Expose
-    private Object sumWeek;
-    @SerializedName("sum_Today")
-    @Expose
-    private Object sumToday;
-    public final static Creator<DataItem> CREATOR = new Creator<DataItem>() {
-
-
-        @SuppressWarnings({
-            "unchecked"
-        })
-
-        public DataItem createFromParcel(Parcel in) {
-            return new DataItem(in);
-        }
-
-        public DataItem[] newArray(int size) {
-            return (new DataItem[size]);
-        }
-
-
-
-    }
-    ;
-
-    protected DataItem(Parcel in) {
-        this.id = ((String) in.readValue((String.class.getClassLoader())));
-        this.importDate = ((String) in.readValue((String.class.getClassLoader())));
-        this.importTicketReceive = ((String) in.readValue((String.class.getClassLoader())));
-        this.importBank = ((String) in.readValue((String.class.getClassLoader())));
-        this.bank = ((String) in.readValue((String.class.getClassLoader())));
-        this._case = ((String) in.readValue((String.class.getClassLoader())));
-        this.contractNumber = ((String) in.readValue((String.class.getClassLoader())));
-        this.ticketNumber = ((String) in.readValue((String.class.getClassLoader())));
-        this.spkNumber = ((String) in.readValue((String.class.getClassLoader())));
-        this.workType = ((String) in.readValue((String.class.getClassLoader())));
-        this.tid = ((String) in.readValue((String.class.getClassLoader())));
-        this.tidCimb = ((String) in.readValue((String.class.getClassLoader())));
-        this.mid = ((String) in.readValue((String.class.getClassLoader())));
-        this.merchantName = ((String) in.readValue((String.class.getClassLoader())));
-        this.merchantAddress = ((String) in.readValue((String.class.getClassLoader())));
-        this.merchantAddress2 = ((String) in.readValue((String.class.getClassLoader())));
-        this.postalCode = ((String) in.readValue((String.class.getClassLoader())));
-        this.city = ((String) in.readValue((String.class.getClassLoader())));
-        this.picName = ((String) in.readValue((String.class.getClassLoader())));
-        this.picNumber = ((String) in.readValue((String.class.getClassLoader())));
-        this.note = ((String) in.readValue((String.class.getClassLoader())));
-        this.damageType = ((String) in.readValue((String.class.getClassLoader())));
-        this.initCode = ((String) in.readValue((String.class.getClassLoader())));
-        this.sla = ((String) in.readValue((String.class.getClassLoader())));
-        this.snEdc = ((String) in.readValue((String.class.getClassLoader())));
-        this.snSim = ((String) in.readValue((String.class.getClassLoader())));
-        this.assignToDate = ((String) in.readValue((String.class.getClassLoader())));
-        this.assignToStatus = ((String) in.readValue((String.class.getClassLoader())));
-        this.sumMonth = ((Object) in.readValue((Object.class.getClassLoader())));
-        this.sumWeek = ((Object) in.readValue((Object.class.getClassLoader())));
-        this.sumToday = ((Object) in.readValue((Object.class.getClassLoader())));
-    }
 
     /**
      * No args constructor for use in serialization
      * 
      */
-    public DataItem() {
+    public DataDetail() {
     }
 
     /**
      * 
      * @param ticketNumber
      * @param note
-     * @param assignToStatus
-     * @param sumToday
      * @param city
      * @param postalCode
      * @param mid
@@ -184,23 +116,24 @@ public class DataItem implements Parcelable
      * @param importTicketReceive
      * @param id
      * @param picNumber
-     * @param sumWeek
-     * @param sumMonth
      * @param importBank
      * @param initCode
      * @param _case
      * @param contractNumber
      * @param sla
      * @param spkNumber
-     * @param assignToDate
      * @param workType
      * @param merchantAddress
      * @param snSim
+     * @param category
      * @param damageType
+     * @param customer
      */
-    public DataItem(String id, String importDate, String importTicketReceive, String importBank, String bank, String _case, String contractNumber, String ticketNumber, String spkNumber, String workType, String tid, String tidCimb, String mid, String merchantName, String merchantAddress, String merchantAddress2, String postalCode, String city, String picName, String picNumber, String note, String damageType, String initCode, String sla, String snEdc, String snSim, String assignToDate, String assignToStatus, Object sumMonth, Object sumWeek, Object sumToday) {
+    public DataDetail(String id, String category, String customer, String importDate, String importTicketReceive, String importBank, String bank, String _case, String contractNumber, String ticketNumber, String spkNumber, String workType, String tid, String tidCimb, String mid, String merchantName, String merchantAddress, String merchantAddress2, String postalCode, String city, String picName, String picNumber, String note, String damageType, String initCode, String sla, String snEdc, String snSim) {
         super();
         this.id = id;
+        this.category = category;
+        this.customer = customer;
         this.importDate = importDate;
         this.importTicketReceive = importTicketReceive;
         this.importBank = importBank;
@@ -226,11 +159,6 @@ public class DataItem implements Parcelable
         this.sla = sla;
         this.snEdc = snEdc;
         this.snSim = snSim;
-        this.assignToDate = assignToDate;
-        this.assignToStatus = assignToStatus;
-        this.sumMonth = sumMonth;
-        this.sumWeek = sumWeek;
-        this.sumToday = sumToday;
     }
 
     public String getId() {
@@ -239,6 +167,22 @@ public class DataItem implements Parcelable
 
     public void setId(String id) {
         this.id = id;
+    }
+
+    public String getCategory() {
+        return category;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
+    }
+
+    public String getCustomer() {
+        return customer;
+    }
+
+    public void setCustomer(String customer) {
+        this.customer = customer;
     }
 
     public String getImportDate() {
@@ -439,84 +383,6 @@ public class DataItem implements Parcelable
 
     public void setSnSim(String snSim) {
         this.snSim = snSim;
-    }
-
-    public String getAssignToDate() {
-        return assignToDate;
-    }
-
-    public void setAssignToDate(String assignToDate) {
-        this.assignToDate = assignToDate;
-    }
-
-    public String getAssignToStatus() {
-        return assignToStatus;
-    }
-
-    public void setAssignToStatus(String assignToStatus) {
-        this.assignToStatus = assignToStatus;
-    }
-
-    public Object getSumMonth() {
-        return sumMonth;
-    }
-
-    public void setSumMonth(Object sumMonth) {
-        this.sumMonth = sumMonth;
-    }
-
-    public Object getSumWeek() {
-        return sumWeek;
-    }
-
-    public void setSumWeek(Object sumWeek) {
-        this.sumWeek = sumWeek;
-    }
-
-    public Object getSumToday() {
-        return sumToday;
-    }
-
-    public void setSumToday(Object sumToday) {
-        this.sumToday = sumToday;
-    }
-
-    public void writeToParcel(Parcel dest, int flags) {
-        dest.writeValue(id);
-        dest.writeValue(importDate);
-        dest.writeValue(importTicketReceive);
-        dest.writeValue(importBank);
-        dest.writeValue(bank);
-        dest.writeValue(_case);
-        dest.writeValue(contractNumber);
-        dest.writeValue(ticketNumber);
-        dest.writeValue(spkNumber);
-        dest.writeValue(workType);
-        dest.writeValue(tid);
-        dest.writeValue(tidCimb);
-        dest.writeValue(mid);
-        dest.writeValue(merchantName);
-        dest.writeValue(merchantAddress);
-        dest.writeValue(merchantAddress2);
-        dest.writeValue(postalCode);
-        dest.writeValue(city);
-        dest.writeValue(picName);
-        dest.writeValue(picNumber);
-        dest.writeValue(note);
-        dest.writeValue(damageType);
-        dest.writeValue(initCode);
-        dest.writeValue(sla);
-        dest.writeValue(snEdc);
-        dest.writeValue(snSim);
-        dest.writeValue(assignToDate);
-        dest.writeValue(assignToStatus);
-        dest.writeValue(sumMonth);
-        dest.writeValue(sumWeek);
-        dest.writeValue(sumToday);
-    }
-
-    public int describeContents() {
-        return  0;
     }
 
 }

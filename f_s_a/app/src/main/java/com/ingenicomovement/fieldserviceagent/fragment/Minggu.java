@@ -11,9 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.ingenicomovement.fieldserviceagent.R;
-import com.ingenicomovement.fieldserviceagent.adapter.AdapterInProgressShopee;
-import com.ingenicomovement.fieldserviceagent.pojo.AssignDataResponse;
-import com.ingenicomovement.fieldserviceagent.pojo.DataItem;
+//import com.ingenicomovement.fieldserviceagent.adapter.AdapterInProgressShopee;
 import com.ingenicomovement.fieldserviceagent.retrofit.RetrofitMethod;
 import com.ingenicomovement.fieldserviceagent.retrofit.RetrofitUrl;
 
@@ -30,8 +28,8 @@ import retrofit2.Response;
 public class Minggu extends Fragment {
 
     RecyclerView recyclerView;
-    AdapterInProgressShopee adapterInProgressShopee;
-    List<DataItem> dataItemArrayList = new ArrayList<>();
+    //AdapterInProgressShopee adapterInProgressShopee;
+    //List<DataItem> dataItemArrayList = new ArrayList<>();
     RetrofitMethod retrofitMethod ;
 
     public Minggu() {
@@ -46,20 +44,22 @@ public class Minggu extends Fragment {
         View view = inflater.inflate(R.layout.fragment_minggu, container, false);
 
         recyclerView = view.findViewById(R.id.rv_inProgresShopee);
-        adapterInProgressShopee = new AdapterInProgressShopee(getActivity(),dataItemArrayList );
-        recyclerView.setAdapter(adapterInProgressShopee);
+     //   adapterInProgressShopee = new AdapterInProgressShopee(getActivity(),dataItemArrayList );
+       // recyclerView.setAdapter(adapterInProgressShopee);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity());
         recyclerView.setLayoutManager(linearLayoutManager);
 
 
        // if (ConnectUtil.isConnected(getActivity())) {
-            shoopeInProgressData();
+          //  shoopeInProgressData();
        // } else {
           //  PopUpUtil.showMsg(getActivity(), "No Internet connection", PopUpUtil.SHORT);
        // }
 
         return view;
     }
+
+    /*
 
     public void shoopeInProgressData(){
         retrofitMethod = RetrofitUrl.getRetrofit().create(RetrofitMethod.class);
@@ -84,4 +84,6 @@ public class Minggu extends Fragment {
 
 
     }
+
+     */
 }

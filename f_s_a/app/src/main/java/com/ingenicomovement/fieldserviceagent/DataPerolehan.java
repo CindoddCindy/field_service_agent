@@ -45,6 +45,8 @@ public class DataPerolehan extends AppCompatActivity {
     private void setupTabLayout() {
         tabLayout.addTab(tabLayout.newTab().setText(" In Progress"));
         tabLayout.addTab(tabLayout.newTab().setText("Done"));
+        tabLayout.addTab(tabLayout.newTab().setText("Close"));
+        tabLayout.addTab(tabLayout.newTab().setText("Revisit"));
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
         TabLayoutAdapter tabLayoutAdapter = new TabLayoutAdapter(getSupportFragmentManager(), tabLayout.getTabCount());
         viewPager.setAdapter(tabLayoutAdapter);
@@ -74,6 +76,16 @@ public class DataPerolehan extends AppCompatActivity {
                         //setStatusBarColor("#007a0e");
                       //  tabLayout.setBackgroundColor(Color.parseColor(String.valueOf(R.color.primary)));
                         break;
+
+                    case 2:
+                        //setStatusBarColor("#007a0e");
+                        //  tabLayout.setBackgroundColor(Color.parseColor(String.valueOf(R.color.primary)));
+                        break;
+                    case 3:
+                        //setStatusBarColor("#007a0e");
+                        //  tabLayout.setBackgroundColor(Color.parseColor(String.valueOf(R.color.primary)));
+                        break;
+
 
                 }
                 viewPager.setCurrentItem(tab.getPosition());

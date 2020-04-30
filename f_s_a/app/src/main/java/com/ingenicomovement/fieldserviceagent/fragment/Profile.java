@@ -4,22 +4,14 @@ import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 
-import android.os.Debug;
-import android.text.format.DateFormat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.ingenicomovement.fieldserviceagent.R;
-import com.ingenicomovement.fieldserviceagent.pojo.AuthLoginResponse;
-import com.ingenicomovement.fieldserviceagent.pojo.Datum;
-import com.ingenicomovement.fieldserviceagent.pojo.Project;
 import com.ingenicomovement.fieldserviceagent.retrofit.RetrofitMethod;
 import com.ingenicomovement.fieldserviceagent.retrofit.RetrofitUrl;
-
-import java.util.ArrayList;
-import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -48,13 +40,13 @@ public class Profile extends Fragment {
         textView_user_full_name=view.findViewById(R.id.tv_user_full_name);
 
 
-        userAuthLogin();
+       // userAuthLogin();
 
 
         return view;
     }
 
-
+/*
     public void userAuthLogin(){
         String name="ranadi";
         String password="000000";
@@ -95,5 +87,7 @@ public class Profile extends Fragment {
     }
 
 
+
+ */
 
 }

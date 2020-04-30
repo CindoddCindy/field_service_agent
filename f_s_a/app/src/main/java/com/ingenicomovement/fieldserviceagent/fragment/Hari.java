@@ -14,7 +14,6 @@ import android.widget.TextView;
 import com.google.android.material.tabs.TabLayout;
 import com.ingenicomovement.fieldserviceagent.DataPerolehan;
 import com.ingenicomovement.fieldserviceagent.R;
-import com.ingenicomovement.fieldserviceagent.pojo.AssignDataResponse;
 import com.ingenicomovement.fieldserviceagent.retrofit.RetrofitMethod;
 import com.ingenicomovement.fieldserviceagent.retrofit.RetrofitUrl;
 
@@ -69,7 +68,7 @@ public class Hari extends Fragment {
     }
 
 
-
+/*
 
     public void dataPerolehan(){
 
@@ -101,4 +100,6 @@ public class Hari extends Fragment {
 
 
     }
+
+ */
 }

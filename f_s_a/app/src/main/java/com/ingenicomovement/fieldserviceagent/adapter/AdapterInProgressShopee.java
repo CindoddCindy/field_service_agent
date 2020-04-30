@@ -1,4 +1,4 @@
-package com.ingenicomovement.fieldserviceagent.adapter;
+/*package com.ingenicomovement.fieldserviceagent.adapter;
 
 import android.content.Context;
 import android.content.Intent;
@@ -14,7 +14,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.ingenicomovement.fieldserviceagent.R;
 import com.ingenicomovement.fieldserviceagent.UserInputDropDown;
-import com.ingenicomovement.fieldserviceagent.pojo.DataItem;
 
 import java.util.List;
 
@@ -123,3 +122,6 @@ public class AdapterInProgressShopee  extends RecyclerView.Adapter<AdapterInProg
         }
     }
 }
+
+
+ */

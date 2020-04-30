@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
 
-import com.ingenicomovement.fieldserviceagent.pojo.AssignDataResponse;
 import com.ingenicomovement.fieldserviceagent.retrofit.RetrofitMethod;
 import com.ingenicomovement.fieldserviceagent.retrofit.RetrofitUrl;
 
@@ -58,7 +57,7 @@ public class UserInputDropDown extends AppCompatActivity {
         textView_duapuluhdelapaan=findViewById(R.id.shope_detail_assign_to_status);
 
 
-        getDetailItem();
+      //  getDetailItem();
     }
 
     public void getBundle(){
@@ -100,7 +99,7 @@ public class UserInputDropDown extends AppCompatActivity {
         }
 
     }
-
+/*
     public void getDetailItem(){
     RetrofitMethod    retrofitMethod = RetrofitUrl.getRetrofit().create(RetrofitMethod.class);
         Call<AssignDataResponse> assignShopeeResponseCall= retrofitMethod.getShpeeAsignInProgressDetail();
@@ -119,4 +118,6 @@ public class UserInputDropDown extends AppCompatActivity {
             }
         });
     }
+
+ */
 }

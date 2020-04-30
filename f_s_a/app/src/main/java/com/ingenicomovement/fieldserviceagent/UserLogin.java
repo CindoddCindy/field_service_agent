@@ -8,10 +8,12 @@ import android.text.format.DateFormat;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
-import com.ingenicomovement.fieldserviceagent.pojo.AuthLoginResponse;
+import com.ingenicomovement.fieldserviceagent.pojo_auth.AuthLoginResponse;
 import com.ingenicomovement.fieldserviceagent.retrofit.RetrofitMethod;
 import com.ingenicomovement.fieldserviceagent.retrofit.RetrofitUrl;
+import com.ingenicomovement.fieldserviceagent.util.SignatureUtility;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -21,6 +23,7 @@ public class UserLogin extends AppCompatActivity {
 
     public Button button_login;
     public EditText editText_username, editText_passord;
+    private SignatureUtility signatureUtility;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,43 +32,43 @@ public class UserLogin extends AppCompatActivity {
         button_login=findViewById(R.id.btnLogin);
         editText_username=findViewById(R.id.etUserName);
         editText_passord=findViewById(R.id.etPassword);
+        signatureUtility  = new SignatureUtility();
         button_login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-              //  userAuthLogin();
-                //Intent intent = new Intent(UserLogin.this, SelectMenu.class);
-
-               // startActivity(intent);
-               // finish();
+              // userAuthLogin();
 
                 Intent intent = new Intent(UserLogin.this, BottomNavDua.class);
                 startActivity(intent);
                 finish();
-
-
             }
         });
     }
 
     public void userAuthLogin(){
         String name=editText_username.getText().toString();
-        String password="95ac42770704d5394099eaed91670c53";
-        String signature="a939f165240abec4382ec354dbf058c5";
+        String password=editText_passord.getText().toString();
         String _datetime  = (String) DateFormat.format("yyyyMMddhhmmss", new java.util.Date());
+        String _signature = signatureUtility.doSignature(_datetime, name);
 
         RetrofitMethod retrofitMethod = RetrofitUrl.getRetrofit().create(RetrofitMethod.class);
-        Call<AuthLoginResponse> authLoginResponseObj = retrofitMethod.loginUserTech(name,password, _datetime,signature);
+        Call<AuthLoginResponse> authLoginResponseObj = retrofitMethod.loginUserTech(name,password, _datetime, _signature);
         authLoginResponseObj.enqueue(new Callback<AuthLoginResponse>() {
             @Override
             public void onResponse(Call<AuthLoginResponse> call, Response<AuthLoginResponse> response) {
 
-
-                if (response.isSuccessful()){
-
-                    Intent intent = new Intent(UserLogin.this, BottomNavDua.class);
-                    startActivity(intent);
-                    finish();
-
+                if(response.body() != null) {
+                    if (response.body().getSuccess().contains("false")) {
+                        Toast.makeText(UserLogin.this, response.body().getMessage().toString(), Toast.LENGTH_SHORT).show();
+                    } else {
+                        Intent intent = new Intent(UserLogin.this, BottomNavDua.class);
+                        startActivity(intent);
+                        finish();
+                    }
+                }
+                else
+                {
+                    Toast.makeText(UserLogin.this, "Error", Toast.LENGTH_SHORT).show();
                 }
             }
 
