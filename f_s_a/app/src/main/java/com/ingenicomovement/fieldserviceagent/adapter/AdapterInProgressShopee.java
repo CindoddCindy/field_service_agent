@@ -1,4 +1,4 @@
-/*package com.ingenicomovement.fieldserviceagent.adapter;
+package com.ingenicomovement.fieldserviceagent.adapter;
 
 import android.content.Context;
 import android.content.Intent;
@@ -14,14 +14,15 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.ingenicomovement.fieldserviceagent.R;
 import com.ingenicomovement.fieldserviceagent.UserInputDropDown;
+import com.ingenicomovement.fieldserviceagent.pojo.ResponseInProgressAssign;
 
 import java.util.List;
 
 public class AdapterInProgressShopee  extends RecyclerView.Adapter<AdapterInProgressShopee.AdapterChild> {
     private Context context;
-    private List<DataItem> dataItemList;
+    private List<ResponseInProgressAssign> dataItemList;
 
-    public AdapterInProgressShopee(Context context, List<DataItem> dataItemList){
+    public AdapterInProgressShopee(Context context, List<ResponseInProgressAssign> dataItemList){
         this.context=context;
         this.dataItemList=dataItemList;
 }
@@ -39,7 +40,7 @@ public class AdapterInProgressShopee  extends RecyclerView.Adapter<AdapterInProg
 
     @Override
     public void onBindViewHolder(@NonNull AdapterChild holder, int position) {
-        final  DataItem dataItem = dataItemList.get(position);
+       /* final  DataItem dataItem = dataItemList.get(position);
 
         holder.textView_merchantName.setText(dataItem.getMerchantName());
         holder.textView_merchantAdress.setText(dataItem.getMerchantAddress());
@@ -97,6 +98,7 @@ public class AdapterInProgressShopee  extends RecyclerView.Adapter<AdapterInProg
 
             }
         });
+        */
 
 
     }
@@ -124,4 +126,3 @@ public class AdapterInProgressShopee  extends RecyclerView.Adapter<AdapterInProg
 }
 
 
- */
