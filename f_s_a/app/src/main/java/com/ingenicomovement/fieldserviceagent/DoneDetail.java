@@ -42,6 +42,9 @@ public class DoneDetail extends AppCompatActivity {
         textView_dua_puluhempat_done=findViewById(R.id.shope_done_detail_damage_type);
         textView_duapuluh_lima_done=findViewById(R.id.shope_done_detail_init_code);
         textView_duapuluh_enam_done=findViewById(R.id.shope_done_detail_sla);
+
+
+        getDataBundle();
     }
 
     public void getDataBundle(){
@@ -50,32 +53,32 @@ public class DoneDetail extends AppCompatActivity {
              * Jika Bundle ada, ambil data dari Bundle
              */
             Bundle bundle = getIntent().getExtras();
-            textView_satu_done.setText(bundle.getString("data_id"));
-            textView_dua_done.setText(bundle.getString("data_date"));
-            textView_tiga_done.setText(bundle.getString("data_ticket_receive"));
-            textView_empat_done.setText(bundle.getString("data_bank"));
-            textView_lima_done.setText(bundle.getString("bank"));
-            textView_enam_done.setText(bundle.getString("case"));
-            textView_tujuh_done.setText(bundle.getString("cont_numb"));
-            textView_delapan_done.setText(bundle.getString("tick_numb"));
-            textView_sembilan_done.setText(bundle.getString("spk_num"));
-            textView_sepuluh_done.setText(bundle.getString("work_type"));
-            textView_sebelas_done.setText(bundle.getString("tid"));
-            textView_duabelas_done.setText(bundle.getString("tid_cimb"));
-            textView_tigabelas_done.setText(bundle.getString("mid"));
-            textView_empatbelas_done.setText(bundle.getString("mer_name"));
-            textView_lima_belas_done.setText(bundle.getString("mer_add"));
-            textView_enambelas_done.setText(bundle.getString("mer_add_dua"));
-            textView_tujuhbelas_done.setText(bundle.getString("post_code"));
-            textView_delapan_belas_done.setText(bundle.getString("city"));
-            textView_sembilanbelas_done.setText(bundle.getString("pict_name"));
-            textView_duapuluh_done.setText(bundle.getString("pict_numb"));
-            textView_duapuluhsatu_done.setText(bundle.getString("note"));
-            textView_duapuluhdua_done.setText(bundle.getString("damage"));
-            textView_duapuluh_tiga_done.setText(bundle.getString("init_code"));
-            textView_dua_puluhempat_done.setText(bundle.getString("sla"));
-            textView_duapuluh_lima_done.setText(bundle.getString("ssn_edc"));
-            textView_duapuluh_enam_done.setText(bundle.getString("ssn_sim"));
+            textView_satu_done.setText(bundle.getString("done_id"));
+            textView_dua_done.setText(bundle.getString("done_category"));
+            textView_tiga_done.setText(bundle.getString("done_customer"));
+            textView_empat_done.setText(bundle.getString("done_import_date"));
+            textView_lima_done.setText(bundle.getString("done_import_ticket"));
+            textView_enam_done.setText(bundle.getString("done_import_bank"));
+            textView_tujuh_done.setText(bundle.getString("done_bank"));
+            textView_delapan_done.setText(bundle.getString("done_case"));
+            textView_sembilan_done.setText(bundle.getString("done_contract_number"));
+            textView_sepuluh_done.setText(bundle.getString("done_ticket_number"));
+            textView_sebelas_done.setText(bundle.getString("done_spk_number"));
+            textView_duabelas_done.setText(bundle.getString("done_work_type"));
+            textView_tigabelas_done.setText(bundle.getString("done_tid"));
+            textView_empatbelas_done.setText(bundle.getString("done_tid_cimb"));
+            textView_lima_belas_done.setText(bundle.getString("done_mid"));
+            textView_enambelas_done.setText(bundle.getString("done_merchant_name"));
+            textView_tujuhbelas_done.setText(bundle.getString("done_merchant_address"));
+            textView_delapan_belas_done.setText(bundle.getString("done_merchant_address_dua"));
+            textView_sembilanbelas_done.setText(bundle.getString("done_postal_code"));
+            textView_duapuluh_done.setText(bundle.getString("done_city"));
+            textView_duapuluhsatu_done.setText(bundle.getString("done_pic_name"));
+            textView_duapuluhdua_done.setText(bundle.getString("done_pic_number"));
+            textView_duapuluh_tiga_done.setText(bundle.getString("done_note"));
+            textView_dua_puluhempat_done.setText(bundle.getString("done_damage_type"));
+            textView_duapuluh_lima_done.setText(bundle.getString("done_init_code"));
+            textView_duapuluh_enam_done.setText(bundle.getString("done_sla"));
 
 
 

@@ -1,5 +1,8 @@
 package com.ingenicomovement.fieldserviceagent.fragment;
 
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -9,7 +12,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.ingenicomovement.fieldserviceagent.MainActivity;
 import com.ingenicomovement.fieldserviceagent.R;
+import com.ingenicomovement.fieldserviceagent.UserLogin;
 import com.ingenicomovement.fieldserviceagent.retrofit.RetrofitMethod;
 import com.ingenicomovement.fieldserviceagent.retrofit.RetrofitUrl;
 
@@ -21,6 +26,8 @@ import retrofit2.Response;
  * A simple {@link Fragment} subclass.
  */
 public class Profile extends Fragment {
+
+    public TextView textView_btn_log_out;
 
     public TextView  textView_username, textView_user_full_name;
     public static String KEY_ACTIVITY = "msg_activity";
@@ -38,6 +45,15 @@ public class Profile extends Fragment {
         View view = inflater.inflate(R.layout.fragment_profile, container, false);
         textView_username=view.findViewById(R.id.tv_user_profile_name);
         textView_user_full_name=view.findViewById(R.id.tv_user_full_name);
+        textView_btn_log_out=view.findViewById(R.id.btn_tv_logout);
+
+        textView_btn_log_out.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                sharedPrefLogOutBtn();
+
+            }
+        });
 
 
        // userAuthLogin();
@@ -89,5 +105,17 @@ public class Profile extends Fragment {
 
 
  */
+
+public void sharedPrefLogOutBtn(){
+    SharedPreferences sharedpreferences = getActivity().getPreferences(Context.MODE_PRIVATE);
+    SharedPreferences.Editor editor = sharedpreferences.edit();
+    editor.clear();
+    editor.commit();
+    Intent intent = new Intent(getActivity(), UserLogin.class);
+    startActivity(intent);
+
+
+
+    }
 
 }

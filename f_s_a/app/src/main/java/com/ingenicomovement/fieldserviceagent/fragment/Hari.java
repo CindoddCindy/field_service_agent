@@ -14,6 +14,8 @@ import android.widget.TextView;
 import com.google.android.material.tabs.TabLayout;
 import com.ingenicomovement.fieldserviceagent.DataPerolehan;
 import com.ingenicomovement.fieldserviceagent.R;
+import com.ingenicomovement.fieldserviceagent.pojo.DataStatus;
+import com.ingenicomovement.fieldserviceagent.pojo.ResponseStatusAssign;
 import com.ingenicomovement.fieldserviceagent.retrofit.RetrofitMethod;
 import com.ingenicomovement.fieldserviceagent.retrofit.RetrofitUrl;
 
@@ -68,22 +70,21 @@ public class Hari extends Fragment {
     }
 
 
-/*
+
 
     public void dataPerolehan(){
 
        RetrofitMethod retrofitMethod = RetrofitUrl.getRetrofit().create(RetrofitMethod.class);
-        Call<AssignDataResponse> assignShopeeResponseCall= retrofitMethod.getShpeeAsignInProgressDetail();
-        assignShopeeResponseCall.enqueue(new Callback<AssignDataResponse>() {
+        Call<ResponseStatusAssign> assignShopeeResponseCall= retrofitMethod.getAssignStatuss();
+        assignShopeeResponseCall.enqueue(new Callback<ResponseStatusAssign>() {
             @Override
-            public void onResponse(Call<AssignDataResponse> call, Response<AssignDataResponse> response) {
-               // DataItem dataItem = new DataItem();
+            public void onResponse(Call<ResponseStatusAssign> call, Response<ResponseStatusAssign> response) {
 
 
                 if (response.isSuccessful()){
-                    //textView_day.setText(response.body().getData().get(0).get.toString());
-                   // textView_week.setText(response.body().getData().get(0).getSumWeek().toString());
-                    //textView_month.setText(response.body().getData().get(0).getSumMonth().toString());
+                   // textView_day.setText(response.body().getData().get(0).getSumToday());
+                    //textView_week.setText(dataStatus.getSumWeek());
+                    //textView_month.setText(dataStatus.getSumMonth());
 
                 }
 
@@ -92,7 +93,7 @@ public class Hari extends Fragment {
             }
 
             @Override
-            public void onFailure(Call<AssignDataResponse> call, Throwable t) {
+            public void onFailure(Call<ResponseStatusAssign> call, Throwable t) {
 
             }
         });
@@ -101,5 +102,5 @@ public class Hari extends Fragment {
 
     }
 
- */
+
 }

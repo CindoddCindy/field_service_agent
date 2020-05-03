@@ -6,28 +6,166 @@ import androidx.viewpager.widget.ViewPager;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
+import android.text.format.DateFormat;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.TextView;
 
 import com.google.android.material.tabs.TabLayout;
 import com.ingenicomovement.fieldserviceagent.adapter.TabLayoutAdapter;
+import com.ingenicomovement.fieldserviceagent.pojo.ResponseInProgressAssign;
+import com.ingenicomovement.fieldserviceagent.pojo.ResponseRevisitAssign;
+import com.ingenicomovement.fieldserviceagent.pojo.ResponseStatusAssign;
+import com.ingenicomovement.fieldserviceagent.pojo_auth.AuthLoginResponse;
+import com.ingenicomovement.fieldserviceagent.retrofit.RetrofitMethod;
+import com.ingenicomovement.fieldserviceagent.retrofit.RetrofitUrl;
+import com.ingenicomovement.fieldserviceagent.util.SignatureUtility;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class DataPerolehan extends AppCompatActivity {
 
     private TabLayout tabLayout;
     private ViewPager viewPager;
+    private TextView textView_hari, textView_minggu, textView_bulan;
+    public TextView t_nama, t_id;
+    public TextView t_in_prog, t_rev;
+
+
+    private SignatureUtility signatureUtility;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_data_perolehan);
-        tabLayout=findViewById(R.id.tab_leout);
-        viewPager=findViewById(R.id.vew_pager);
-        setupTabLayout();
+//        tabLayout=findViewById(R.id.tab_leout);
+       // viewPager=findViewById(R.id.vew_pager);
+
+        textView_hari=findViewById(R.id.tv_per_day);
+        textView_minggu=findViewById(R.id.tv_per_week);
+        textView_bulan=findViewById(R.id.tv_per_month);
+
+
+
+
+        signatureUtility  = new SignatureUtility();
+
+
+        t_nama=findViewById(R.id.tv_get_per_nama);
+        t_id=findViewById(R.id.tv_get_per_id);
+
+        t_in_prog=findViewById(R.id.tv_in_prog);
+        t_rev=findViewById(R.id.tv_rev);
+
+        if(getIntent().getExtras()!=null){
+            /**
+             * Jika Bundle ada, ambil data dari Bundle
+             */
+            Bundle bundle = getIntent().getExtras();
+            t_nama.setText(bundle.getString("data_satu"));
+            t_id.setText(bundle.getString("data_dua"));
+            // data2 = bundle.getString("data2");
+        }
+
+
+
+
+
+        getDataPer();
+        getInProgress();
+        getRevit();
+       // setupTabLayout();
        // setStatusBarColor();
 
     }
 
+    public void getDataPer(){
+        String name= t_nama.getText().toString();
+        String id= t_id.getText().toString();
+        String _datetime  = (String) DateFormat.format("yyyyMMddhhmmss", new java.util.Date());
+        String _signature = signatureUtility.doSignatures(_datetime);
+
+        RetrofitMethod retrofitMethod = RetrofitUrl.getRetrofit().create(RetrofitMethod.class);
+        //Call<ResponseStatusAssign> responseCall= retrofitMethod.getAssignStatus(id, _datetime, _signature);
+        Call<ResponseStatusAssign> responseCall= retrofitMethod.getAssignStatusses();
+
+        responseCall.enqueue(new Callback<ResponseStatusAssign>() {
+            @Override
+            public void onResponse(Call<ResponseStatusAssign> call, Response<ResponseStatusAssign> response) {
+                if (response.isSuccessful()){
+                    textView_hari.setText(response.body().getData().get(0).getSumToday());
+                    textView_minggu.setText(response.body().getData().get(0).getSumWeek());
+                    textView_bulan.setText(response.body().getData().get(0).getSumMonth());
+                }
+            }
+
+            @Override
+            public void onFailure(Call<ResponseStatusAssign> call, Throwable t) {
+
+            }
+        });
+
+
+
+
+
+
+    }
+
+    public void getInProgress(){
+
+        RetrofitMethod retrofitMethod = RetrofitUrl.getRetrofit().create(RetrofitMethod.class);
+        //Call<ResponseStatusAssign> responseCall= retrofitMethod.getAssignStatus(id, _datetime, _signature);
+        Call<ResponseInProgressAssign> responseCall= retrofitMethod.getAssignInProgressess();
+        responseCall.enqueue(new Callback<ResponseInProgressAssign>() {
+            @Override
+            public void onResponse(Call<ResponseInProgressAssign> call, Response<ResponseInProgressAssign> response) {
+                if (response.isSuccessful()){
+                    t_in_prog.setText(response.body().getTotal());
+
+                }
+            }
+
+            @Override
+            public void onFailure(Call<ResponseInProgressAssign> call, Throwable t) {
+
+            }
+        });
+
+
+    }
+
+
+    public void getRevit(){
+
+        RetrofitMethod retrofitMethod = RetrofitUrl.getRetrofit().create(RetrofitMethod.class);
+        //Call<ResponseStatusAssign> responseCall= retrofitMethod.getAssignStatus(id, _datetime, _signature);
+        Call<ResponseRevisitAssign> responseCall= retrofitMethod.getAssignRevisitest();
+        responseCall.enqueue(new Callback<ResponseRevisitAssign>() {
+            @Override
+            public void onResponse(Call<ResponseRevisitAssign> call, Response<ResponseRevisitAssign> response) {
+                if (response.isSuccessful()){
+                    t_rev.setText(response.body().getTotal());
+                }
+            }
+
+            @Override
+            public void onFailure(Call<ResponseRevisitAssign> call, Throwable t) {
+
+            }
+        });
+
+
+    }
+
+
+
+
+
+/*
     public void setStatusBarColor(String color) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             Window window = getWindow();
@@ -41,7 +179,9 @@ public class DataPerolehan extends AppCompatActivity {
         }
     }
 
+ */
 
+/*
     private void setupTabLayout() {
         tabLayout.addTab(tabLayout.newTab().setText(" In Progress"));
         tabLayout.addTab(tabLayout.newTab().setText("Done"));
@@ -67,6 +207,7 @@ public class DataPerolehan extends AppCompatActivity {
                 posisi 2 = MOVIES
                 posisi 3 = BOOKS
                  */
+/*
                 switch (tab.getPosition()) {
                     case 0:
                         //setStatusBarColor("#3F51B5");
@@ -102,5 +243,7 @@ public class DataPerolehan extends AppCompatActivity {
             }
         });
     }
+
+ */
 
 }

@@ -2,7 +2,9 @@ package com.ingenicomovement.fieldserviceagent;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.format.DateFormat;
 import android.view.View;
@@ -11,6 +13,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.ingenicomovement.fieldserviceagent.pojo_auth.AuthLoginResponse;
+import com.ingenicomovement.fieldserviceagent.pojo_auth.Project;
 import com.ingenicomovement.fieldserviceagent.retrofit.RetrofitMethod;
 import com.ingenicomovement.fieldserviceagent.retrofit.RetrofitUrl;
 import com.ingenicomovement.fieldserviceagent.util.SignatureUtility;
@@ -25,6 +28,7 @@ public class UserLogin extends AppCompatActivity {
     public EditText editText_username, editText_passord;
     private SignatureUtility signatureUtility;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,14 +37,14 @@ public class UserLogin extends AppCompatActivity {
         editText_username=findViewById(R.id.etUserName);
         editText_passord=findViewById(R.id.etPassword);
         signatureUtility  = new SignatureUtility();
+
+
+
         button_login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-              // userAuthLogin();
+               userAuthLogin();
 
-                Intent intent = new Intent(UserLogin.this, BottomNavDua.class);
-                startActivity(intent);
-                finish();
             }
         });
     }
@@ -50,6 +54,7 @@ public class UserLogin extends AppCompatActivity {
         String password=editText_passord.getText().toString();
         String _datetime  = (String) DateFormat.format("yyyyMMddhhmmss", new java.util.Date());
         String _signature = signatureUtility.doSignature(_datetime, name);
+        String id_;
 
         RetrofitMethod retrofitMethod = RetrofitUrl.getRetrofit().create(RetrofitMethod.class);
         Call<AuthLoginResponse> authLoginResponseObj = retrofitMethod.loginUserTech(name,password, _datetime, _signature);
@@ -60,10 +65,18 @@ public class UserLogin extends AppCompatActivity {
                 if(response.body() != null) {
                     if (response.body().getSuccess().contains("false")) {
                         Toast.makeText(UserLogin.this, response.body().getMessage().toString(), Toast.LENGTH_SHORT).show();
-                    } else {
-                        Intent intent = new Intent(UserLogin.this, BottomNavDua.class);
+
+
+
+                          } else {
+
+                        Bundle bundle = new Bundle();
+                        bundle.putString("data1", editText_username.getText().toString());
+                        bundle.putString("data2", response.body().getData().get(0).getId());
+                        Intent intent = new Intent(UserLogin.this, PilihProject.class);
+                        intent.putExtras(bundle);
                         startActivity(intent);
-                        finish();
+
                     }
                 }
                 else

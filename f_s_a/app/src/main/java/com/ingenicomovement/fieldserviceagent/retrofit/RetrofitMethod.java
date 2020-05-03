@@ -28,9 +28,9 @@ public interface RetrofitMethod {
 
                                              @Query("dateTime") int dateTime, @Query("signature") String signature);
 
-    @GET("api/jobs/assign-status")
-    Call<ResponseStatusAssign> getAssignStatus(@Query("accountId") int accountId,
-                                               @Query("dateTime") int dateTime, @Query("signature") String signature);
+    @GET("jobs/assign-status")
+    Call<ResponseStatusAssign> getAssignStatus(@Query("accountId") String accountId,
+                                               @Query("dateTime") String dateTime, @Query("signature") String signature);
 
     @GET("api/jobs/assign-detail")
     Call<ResponseDetailAssign> getAssignDetail(@Query("accountId") int accountId,@Query("jobsId") int jobsId,
@@ -50,7 +50,7 @@ public interface RetrofitMethod {
 
 
     @FormUrlEncoded
-    @POST("api/auth/login")
+    @POST("auth/login")
     Call<AuthLoginResponse> loginUserTech(@Field("username") String username,
                                           @Field("password") String password,
                                           @Field("dateTime") String dateTime,
@@ -74,6 +74,26 @@ public interface RetrofitMethod {
                                         @Field("status ") String status,
                                         @Field(" dateTime") String dateTime,
                                         @Field(" signature") String signature);
+
+    ///metod test
+    @GET("jobs/assign-done?accountId=1&skip=0&dateTime=20200420000000&signature=7f92cd4e71c23704912e39f149fcfbeb")
+    Call<ResponseDoneAssign> getAssignDones();
+
+    @GET("jobs/assign-status?accountId=1&dateTime=20200420000000&signature=7f92cd4e71c23704912e39f149fcfbeb")
+    Call<ResponseStatusAssign> getAssignStatuss();
+
+    @GET("jobs/assign-status?accountId=1&dateTime=20200420000000&signature=7f92cd4e71c23704912e39f149fcfbeb")
+    Call<ResponseStatusAssign> getAssignStatusses();
+
+    @GET("/jobs/assign-inprogress?accountId=1&skip=0&dateTime=20200420000000&signature=7f92cd4e71c23704912e39f149fcfbeb")
+    Call<ResponseInProgressAssign> getAssignInProgressess();
+
+    @GET("jobs/assign-revisit?accountId=1&skip=0&dateTime=20200420000000&signature=7f92cd4e71c23704912e39f149fcfbeb")
+    Call<ResponseRevisitAssign> getAssignRevisitest();
+
+
+
+
 
 
 
