@@ -14,15 +14,16 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.ingenicomovement.fieldserviceagent.R;
 import com.ingenicomovement.fieldserviceagent.UserInputDropDown;
-import com.ingenicomovement.fieldserviceagent.pojo.ResponseInProgressAssign;
+import com.ingenicomovement.fieldserviceagent.pojo.DataInProgress;
+import com.ingenicomovement.fieldserviceagent.pojo.ResponseInProgAssign;
 
 import java.util.List;
 
 public class AdapterInProgressShopee  extends RecyclerView.Adapter<AdapterInProgressShopee.AdapterChild> {
     private Context context;
-    private List<ResponseInProgressAssign> dataItemList;
+    private List<DataInProgress> dataItemList;
 
-    public AdapterInProgressShopee(Context context, List<ResponseInProgressAssign> dataItemList){
+    public AdapterInProgressShopee(Context context, List<DataInProgress> dataItemList){
         this.context=context;
         this.dataItemList=dataItemList;
 }
@@ -40,7 +41,7 @@ public class AdapterInProgressShopee  extends RecyclerView.Adapter<AdapterInProg
 
     @Override
     public void onBindViewHolder(@NonNull AdapterChild holder, int position) {
-       /* final  DataItem dataItem = dataItemList.get(position);
+        final DataInProgress dataItem = dataItemList.get(position);
 
         holder.textView_merchantName.setText(dataItem.getMerchantName());
         holder.textView_merchantAdress.setText(dataItem.getMerchantAddress());
@@ -52,35 +53,32 @@ public class AdapterInProgressShopee  extends RecyclerView.Adapter<AdapterInProg
 
                 Bundle bundle = new Bundle();
 
-                bundle.putString("data_id", dataItem.getId().toString());//.getText().toString());
-                bundle.putString("data_date",dataItem.getImportDate());
-                bundle.putString("data_ticket_receive",dataItem.getImportTicketReceive());
-                bundle.putString("data_bank",dataItem.getImportBank());
-                bundle.putString("bank",dataItem.getBank());
-                bundle.putString("case",dataItem.getCase());
-                bundle.putString("cont_numb",dataItem.getContractNumber());
-                bundle.putString("tick_numb",dataItem.getTicketNumber());
-                bundle.putString("spk_num",dataItem.getSpkNumber());
-                bundle.putString("work_type",dataItem.getWorkType());
-                bundle.putString("tid",dataItem.getTid());
-                bundle.putString("tid_cimb",dataItem.getTidCimb());
-                bundle.putString("mid",dataItem.getMid());
-                bundle.putString("mer_name",dataItem.getMerchantName());
-                bundle.putString("mer_add",dataItem.getMerchantAddress());
-                bundle.putString("mer_add_dua",dataItem.getMerchantAddress2());
-                bundle.putString("post_code",dataItem.getPostalCode());
-                bundle.putString("city",dataItem.getCity());
-                bundle.putString("pict_name",dataItem.getPicName());
-                bundle.putString("pict_numb",dataItem.getPicNumber());
-                bundle.putString("note",dataItem.getNote());
-                bundle.putString("damage",dataItem.getDamageType());
-                bundle.putString("init_code",dataItem.getInitCode());
-                bundle.putString("sla",dataItem.getSla());
-                bundle.putString("ssn_edc",dataItem.getSnEdc());
-                bundle.putString("ssn_sim",dataItem.getSnSim());
-                bundle.putString("assign_to_date",dataItem.getAssignToDate());
-                bundle.putString("assign_to_status",dataItem.getAssignToStatus());
-
+               bundle.putString("prog_id", dataItem.getId());
+                bundle.putString("prog_category",dataItem.getCategory());
+                bundle.putString("prog_customer",dataItem.getCustomer());
+                bundle.putString("prog_import_date",dataItem.getImportDate());
+                bundle.putString("prog_import_ticket",dataItem.getImportTicketReceive());
+                bundle.putString("prog_import_bank",dataItem.getImportBank());
+                bundle.putString("prog_bank",dataItem.getBank());
+                bundle.putString("prog_case",dataItem.getCase());
+                bundle.putString("prog_contract_number",dataItem.getContractNumber());
+                bundle.putString("prog_ticket_number",dataItem.getTicketNumber());
+                bundle.putString("prog_spk_number",dataItem.getSpkNumber());
+                bundle.putString("prog_work_type",dataItem.getWorkType());
+                bundle.putString("prog_tid",dataItem.getTid());
+                bundle.putString("prog_tid_cimb",dataItem.getTidCimb());
+                bundle.putString("prog_mid",dataItem.getMid());
+                bundle.putString("prog_merchant_name",dataItem.getMerchantName());
+                bundle.putString("prog_merchant_address",dataItem.getMerchantAddress());
+                bundle.putString("prog_merchant_address_dua",dataItem.getMerchantAddress2());
+                bundle.putString("prog_postal_code",dataItem.getPostalCode());
+                bundle.putString("prog_city",dataItem.getCity());
+                bundle.putString("prog_pic_name",dataItem.getPicName());
+                bundle.putString("prog_pic_number",dataItem.getPicNumber());
+                bundle.putString("prog_note",dataItem.getNote());
+                bundle.putString("prog_damage_type",dataItem.getDamageType());
+                bundle.putString("prog_init_code",dataItem.getInitCode());
+                bundle.putString("prog_sla",dataItem.getSla());
 
 
 
@@ -98,7 +96,7 @@ public class AdapterInProgressShopee  extends RecyclerView.Adapter<AdapterInProg
 
             }
         });
-        */
+
 
 
     }

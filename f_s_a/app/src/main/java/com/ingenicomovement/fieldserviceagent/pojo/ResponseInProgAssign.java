@@ -6,7 +6,7 @@ import java.util.List;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class ResponseInProgressAssign {
+public class ResponseInProgAssign {
 
     @SerializedName("success")
     @Expose
@@ -19,13 +19,13 @@ public class ResponseInProgressAssign {
     private String total;
     @SerializedName("data")
     @Expose
-    private List<Object> data = new ArrayList<Object>();
+    private List<DataInProgress> data = new ArrayList<DataInProgress>();
 
     /**
      * No args constructor for use in serialization
      * 
      */
-    public ResponseInProgressAssign() {
+    public ResponseInProgAssign() {
     }
 
     /**
@@ -35,7 +35,7 @@ public class ResponseInProgressAssign {
      * @param success
      * @param message
      */
-    public ResponseInProgressAssign(String success, Object message, String total, List<Object> data) {
+    public ResponseInProgAssign(String success, Object message, String total, List<DataInProgress> data) {
         super();
         this.success = success;
         this.message = message;
@@ -67,11 +67,11 @@ public class ResponseInProgressAssign {
         this.total = total;
     }
 
-    public List<Object> getData() {
+    public List<DataInProgress> getData() {
         return data;
     }
 
-    public void setData(List<Object> data) {
+    public void setData(List<DataInProgress> data) {
         this.data = data;
     }
 

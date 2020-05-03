@@ -3,7 +3,7 @@ package com.ingenicomovement.fieldserviceagent.retrofit;
 import com.ingenicomovement.fieldserviceagent.pojo.ResponseCloseAssign;
 import com.ingenicomovement.fieldserviceagent.pojo.ResponseDetailAssign;
 import com.ingenicomovement.fieldserviceagent.pojo.ResponseDoneAssign;
-import com.ingenicomovement.fieldserviceagent.pojo.ResponseInProgressAssign;
+import com.ingenicomovement.fieldserviceagent.pojo.ResponseInProgAssign;
 import com.ingenicomovement.fieldserviceagent.pojo.ResponseRevisitAssign;
 import com.ingenicomovement.fieldserviceagent.pojo.ResponseStatusAssign;
 import com.ingenicomovement.fieldserviceagent.pojo_auth.AuthLoginResponse;
@@ -19,7 +19,7 @@ import retrofit2.http.Query;
 public interface RetrofitMethod {
 
     @GET("api/jobs/assign-inprogress")
-    Call<ResponseInProgressAssign> getAssignInProgress(@Query("accountId") int accountId, @Query("skip") int skip,
+    Call<ResponseInProgAssign> getAssignInProgress(@Query("accountId") int accountId, @Query("skip") int skip,
 
                                                        @Query("dateTime") int dateTime, @Query("signature") String signature);
 
@@ -85,8 +85,8 @@ public interface RetrofitMethod {
     @GET("jobs/assign-status?accountId=1&dateTime=20200420000000&signature=7f92cd4e71c23704912e39f149fcfbeb")
     Call<ResponseStatusAssign> getAssignStatusses();
 
-    @GET("/jobs/assign-inprogress?accountId=1&skip=0&dateTime=20200420000000&signature=7f92cd4e71c23704912e39f149fcfbeb")
-    Call<ResponseInProgressAssign> getAssignInProgressess();
+    @GET("jobs/assign-inprogress?accountId=1&skip=0&dateTime=20200420000000&signature=7f92cd4e71c23704912e39f149fcfbeb")
+    Call<ResponseInProgAssign> getAssignInProgressess();
 
     @GET("jobs/assign-revisit?accountId=1&skip=0&dateTime=20200420000000&signature=7f92cd4e71c23704912e39f149fcfbeb")
     Call<ResponseRevisitAssign> getAssignRevisitest();

@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
 
+import com.ingenicomovement.fieldserviceagent.pojo.ResponseInProgAssign;
 import com.ingenicomovement.fieldserviceagent.retrofit.RetrofitMethod;
 import com.ingenicomovement.fieldserviceagent.retrofit.RetrofitUrl;
 
@@ -53,11 +54,9 @@ public class UserInputDropDown extends AppCompatActivity {
         textView_dua_puluhempat=findViewById(R.id.shope_detail_sla);
         textView_duapuluhlima=findViewById(R.id.shope_detail_ssn_edc);
         textView_duapuluhenam=findViewById(R.id.shope_detail_ssn_sim);
-        textView_duapuluhtujuh=findViewById(R.id.shope_detail_assign_to_date);
-        textView_duapuluhdelapaan=findViewById(R.id.shope_detail_assign_to_status);
 
 
-      //  getDetailItem();
+       getDetailItem();
     }
 
     public void getBundle(){
@@ -67,45 +66,45 @@ public class UserInputDropDown extends AppCompatActivity {
              * Jika Bundle ada, ambil data dari Bundle
              */
             Bundle bundle = getIntent().getExtras();
-            textView_satu.setText(bundle.getString("data_id"));
-            textView_dua.setText(bundle.getString("data_date"));
-            textView_tiga.setText(bundle.getString("data_ticket_receive"));
-            textView_empat.setText(bundle.getString("data_bank"));
-            textView_lima.setText(bundle.getString("bank"));
-            textView_enam.setText(bundle.getString("case"));
-            textView_tujuh.setText(bundle.getString("cont_numb"));
-            textView_delapan.setText(bundle.getString("tick_numb"));
-            textView_sembilan.setText(bundle.getString("spk_num"));
-            textView_sepuluh.setText(bundle.getString("work_type"));
-            textView_sebelas.setText(bundle.getString("tid"));
-            textView_duabelas.setText(bundle.getString("tid_cimb"));
-            textView_tigabelas.setText(bundle.getString("mid"));
-            textView_empatbelas.setText(bundle.getString("mer_name"));
-            textView_lima_belas.setText(bundle.getString("mer_add"));
-            textView_enambelas.setText(bundle.getString("mer_add_dua"));
-            textView_tujuhbelas.setText(bundle.getString("post_code"));
-            textView_delapan_belas.setText(bundle.getString("city"));
-            textView_sembilanbelas.setText(bundle.getString("pict_name"));
-            textView_duapuluh.setText(bundle.getString("pict_numb"));
-            textView_duapuluhsatu.setText(bundle.getString("note"));
-            textView_duapuluhdua.setText(bundle.getString("damage"));
-            textView_duapuluh_tiga.setText(bundle.getString("init_code"));
-            textView_dua_puluhempat.setText(bundle.getString("sla"));
-            textView_duapuluhlima.setText(bundle.getString("ssn_edc"));
-            textView_duapuluhenam.setText(bundle.getString("ssn_sim"));
-            textView_duapuluhtujuh.setText(bundle.getString("assign_to_date"));
-            textView_duapuluhdelapaan.setText(bundle.getString("assign_to_status"));
+            textView_satu.setText(bundle.getString("prog_id"));
+            textView_dua.setText(bundle.getString("prog_category"));
+            textView_tiga.setText(bundle.getString("prog_customer"));
+            textView_empat.setText(bundle.getString("prog_import_date"));
+            textView_lima.setText(bundle.getString("prog_import_ticket"));
+            textView_enam.setText(bundle.getString("prog_import_bank"));
+            textView_tujuh.setText(bundle.getString("prog_bank"));
+            textView_delapan.setText(bundle.getString("prog_case"));
+            textView_sembilan.setText(bundle.getString("prog_contract_number"));
+            textView_sepuluh.setText(bundle.getString("prog_ticket_number"));
+            textView_sebelas.setText(bundle.getString("prog_spk_number"));
+            textView_duabelas.setText(bundle.getString("prog_work_type"));
+            textView_tigabelas.setText(bundle.getString("prog_tid"));
+            textView_empatbelas.setText(bundle.getString("prog_tid_cimb"));
+            textView_lima_belas.setText(bundle.getString("prog_mid"));
+            textView_enambelas.setText(bundle.getString("prog_merchant_name"));
+            textView_tujuhbelas.setText(bundle.getString("prog_merchant_address"));
+            textView_delapan_belas.setText(bundle.getString("prog_merchant_address_dua"));
+            textView_sembilanbelas.setText(bundle.getString("prog_postal_code"));
+            textView_duapuluh.setText(bundle.getString("prog_city"));
+            textView_duapuluhsatu.setText(bundle.getString("prog_pic_name"));
+            textView_duapuluhdua.setText(bundle.getString("prog_pic_number"));
+            textView_duapuluh_tiga.setText(bundle.getString("prog_note"));
+            textView_dua_puluhempat.setText(bundle.getString("prog_damage_type"));
+            textView_duapuluhlima.setText(bundle.getString("prog_init_code"));
+            textView_duapuluhenam.setText(bundle.getString("prog_sla"));
+//            textView_duapuluhtujuh.setText(bundle.getString(""));
+          //  textView_duapuluhdelapaan.setText(bundle.getString(""));
 
         }
 
     }
-/*
+
     public void getDetailItem(){
     RetrofitMethod    retrofitMethod = RetrofitUrl.getRetrofit().create(RetrofitMethod.class);
-        Call<AssignDataResponse> assignShopeeResponseCall= retrofitMethod.getShpeeAsignInProgressDetail();
-        assignShopeeResponseCall.enqueue(new Callback<AssignDataResponse>() {
+        Call<ResponseInProgAssign> assignShopeeResponseCall= retrofitMethod.getAssignInProgressess();
+        assignShopeeResponseCall.enqueue(new Callback<ResponseInProgAssign>() {
             @Override
-            public void onResponse(Call<AssignDataResponse> call, Response<AssignDataResponse> response) {
+            public void onResponse(Call<ResponseInProgAssign> call, Response<ResponseInProgAssign> response) {
                 if (response.isSuccessful()){
                     getBundle();
 
@@ -113,11 +112,11 @@ public class UserInputDropDown extends AppCompatActivity {
             }
 
             @Override
-            public void onFailure(Call<AssignDataResponse> call, Throwable t) {
+            public void onFailure(Call<ResponseInProgAssign> call, Throwable t) {
 
             }
         });
     }
 
- */
+
 }

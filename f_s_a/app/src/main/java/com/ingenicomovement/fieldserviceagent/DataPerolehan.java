@@ -3,20 +3,17 @@ package com.ingenicomovement.fieldserviceagent;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
-import android.graphics.Color;
-import android.os.Build;
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.format.DateFormat;
-import android.view.Window;
-import android.view.WindowManager;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.google.android.material.tabs.TabLayout;
-import com.ingenicomovement.fieldserviceagent.adapter.TabLayoutAdapter;
-import com.ingenicomovement.fieldserviceagent.pojo.ResponseInProgressAssign;
+import com.ingenicomovement.fieldserviceagent.pojo.ResponseInProgAssign;
 import com.ingenicomovement.fieldserviceagent.pojo.ResponseRevisitAssign;
 import com.ingenicomovement.fieldserviceagent.pojo.ResponseStatusAssign;
-import com.ingenicomovement.fieldserviceagent.pojo_auth.AuthLoginResponse;
 import com.ingenicomovement.fieldserviceagent.retrofit.RetrofitMethod;
 import com.ingenicomovement.fieldserviceagent.retrofit.RetrofitUrl;
 import com.ingenicomovement.fieldserviceagent.util.SignatureUtility;
@@ -33,6 +30,8 @@ public class DataPerolehan extends AppCompatActivity {
     public TextView t_nama, t_id;
     public TextView t_in_prog, t_rev;
 
+    public Button button_in_prog;
+
 
     private SignatureUtility signatureUtility;
 
@@ -48,6 +47,14 @@ public class DataPerolehan extends AppCompatActivity {
         textView_minggu=findViewById(R.id.tv_per_week);
         textView_bulan=findViewById(R.id.tv_per_month);
 
+        button_in_prog=findViewById(R.id.btn_in_prog_rv);
+        button_in_prog.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(DataPerolehan.this,RvinProgg.class);
+                startActivity(intent);
+            }
+        });
 
 
 
@@ -119,10 +126,10 @@ public class DataPerolehan extends AppCompatActivity {
 
         RetrofitMethod retrofitMethod = RetrofitUrl.getRetrofit().create(RetrofitMethod.class);
         //Call<ResponseStatusAssign> responseCall= retrofitMethod.getAssignStatus(id, _datetime, _signature);
-        Call<ResponseInProgressAssign> responseCall= retrofitMethod.getAssignInProgressess();
-        responseCall.enqueue(new Callback<ResponseInProgressAssign>() {
+        Call<ResponseInProgAssign> responseCall= retrofitMethod.getAssignInProgressess();
+        responseCall.enqueue(new Callback<ResponseInProgAssign>() {
             @Override
-            public void onResponse(Call<ResponseInProgressAssign> call, Response<ResponseInProgressAssign> response) {
+            public void onResponse(Call<ResponseInProgAssign> call, Response<ResponseInProgAssign> response) {
                 if (response.isSuccessful()){
                     t_in_prog.setText(response.body().getTotal());
 
@@ -130,7 +137,7 @@ public class DataPerolehan extends AppCompatActivity {
             }
 
             @Override
-            public void onFailure(Call<ResponseInProgressAssign> call, Throwable t) {
+            public void onFailure(Call<ResponseInProgAssign> call, Throwable t) {
 
             }
         });
