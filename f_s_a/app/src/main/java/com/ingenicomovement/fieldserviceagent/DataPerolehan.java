@@ -93,11 +93,11 @@ public class DataPerolehan extends AppCompatActivity {
         String name= t_nama.getText().toString();
         String id= t_id.getText().toString();
         String _datetime  = (String) DateFormat.format("yyyyMMddhhmmss", new java.util.Date());
-        String _signature = signatureUtility.doSignatures(_datetime);
+        String _signature = signatureUtility.doSignature(_datetime,id);
 
         RetrofitMethod retrofitMethod = RetrofitUrl.getRetrofit().create(RetrofitMethod.class);
-        //Call<ResponseStatusAssign> responseCall= retrofitMethod.getAssignStatus(id, _datetime, _signature);
-        Call<ResponseStatusAssign> responseCall= retrofitMethod.getAssignStatusses();
+        Call<ResponseStatusAssign> responseCall= retrofitMethod.getAssignStatus(id, _datetime, _signature);
+       // Call<ResponseStatusAssign> responseCall= retrofitMethod.getAssignStatusses();
 
         responseCall.enqueue(new Callback<ResponseStatusAssign>() {
             @Override

@@ -1,8 +1,15 @@
 package com.ingenicomovement.fieldserviceagent;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
+import android.content.Intent;
+import android.graphics.Bitmap;
 import android.os.Bundle;
+import android.provider.MediaStore;
+import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.ingenicomovement.fieldserviceagent.pojo.ResponseInProgAssign;
@@ -22,6 +29,17 @@ public class UserInputDropDown extends AppCompatActivity {
     textView_enambelas, textView_tujuhbelas, textView_delapan_belas, textView_sembilanbelas, textView_duapuluh,
     textView_duapuluhsatu, textView_duapuluhdua, textView_duapuluh_tiga, textView_dua_puluhempat, textView_duapuluhlima,
     textView_duapuluhenam, textView_duapuluhtujuh, textView_duapuluhdelapaan;
+
+    public ImageView imageView_1, imageView_2, imageView_3, imageView_4;
+
+    private static final String TAG = UserInputDropDown.class.getSimpleName();
+    //private static final int CAMERA_REQUEST_CODE = 7777;
+    private static final int CAMERA_CODE_SATU = 01;
+    private static final int CAMERA_CODE_DUA=02;
+    private static final int CAMERA_CODE_TIGA=03;
+    private static final int CAMERA_CODE_EMPAT=04;
+
+
 
 
     @Override
@@ -55,9 +73,115 @@ public class UserInputDropDown extends AppCompatActivity {
         textView_duapuluhlima=findViewById(R.id.shope_detail_ssn_edc);
         textView_duapuluhenam=findViewById(R.id.shope_detail_ssn_sim);
 
+        imageView_1=findViewById(R.id.img_prog_1);
+        imageView_2=findViewById(R.id.img_prog_2);
+        imageView_3=findViewById(R.id.img_prog_3);
+        imageView_4=findViewById(R.id.img_prog_4);
+
+
+        imageView_1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+                startActivityForResult(intent, CAMERA_CODE_SATU);
+
+
+            }
+        });
+
+        imageView_2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+                startActivityForResult(intent, CAMERA_CODE_DUA);
+
+
+            }
+        });
+
+        imageView_3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+                startActivityForResult(intent, CAMERA_CODE_TIGA);
+
+            }
+        });
+
+        imageView_4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+                startActivityForResult(intent, CAMERA_CODE_EMPAT);
+
+
+            }
+        });
+
 
        getDetailItem();
     }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        switch (requestCode) {
+            case (CAMERA_CODE_SATU ) :
+                if(resultCode == Activity.RESULT_OK)
+                {
+                    // result code sama, save gambar ke bitmap
+                    Bitmap bitmap;
+                    bitmap = (Bitmap) data.getExtras().get("data");
+                    imageView_1.setImageBitmap(bitmap);
+                      }
+                break;
+            case (CAMERA_CODE_DUA ) :
+                if(resultCode == Activity.RESULT_OK)
+                {
+                    // result code sama, save gambar ke bitmap
+                    Bitmap bitmap;
+                    bitmap = (Bitmap) data.getExtras().get("data");
+                    imageView_2.setImageBitmap(bitmap);
+
+                }
+                break;
+
+            case (CAMERA_CODE_TIGA ) :
+                if(resultCode == Activity.RESULT_OK)
+                {
+                    // result code sama, save gambar ke bitmap
+                    Bitmap bitmap;
+                    bitmap = (Bitmap) data.getExtras().get("data");
+                    imageView_3.setImageBitmap(bitmap);
+                     }
+                break;
+            case (CAMERA_CODE_EMPAT ) :
+                if(resultCode == Activity.RESULT_OK)
+                {
+                    // result code sama, save gambar ke bitmap
+                    Bitmap bitmap;
+                    bitmap = (Bitmap) data.getExtras().get("data");
+                    imageView_4.setImageBitmap(bitmap);
+                      }
+                break;
+
+
+
+
+
+
+
+        }
+    }
+
+    public void getImage(){
+
+
+
+    }
+
+
 
     public void getBundle(){
 

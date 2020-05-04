@@ -13,6 +13,7 @@ import retrofit2.Call;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
+import retrofit2.http.Multipart;
 import retrofit2.http.POST;
 import retrofit2.http.Query;
 
@@ -56,6 +57,15 @@ public interface RetrofitMethod {
                                           @Field("dateTime") String dateTime,
                                           @Field("signature") String signature);
 
+
+
+/*
+    @Multipart
+    @POST("/imagefolder/index.php")
+    Call<UploadObject> uploadFile(@Part MultipartBody.Part file, @Part("name") RequestBody name);
+
+ */
+
     @FormUrlEncoded
     @POST("api/jobs/submit")
     Call<ResponseSubmitJobs> submitJobs(@Field("accountId") String accountId,
@@ -74,6 +84,10 @@ public interface RetrofitMethod {
                                         @Field("status ") String status,
                                         @Field(" dateTime") String dateTime,
                                         @Field(" signature") String signature);
+
+
+
+
 
     ///metod test
     @GET("jobs/assign-done?accountId=1&skip=0&dateTime=20200420000000&signature=7f92cd4e71c23704912e39f149fcfbeb")
