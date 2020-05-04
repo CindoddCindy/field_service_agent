@@ -124,9 +124,16 @@ public class DataPerolehan extends AppCompatActivity {
 
     public void getInProgress(){
 
+        String name= t_nama.getText().toString();
+        String skip ="0";
+        String id= t_id.getText().toString();
+        String _datetime  = (String) DateFormat.format("yyyyMMddhhmmss", new java.util.Date());
+        String _signature = signatureUtility.doSignature(_datetime,id);
+
+
         RetrofitMethod retrofitMethod = RetrofitUrl.getRetrofit().create(RetrofitMethod.class);
-        //Call<ResponseStatusAssign> responseCall= retrofitMethod.getAssignStatus(id, _datetime, _signature);
-        Call<ResponseInProgAssign> responseCall= retrofitMethod.getAssignInProgressess();
+        Call<ResponseInProgAssign> responseCall= retrofitMethod.getAssignInProgress(id,skip, _datetime, _signature);
+        //Call<ResponseInProgAssign> responseCall= retrofitMethod.getAssignInProgressess();
         responseCall.enqueue(new Callback<ResponseInProgAssign>() {
             @Override
             public void onResponse(Call<ResponseInProgAssign> call, Response<ResponseInProgAssign> response) {
@@ -148,9 +155,16 @@ public class DataPerolehan extends AppCompatActivity {
 
     public void getRevit(){
 
+        String name= t_nama.getText().toString();
+        String skip ="0";
+        String id= t_id.getText().toString();
+        String _datetime  = (String) DateFormat.format("yyyyMMddhhmmss", new java.util.Date());
+        String _signature = signatureUtility.doSignature(_datetime,id);
+
+
         RetrofitMethod retrofitMethod = RetrofitUrl.getRetrofit().create(RetrofitMethod.class);
-        //Call<ResponseStatusAssign> responseCall= retrofitMethod.getAssignStatus(id, _datetime, _signature);
-        Call<ResponseRevisitAssign> responseCall= retrofitMethod.getAssignRevisitest();
+        Call<ResponseRevisitAssign> responseCall= retrofitMethod.getAssignRevisit(id,skip,_datetime,_signature);
+       // Call<ResponseRevisitAssign> responseCall= retrofitMethod.getAssignRevisitest();
         responseCall.enqueue(new Callback<ResponseRevisitAssign>() {
             @Override
             public void onResponse(Call<ResponseRevisitAssign> call, Response<ResponseRevisitAssign> response) {

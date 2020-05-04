@@ -19,10 +19,10 @@ import retrofit2.http.Query;
 
 public interface RetrofitMethod {
 
-    @GET("api/jobs/assign-inprogress")
-    Call<ResponseInProgAssign> getAssignInProgress(@Query("accountId") int accountId, @Query("skip") int skip,
+    @GET("jobs/assign-inprogress")
+    Call<ResponseInProgAssign> getAssignInProgress(@Query("accountId") String accountId, @Query("skip") String skip,
 
-                                                       @Query("dateTime") int dateTime, @Query("signature") String signature);
+                                                       @Query("dateTime") String dateTime, @Query("signature") String signature);
 
     @GET("api/jobs/assign-done")
     Call<ResponseDoneAssign> getAssignDone(@Query("accountId") int accountId, @Query("skip") int skip,
@@ -37,10 +37,10 @@ public interface RetrofitMethod {
     Call<ResponseDetailAssign> getAssignDetail(@Query("accountId") int accountId,@Query("jobsId") int jobsId,
                                              @Query("dateTime") int dateTime, @Query("signature") String signature);
 
-    @GET("api/jobs/assign-revisit")
-    Call<ResponseRevisitAssign> getAssignRevisit(@Query("accountId") int accountId, @Query("skip") int skip,
+    @GET("jobs/assign-revisit")
+    Call<ResponseRevisitAssign> getAssignRevisit(@Query("accountId") String accountId, @Query("skip") String skip,
 
-                                                 @Query("dateTime") int dateTime, @Query("signature") String signature);
+                                                 @Query("dateTime") String dateTime, @Query("signature") String signature);
 
 
     @GET("api/jobs/assign-close")

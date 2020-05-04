@@ -1,17 +1,35 @@
 package com.ingenicomovement.fieldserviceagent;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
 
+import android.Manifest;
+import android.annotation.SuppressLint;
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
+import android.location.Location;
+import android.location.LocationManager;
 import android.os.Bundle;
+import android.os.Looper;
 import android.provider.MediaStore;
+import android.provider.Settings;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.google.android.gms.location.FusedLocationProviderClient;
+import com.google.android.gms.location.LocationCallback;
+import com.google.android.gms.location.LocationRequest;
+import com.google.android.gms.location.LocationResult;
+import com.google.android.gms.location.LocationServices;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.ingenicomovement.fieldserviceagent.pojo.ResponseInProgAssign;
 import com.ingenicomovement.fieldserviceagent.retrofit.RetrofitMethod;
 import com.ingenicomovement.fieldserviceagent.retrofit.RetrofitUrl;
@@ -31,6 +49,10 @@ public class UserInputDropDown extends AppCompatActivity {
     textView_duapuluhenam, textView_duapuluhtujuh, textView_duapuluhdelapaan;
 
     public ImageView imageView_1, imageView_2, imageView_3, imageView_4;
+
+    int PERMISSION_ID = 44;
+    FusedLocationProviderClient mFusedLocationClient;
+    TextView latTextView, lonTextView;
 
     private static final String TAG = UserInputDropDown.class.getSimpleName();
     //private static final int CAMERA_REQUEST_CODE = 7777;
@@ -79,6 +101,13 @@ public class UserInputDropDown extends AppCompatActivity {
         imageView_4=findViewById(R.id.img_prog_4);
 
 
+        latTextView = findViewById(R.id.tv_in_progg_lat);
+        lonTextView = findViewById(R.id.tv_in_progg_long);
+        mFusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
+
+        getLastLocation();
+
+
         imageView_1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -119,9 +148,11 @@ public class UserInputDropDown extends AppCompatActivity {
             }
         });
 
-
+        //getBundle
        getDetailItem();
     }
+
+    //camera
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
@@ -175,12 +206,7 @@ public class UserInputDropDown extends AppCompatActivity {
         }
     }
 
-    public void getImage(){
-
-
-
-    }
-
+   //getdataBundle
 
 
     public void getBundle(){
@@ -223,6 +249,8 @@ public class UserInputDropDown extends AppCompatActivity {
 
     }
 
+    //dataMetodAPI
+
     public void getDetailItem(){
     RetrofitMethod    retrofitMethod = RetrofitUrl.getRetrofit().create(RetrofitMethod.class);
         Call<ResponseInProgAssign> assignShopeeResponseCall= retrofitMethod.getAssignInProgressess();
@@ -241,6 +269,112 @@ public class UserInputDropDown extends AppCompatActivity {
             }
         });
     }
+
+    //location
+
+    @SuppressLint("MissingPermission")
+    private void getLastLocation(){
+        if (checkPermissions()) {
+            if (isLocationEnabled()) {
+                mFusedLocationClient.getLastLocation().addOnCompleteListener(
+                        new OnCompleteListener<Location>() {
+                            @Override
+                            public void onComplete(@NonNull Task<Location> task) {
+                                Location location = task.getResult();
+                                if (location == null) {
+                                    requestNewLocationData();
+                                } else {
+                                    latTextView.setText(location.getLatitude()+"");
+                                    lonTextView.setText(location.getLongitude()+"");
+                                }
+                            }
+                        }
+                );
+            } else {
+                Toast.makeText(this, "Turn on location", Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS);
+                startActivity(intent);
+            }
+        } else {
+            requestPermissions();
+        }
+    }
+
+
+    @SuppressLint("MissingPermission")
+    private void requestNewLocationData(){
+
+        LocationRequest mLocationRequest = new LocationRequest();
+        mLocationRequest.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
+        mLocationRequest.setInterval(0);
+        mLocationRequest.setFastestInterval(0);
+        mLocationRequest.setNumUpdates(1);
+
+        mFusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
+        mFusedLocationClient.requestLocationUpdates(
+                mLocationRequest, mLocationCallback,
+                Looper.myLooper()
+        );
+
+    }
+
+
+    private LocationCallback mLocationCallback = new LocationCallback() {
+        @Override
+        public void onLocationResult(LocationResult locationResult) {
+            Location mLastLocation = locationResult.getLastLocation();
+            latTextView.setText(mLastLocation.getLatitude()+"");
+            lonTextView.setText(mLastLocation.getLongitude()+"");
+        }
+    };
+
+
+    private boolean checkPermissions() {
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) == PackageManager.PERMISSION_GRANTED &&
+                ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
+            return true;
+        }
+        return false;
+    }
+
+
+    private void requestPermissions() {
+        ActivityCompat.requestPermissions(
+                this,
+                new String[]{Manifest.permission.ACCESS_COARSE_LOCATION, Manifest.permission.ACCESS_FINE_LOCATION},
+                PERMISSION_ID
+        );
+    }
+
+
+    private boolean isLocationEnabled() {
+        LocationManager locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
+        return locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER) || locationManager.isProviderEnabled(
+                LocationManager.NETWORK_PROVIDER
+        );
+    }
+
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        if (requestCode == PERMISSION_ID) {
+            if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                getLastLocation();
+            }
+        }
+    }
+
+    @Override
+    public void onResume(){
+        super.onResume();
+        if (checkPermissions()) {
+            getLastLocation();
+        }
+
+    }
+
+
 
 
 }
