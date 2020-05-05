@@ -35,6 +35,7 @@ import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.ingenicomovement.fieldserviceagent.pojo.ResponseInProgAssign;
+import com.ingenicomovement.fieldserviceagent.pojo.ResponseSubmitJobs;
 import com.ingenicomovement.fieldserviceagent.retrofit.RetrofitMethod;
 import com.ingenicomovement.fieldserviceagent.retrofit.RetrofitUrl;
 import com.ingenicomovement.fieldserviceagent.util.SignatureUtility;
@@ -56,7 +57,10 @@ public class UserInputDropDown extends AppCompatActivity {
     textView_duapuluhsatu, textView_duapuluhdua, textView_duapuluh_tiga, textView_dua_puluhempat, textView_duapuluhlima,
     textView_duapuluhenam, textView_duapuluhtujuh, textView_duapuluhdelapaan;
 
-    public ImageView imageView_1, imageView_2, imageView_3, imageView_4;
+    public byte[] imageView_1;
+    public byte[] imageView_2;
+    public byte[] imageView_3;
+    public byte[] imageView_4;
     public TextView textView_id_detail_in_progg;
 
     int PERMISSION_ID = 44;
@@ -434,13 +438,33 @@ public class UserInputDropDown extends AppCompatActivity {
         String sp_text = spinner_status.getSelectedItem().toString();
         String latitude = latTextView.getText().toString();
         String longtid=lonTextView.getText().toString();
+        String jobId=textView_satu.getText().toString();
 
         MediaType MEDIA_TYPE_IMAGE = MediaType.parse("image/*");
 
         ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
         Bitmap imageBitmap = null;
         imageBitmap.compress(Bitmap.CompressFormat.JPEG,90,byteArrayOutputStream);
-       // profilePictureByte = byteArrayOutputStream.toByteArray();
+        imageView_1 = byteArrayOutputStream.toByteArray();
+        imageView_2=byteArrayOutputStream.toByteArray();
+        imageView_3=byteArrayOutputStream.toByteArray();
+        imageView_4=byteArrayOutputStream.toByteArray();
+
+
+        RetrofitMethod    retrofitMethod = RetrofitUrl.getRetrofit().create(RetrofitMethod.class);
+        Call<ResponseSubmitJobs> responseSubmitJobsCall= retrofitMethod.submitJobs(id,skip, _datetime, _signature);
+        responseSubmitJobsCall.enqueue(new Callback<ResponseSubmitJobs>() {
+            @Override
+            public void onResponse(Call<ResponseSubmitJobs> call, Response<ResponseSubmitJobs> response) {
+
+            }
+
+            @Override
+            public void onFailure(Call<ResponseSubmitJobs> call, Throwable t) {
+
+            }
+        });
+
 
 
 
