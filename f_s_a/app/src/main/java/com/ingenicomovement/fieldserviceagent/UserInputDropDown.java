@@ -35,14 +35,10 @@ import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.ingenicomovement.fieldserviceagent.pojo.ResponseInProgAssign;
-import com.ingenicomovement.fieldserviceagent.pojo.ResponseSubmitJobs;
 import com.ingenicomovement.fieldserviceagent.retrofit.RetrofitMethod;
 import com.ingenicomovement.fieldserviceagent.retrofit.RetrofitUrl;
 import com.ingenicomovement.fieldserviceagent.util.SignatureUtility;
 
-import java.io.ByteArrayOutputStream;
-
-import okhttp3.MediaType;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -57,10 +53,10 @@ public class UserInputDropDown extends AppCompatActivity {
     textView_duapuluhsatu, textView_duapuluhdua, textView_duapuluh_tiga, textView_dua_puluhempat, textView_duapuluhlima,
     textView_duapuluhenam, textView_duapuluhtujuh, textView_duapuluhdelapaan;
 
-    public byte[] imageView_1;
-    public byte[] imageView_2;
-    public byte[] imageView_3;
-    public byte[] imageView_4;
+    public ImageView imageView_1;
+    public ImageView imageView_2;
+    public ImageView imageView_3;
+    public ImageView imageView_4;
     public TextView textView_id_detail_in_progg;
 
     int PERMISSION_ID = 44;
@@ -152,7 +148,7 @@ public class UserInputDropDown extends AppCompatActivity {
         getLastLocation();
 
 
-        imageView_1.setOnClickListener(new View.OnClickListener() {
+        textViewjb_id.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
@@ -425,6 +421,8 @@ public class UserInputDropDown extends AppCompatActivity {
 
     }
 
+    /*
+
     public void kirimData(){
         String id= textView_id_detail_in_progg.getText().toString();
       //  String skip ="0";
@@ -438,17 +436,8 @@ public class UserInputDropDown extends AppCompatActivity {
         String sp_text = spinner_status.getSelectedItem().toString();
         String latitude = latTextView.getText().toString();
         String longtid=lonTextView.getText().toString();
-        String jobId=textView_satu.getText().toString();
 
-        MediaType MEDIA_TYPE_IMAGE = MediaType.parse("image/*");
 
-        ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
-        Bitmap imageBitmap = null;
-        imageBitmap.compress(Bitmap.CompressFormat.JPEG,90,byteArrayOutputStream);
-        imageView_1 = byteArrayOutputStream.toByteArray();
-        imageView_2=byteArrayOutputStream.toByteArray();
-        imageView_3=byteArrayOutputStream.toByteArray();
-        imageView_4=byteArrayOutputStream.toByteArray();
 
 
         RetrofitMethod    retrofitMethod = RetrofitUrl.getRetrofit().create(RetrofitMethod.class);
@@ -471,6 +460,8 @@ public class UserInputDropDown extends AppCompatActivity {
 
     }
 
+
+     */
 
 
 
