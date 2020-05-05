@@ -47,15 +47,6 @@ public class DataPerolehan extends AppCompatActivity {
         textView_minggu=findViewById(R.id.tv_per_week);
         textView_bulan=findViewById(R.id.tv_per_month);
 
-        button_in_prog=findViewById(R.id.btn_in_prog_rv);
-        button_in_prog.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(DataPerolehan.this,RvinProgg.class);
-                startActivity(intent);
-            }
-        });
-
 
 
         signatureUtility  = new SignatureUtility();
@@ -65,6 +56,15 @@ public class DataPerolehan extends AppCompatActivity {
         t_id=findViewById(R.id.tv_get_per_id);
 
         t_in_prog=findViewById(R.id.tv_in_prog);
+
+        t_in_prog.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(DataPerolehan.this,RvinProgg.class);
+                startActivity(intent);
+
+            }
+        });
         t_rev=findViewById(R.id.tv_rev);
 
         if(getIntent().getExtras()!=null){

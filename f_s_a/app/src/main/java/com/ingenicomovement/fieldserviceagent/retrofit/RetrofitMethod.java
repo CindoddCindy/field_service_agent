@@ -9,12 +9,14 @@ import com.ingenicomovement.fieldserviceagent.pojo.ResponseStatusAssign;
 import com.ingenicomovement.fieldserviceagent.pojo_auth.AuthLoginResponse;
 import com.ingenicomovement.fieldserviceagent.pojo_post.ResponseSubmitJobs;
 
+import okhttp3.MultipartBody;
 import retrofit2.Call;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
 import retrofit2.http.Multipart;
 import retrofit2.http.POST;
+import retrofit2.http.Part;
 import retrofit2.http.Query;
 
 public interface RetrofitMethod {
@@ -65,9 +67,9 @@ public interface RetrofitMethod {
     Call<UploadObject> uploadFile(@Part MultipartBody.Part file, @Part("name") RequestBody name);
 
  */
-
+    @Multipart
     @FormUrlEncoded
-    @POST("api/jobs/submit")
+    @POST("jobs/submit")
     Call<ResponseSubmitJobs> submitJobs(@Field("accountId") String accountId,
                                         @Field("jobsId") String jobsId,
                                         @Field("picName") String picName ,
@@ -75,10 +77,10 @@ public interface RetrofitMethod {
                                         @Field("snEdc ") String snEdc,
                                         @Field("snSim ") String snSim,
                                         @Field("note ") String note,
-                                        @Field("photoMerchant ") String photoMerchant,
-                                        @Field(" photoEdc") String photoEdc,
-                                        @Field("photoFormulir ") String photoFormulir,
-                                        @Field("photoOthers ") String photoOthers,
+                                        @Part MultipartBody.Part  photoMerchant,
+                                        @Part MultipartBody.Part  photoEdc,
+                                        @Part MultipartBody.Part  photoFormulir,
+                                        @Part MultipartBody.Part  photoOthers,
                                         @Field("latitude ") String latitude,
                                         @Field("longitude ") String longitude ,
                                         @Field("status ") String status,

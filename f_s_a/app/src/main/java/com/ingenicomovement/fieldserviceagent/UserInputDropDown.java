@@ -18,8 +18,12 @@ import android.os.Bundle;
 import android.os.Looper;
 import android.provider.MediaStore;
 import android.provider.Settings;
+import android.text.format.DateFormat;
 import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -33,7 +37,11 @@ import com.google.android.gms.tasks.Task;
 import com.ingenicomovement.fieldserviceagent.pojo.ResponseInProgAssign;
 import com.ingenicomovement.fieldserviceagent.retrofit.RetrofitMethod;
 import com.ingenicomovement.fieldserviceagent.retrofit.RetrofitUrl;
+import com.ingenicomovement.fieldserviceagent.util.SignatureUtility;
 
+import java.io.ByteArrayOutputStream;
+
+import okhttp3.MediaType;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -49,6 +57,7 @@ public class UserInputDropDown extends AppCompatActivity {
     textView_duapuluhenam, textView_duapuluhtujuh, textView_duapuluhdelapaan;
 
     public ImageView imageView_1, imageView_2, imageView_3, imageView_4;
+    public TextView textView_id_detail_in_progg;
 
     int PERMISSION_ID = 44;
     FusedLocationProviderClient mFusedLocationClient;
@@ -61,6 +70,15 @@ public class UserInputDropDown extends AppCompatActivity {
     private static final int CAMERA_CODE_TIGA=03;
     private static final int CAMERA_CODE_EMPAT=04;
 
+    public Button button_sb_;
+
+    private SignatureUtility signatureUtility;
+
+    public TextView textViewjb_id;
+    public EditText editText_picName, editTextPicNumber, editText_snEdc, editText_sensim, editText_note;
+    public Spinner spinner_status;
+
+
 
 
 
@@ -68,7 +86,7 @@ public class UserInputDropDown extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_input_drop_down);
-        textView_satu=findViewById(R.id.shoope_detail_id);
+        textView_satu=findViewById(R.id.shoope_in_prog_id);
         textView_dua=findViewById(R.id.shopee_detail_iport_date);
         textView_tiga=findViewById(R.id.shopee_ticket_receive);
         textView_empat=findViewById(R.id.shopee_datail_banks);
@@ -100,10 +118,32 @@ public class UserInputDropDown extends AppCompatActivity {
         imageView_3=findViewById(R.id.img_prog_3);
         imageView_4=findViewById(R.id.img_prog_4);
 
+        textView_id_detail_in_progg=findViewById(R.id.tv_id_detail_in_progress);
+
 
         latTextView = findViewById(R.id.tv_in_progg_lat);
         lonTextView = findViewById(R.id.tv_in_progg_long);
         mFusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
+
+        signatureUtility  = new SignatureUtility();
+
+        button_sb_=findViewById(R.id.btn_submit_);
+
+        button_sb_.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
+        textViewjb_id=findViewById(R.id.shoope_in_prog_id);
+        editText_picName=findViewById(R.id.et__in_progg_pic_name);
+        editTextPicNumber=findViewById(R.id.et_in_prog_pic_numb);
+        editText_snEdc=findViewById(R.id.et_in_prog_detail_edc);
+        editText_sensim=findViewById(R.id.et_in_prog_detail_sim);
+        editText_note=findViewById(R.id.et_in_prog_detail_note);
+        spinner_status=findViewById(R.id.sp_name_);
+
 
         getLastLocation();
 
@@ -252,8 +292,15 @@ public class UserInputDropDown extends AppCompatActivity {
     //dataMetodAPI
 
     public void getDetailItem(){
-    RetrofitMethod    retrofitMethod = RetrofitUrl.getRetrofit().create(RetrofitMethod.class);
-        Call<ResponseInProgAssign> assignShopeeResponseCall= retrofitMethod.getAssignInProgressess();
+
+       // String name= t_nama.getText().toString();
+        String id= textView_id_detail_in_progg.getText().toString();
+        String skip ="0";
+        String _datetime  = (String) DateFormat.format("yyyyMMddhhmmss", new java.util.Date());
+        String _signature = signatureUtility.doSignature(_datetime,id);
+
+        RetrofitMethod    retrofitMethod = RetrofitUrl.getRetrofit().create(RetrofitMethod.class);
+        Call<ResponseInProgAssign> assignShopeeResponseCall= retrofitMethod.getAssignInProgress(id,skip, _datetime, _signature);
         assignShopeeResponseCall.enqueue(new Callback<ResponseInProgAssign>() {
             @Override
             public void onResponse(Call<ResponseInProgAssign> call, Response<ResponseInProgAssign> response) {
@@ -371,6 +418,32 @@ public class UserInputDropDown extends AppCompatActivity {
         if (checkPermissions()) {
             getLastLocation();
         }
+
+    }
+
+    public void kirimData(){
+        String id= textView_id_detail_in_progg.getText().toString();
+      //  String skip ="0";
+        String _datetime  = (String) DateFormat.format("yyyyMMddhhmmss", new java.util.Date());
+        String _signature = signatureUtility.doSignature(_datetime,id);
+        String pic_name= editText_picName.getText().toString();
+        String pic_number=editTextPicNumber.getText().toString();
+        String sn_edc=editText_snEdc.getText().toString();
+        String sn_sim=editText_sensim.getText().toString();
+        String note= editText_note.getText().toString();
+        String sp_text = spinner_status.getSelectedItem().toString();
+        String latitude = latTextView.getText().toString();
+        String longtid=lonTextView.getText().toString();
+
+        MediaType MEDIA_TYPE_IMAGE = MediaType.parse("image/*");
+
+        ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
+        Bitmap imageBitmap = null;
+        imageBitmap.compress(Bitmap.CompressFormat.JPEG,90,byteArrayOutputStream);
+       // profilePictureByte = byteArrayOutputStream.toByteArray();
+
+
+
 
     }
 
